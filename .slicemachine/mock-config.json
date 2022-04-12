@@ -1,6 +1,15 @@
 {
   "_cts": {
     "footer": {},
-    "page": {}
+    "page": {},
+    "homepage": {}
+  },
+  "slices": {
+    "Slider": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
+    }
   }
 }

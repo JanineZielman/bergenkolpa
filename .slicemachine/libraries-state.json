@@ -1,5 +1,210 @@
 {
   "slices": {
-    "components": {}
+    "components": {
+      "slider": {
+        "library": "slices",
+        "id": "slider",
+        "name": "Slider",
+        "description": "Slider",
+        "model": {
+          "id": "slider",
+          "type": "SharedSlice",
+          "name": "Slider",
+          "description": "Slider",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Slider",
+              "primary": {},
+              "items": {
+                "title": {
+                  "config": {
+                    "label": "title",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "color": {
+                  "config": {
+                    "label": "color",
+                    "placeholder": "",
+                    "options": [
+                      "white",
+                      "black"
+                    ],
+                    "default_value": "white"
+                  },
+                  "type": "Select"
+                },
+                "position": {
+                  "config": {
+                    "label": "position",
+                    "placeholder": "",
+                    "options": [
+                      "top-left",
+                      "top-right",
+                      "bottom-left",
+                      "bottom-right"
+                    ],
+                    "default_value": "top-left"
+                  },
+                  "type": "Select"
+                },
+                "image": {
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "description": {
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  },
+                  "type": "StructuredText"
+                },
+                "link": {
+                  "config": {
+                    "label": "link",
+                    "placeholder": "",
+                    "allowTargetBlank": false
+                  },
+                  "type": "Link"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "slider",
+            "items": [
+              {
+                "title": "synthesize holistic blockchains",
+                "color": "black",
+                "position": "top-left",
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
+                },
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Labore deserunt aute elit exercitation et.",
+                    "spans": []
+                  }
+                ],
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              },
+              {
+                "title": "reinvent user-centric supply-chains",
+                "color": "white",
+                "position": "top-left",
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
+                },
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Eu nulla eiusmod nisi voluptate occaecat reprehenderit irure excepteur ullamco Lorem ullamco do cillum labore. Commodo in consequat pariatur velit aliqua anim duis laborum esse minim mollit duis officia mollit. Incididunt occaecat aliquip deserunt ipsum.",
+                    "spans": []
+                  }
+                ],
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              },
+              {
+                "title": "benchmark distributed methodologies",
+                "color": "white",
+                "position": "top-left",
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
+                },
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Sint excepteur aute fugiat duis esse est nisi minim exercitation est qui.",
+                    "spans": []
+                  }
+                ],
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              },
+              {
+                "title": "mesh bricks-and-clicks systems",
+                "color": "white",
+                "position": "top-right",
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
+                },
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Consequat consectetur sunt proident velit sit nostrud aliqua do sint nulla mollit officia ex aute irure. Id ad non ullamco duis non irure duis elit et aute cillum laborum. Reprehenderit proident magna amet proident do officia esse esse laborum cupidatat.",
+                    "spans": []
+                  }
+                ],
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              }
+            ],
+            "primary": {}
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/Slider/default-slice/preview.png",
+            "width": 800,
+            "height": 2082
+          }
+        }
+      }
+    }
   }
 }

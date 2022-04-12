@@ -6,14 +6,26 @@ export const LanguageSwitcher = ({ altLangs = [] , lang}) => {
     <div className="language-switcher">
 			<div className="current-language">
 				<Link href={lang} locale={lang}>
-					<a>{lang.substring(0,2)}</a>
+					<a>
+						{lang.substring(0,2) == 'zh' ?
+							'中文'
+						:
+							lang.substring(0,2)
+						}
+					</a>
 				</Link>
 			</div>
       {altLangs.map((altLang) => {
         return (
           <div key={altLang.lang}>
             <Link href={altLang.uid} locale={altLang.lang}>
-              <a>{altLang.lang.substring(0,2)}</a>
+              <a>
+								{altLang.lang.substring(0,2) == 'zh' ?
+									'中文'
+								:
+									altLang.lang.substring(0,2)
+								}
+							</a>
             </Link>
           </div>
         );

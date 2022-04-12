@@ -1,0 +1,113 @@
+.slick-slider{
+	.slick-slide{
+		margin-right: 48px;
+		position: relative;
+		.slide-item {
+			width: 725px;			
+			height:85vh;
+			overflow: hidden;
+			.image {
+				display: inline-block;
+				height: 80vh;
+				overflow: hidden;
+				img {
+					width: 100%;
+					max-width: 80vw;
+					height: 90vh;
+					object-fit: cover;
+				}
+			}
+			.title{
+				position: absolute;
+				text-align: center;
+				&.white{
+					color: #fff;
+					border-bottom: 7px solid #fff;
+				}
+				&.black {
+					color: #000;
+					border-bottom: 7px solid #000;
+				}
+				&.top-right{
+					top: 0;
+					right: 0;
+				}
+				&.top-left {
+					top: 0;
+					left: 0;
+				}
+				&.bottom-right {
+					bottom: 0;
+					right: 0;
+				}
+				&.bottom-left {
+					bottom: 0;
+					left: 0;
+				}
+				
+				font-size: 80px;
+				margin: 14px 24px 7vh 24px;
+			}
+			.description{
+				width: 600px;
+				font-size: 18px;
+			}
+		}
+	}
+	.slick-dots {
+		text-align: left;
+		bottom: -30px;
+		li{
+			margin: 0 5px;
+			width: 11px;
+			height: 11px;
+			button:before{
+				content:'';
+				border: 1px solid black;
+				border-radius: 50%;
+				opacity: 1;
+				width: 11px;
+				height: 11px;
+			}
+			&.slick-active button:before {
+				background-color: #000;
+				opacity: 1;
+			}
+		}
+	}
+	.slick-arrow{
+		height: 100%;
+		width: 20%;
+		position: absolute;
+		z-index: 999;
+		&.slick-prev{
+			left: 14px;
+		}
+		&.slick-next {
+			right: 14px;
+		}
+		&.slick-prev:before {
+			opacity: 0; 
+			display: flex;
+			justify-content: flex-start;
+			font-size: 40px;
+			transition: opacity 0.4s ease-in-out;
+		}
+		&.slick-next:before {
+			opacity: 0;
+			display: flex;
+			justify-content: flex-end;
+			font-size: 40px;
+			transition: opacity 0.4s ease-in-out;
+		}
+		&:hover{
+			&.slick-prev:before {
+				opacity: 1;
+			}
+			
+			&.slick-next:before {
+				opacity: 1;
+			}
+		}
+	}
+}
