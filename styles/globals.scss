@@ -1,14 +1,28 @@
 @font-face {
-  font-family: circular;
-  src: url(/fonts/circular-book.woff2);
+  font-family: favorit;
+  src: url(/fonts/Favorit.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: favorit;
+  src: url(/fonts/ABCFavoritMono-Light-Trial.woff2);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: favorit;
+  src: url(/fonts/ABCFavorit-Regular-Trial.otf);
+  font-weight: 400;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: circular;
+  font-family: favorit, sans-serif;
   position: relative;
+  font-weight: 400;
 }
 
 a {
@@ -22,7 +36,7 @@ a {
 
 .main-container{
   margin:0;
-  padding: 115px 48px 0 48px;
+  padding: 135px 48px 0 48px;
   position: relative;
 }
 
@@ -33,6 +47,7 @@ a {
   padding: 0 48px;
   height: 115px;
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -40,6 +55,7 @@ a {
   .logo{
     h1{
       font-size: 21px;
+      font-weight: 500;
     }
   }
   .menu-items{
@@ -48,11 +64,13 @@ a {
     .menu-item {
       padding: 21px 36px;
       font-size: 21px;
+      font-weight: 400;
     }
   }
   .language-switcher{
     display: flex;
     font-size: 21px;
+    font-weight: 400;
     text-transform: uppercase;
     .current-language a{
       text-decoration: underline;

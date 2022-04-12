@@ -89,33 +89,8 @@
             "slice_type": "slider",
             "items": [
               {
-                "title": "synthesize holistic blockchains",
+                "title": "incentivize granular markets",
                 "color": "black",
-                "position": "top-left",
-                "image": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
-                },
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "Labore deserunt aute elit exercitation et.",
-                    "spans": []
-                  }
-                ],
-                "link": {
-                  "link_type": "Web",
-                  "url": "http://twitter.com"
-                }
-              },
-              {
-                "title": "reinvent user-centric supply-chains",
-                "color": "white",
                 "position": "top-left",
                 "image": {
                   "dimensions": {
@@ -129,17 +104,17 @@
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Eu nulla eiusmod nisi voluptate occaecat reprehenderit irure excepteur ullamco Lorem ullamco do cillum labore. Commodo in consequat pariatur velit aliqua anim duis laborum esse minim mollit duis officia mollit. Incididunt occaecat aliquip deserunt ipsum.",
+                    "text": "Aute occaecat laborum excepteur ea ipsum reprehenderit ad aliquip quis aute et aliquip qui esse. Et incididunt mollit culpa.",
                     "spans": []
                   }
                 ],
                 "link": {
                   "link_type": "Web",
-                  "url": "http://twitter.com"
+                  "url": "http://google.com"
                 }
               },
               {
-                "title": "benchmark distributed methodologies",
+                "title": "leverage e-business content",
                 "color": "white",
                 "position": "top-left",
                 "image": {
@@ -149,12 +124,12 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
                 },
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Sint excepteur aute fugiat duis esse est nisi minim exercitation est qui.",
+                    "text": "Labore irure sunt reprehenderit aliqua enim est ea nulla et exercitation velit qui. In ut nulla sunt officia. Nostrud do minim consectetur cillum ullamco dolor ipsum fugiat ad velit proident magna nisi reprehenderit sit.",
                     "spans": []
                   }
                 ],
@@ -164,7 +139,7 @@
                 }
               },
               {
-                "title": "mesh bricks-and-clicks systems",
+                "title": "innovate granular e-markets",
                 "color": "white",
                 "position": "top-right",
                 "image": {
@@ -174,18 +149,18 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
                 },
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Consequat consectetur sunt proident velit sit nostrud aliqua do sint nulla mollit officia ex aute irure. Id ad non ullamco duis non irure duis elit et aute cillum laborum. Reprehenderit proident magna amet proident do officia esse esse laborum cupidatat.",
+                    "text": "Enim eiusmod sit culpa labore dolor ut veniam cillum eu consequat duis proident nulla.",
                     "spans": []
                   }
                 ],
                 "link": {
                   "link_type": "Web",
-                  "url": "http://google.com"
+                  "url": "http://twitter.com"
                 }
               }
             ],
@@ -201,7 +176,7 @@
           "default-slice": {
             "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/Slider/default-slice/preview.png",
             "width": 800,
-            "height": 2082
+            "height": 485
           }
         }
       }

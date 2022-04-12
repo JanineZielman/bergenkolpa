@@ -5,13 +5,15 @@ import * as Slices from "../slices";
 const resolver = ({ sliceName }) => Slices[sliceName];
 
 import Layout from "../components/layout"
+import Projects from "../components/projects"
 
 const Page = (props) => {
-  const {doc, menu} = props
-  console.log(props)
+  const {doc, menu, projects} = props
+  console.log('projects', projects)
   return(
     <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang}>
       <SliceZone slices={props.slices} resolver={resolver} />
+      <Projects projects={projects}/>
     </Layout>
   )
   
@@ -22,12 +24,14 @@ export async function getStaticProps({ locale }) {
 
   const page = await client.getByUID("homepage", "home", { lang: locale });
   const menu = await client.getSingle("menu");
+  const projects = await client.getAllByType('project');
 
   return {
     props: {
       menu: menu.data,
       doc: page,
-      slices: page.data.slices
+      slices: page.data.slices,
+      projects: projects
     },
   };
 }

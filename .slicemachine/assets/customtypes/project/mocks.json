@@ -1,0 +1,24 @@
+{
+  "id": "f190c1a5-e213-48ca-a9e1-6be2ac91d75e",
+  "uid": "sint-dolor-qui",
+  "type": "project",
+  "data": {
+    "title": "enhance strategic channels",
+    "cover-image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+    },
+    "cover-text": [
+      {
+        "type": "heading2",
+        "text": "Enable killer e-business",
+        "spans": []
+      }
+    ]
+  }
+}
