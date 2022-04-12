@@ -1,0 +1,71 @@
+@font-face {
+  font-family: circular;
+  src: url(/fonts/circular-book.woff2);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: circular;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-container{
+  margin: 140px 0 0 0;
+  padding: 0 48px;
+  position: relative;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  .logo{
+    h1{
+      font-size: 21px;
+    }
+  }
+  .menu-items{
+    display: flex;
+    justify-content: center;
+    .menu-item {
+      padding: 21px 36px;
+      font-size: 21px;
+    }
+  }
+  .language-switcher{
+    display: flex;
+    font-size: 21px;
+    text-transform: uppercase;
+    .current-language a{
+      text-decoration: underline;
+    }
+    div{
+      margin-left: 5px;
+      &:after{
+        content: ' /';
+      }
+      &:last-child{
+        &:after {
+          content: '';
+        }
+      }
+    }
+  }
+}

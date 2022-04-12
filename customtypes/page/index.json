@@ -11,6 +11,13 @@
           "label": "UID",
           "placeholder": "unique-identifier-eg-homepage"
         }
+      },
+      "text": {
+        "config": {
+          "label": "text",
+          "placeholder": ""
+        },
+        "type": "Text"
       }
     },
     "SEO Metadata": {

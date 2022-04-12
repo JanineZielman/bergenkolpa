@@ -1,36 +1,49 @@
-import { Client } from "../utils/prismicHelpers";
+// import { Client } from "../utils/prismicHelpers";
+import { createClient } from '../prismicConfiguration'
 import { queryRepeatableDocuments } from '../utils/queries';
 import SliceZone from "next-slicezone";
 
 import * as Slices from "../slices";
 const resolver = ({ sliceName }) => Slices[sliceName];
 
+import Layout from "../components/layout"
+
 const Page = (props) => {
+  const {doc, menu} = props
+  console.log(doc)
   return(
-    <></>
+   <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang}>
+     {doc.data.text}
+   </Layout>
     // <SliceZone slices={props.slices} resolver={resolver} />
   )
 }
-  
 
-// Fetch content from prismic
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
+  const client = createClient();
 
-  const doc = await Client().getByUID("page", params.uid) || {}
+  const page = await client.getByUID("page", params.uid, { lang: locale });
+  const menu = await client.getSingle("menu");
 
   return {
     props: {
-      // slices: doc.data.slices
-    }
-  }
+      menu: menu.data,
+      doc: page,
+    },
+  };
 }
 
 export async function getStaticPaths() {
-  const documents = await queryRepeatableDocuments((doc) => doc.type === 'page')
+  const client = createClient();
+
+  const documents = await client.getAllByType("page", { lang: "*" });
+
   return {
-    paths: documents.map(doc => `/${doc.uid}`),
-    fallback: true,
-  }
+    paths: documents.map((doc) => {
+      return { params: { uid: doc.uid }, locale: doc.lang };
+    }),
+    fallback: false,
+  };
 }
 
 export default Page;
