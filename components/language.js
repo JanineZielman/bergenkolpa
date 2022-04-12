@@ -18,7 +18,7 @@ export const LanguageSwitcher = ({ altLangs = [] , lang}) => {
       {altLangs.map((altLang) => {
         return (
           <div key={altLang.lang}>
-            <Link href={altLang.uid} locale={altLang.lang}>
+            <Link href={altLang.uid == 'home' ? '/' : altLang.uid} locale={altLang.lang}>
               <a>
 								{altLang.lang.substring(0,2) == 'zh' ?
 									'中文'
