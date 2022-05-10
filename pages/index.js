@@ -8,7 +8,7 @@ import Layout from "../components/layout"
 import Projects from "../components/projects"
 
 const Page = (props) => {
-  const {doc, menu, projects} = props
+  const {doc, menu, projects, slices} = props
   console.log('projects', projects)
   return(
     <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang}>

@@ -35,6 +35,24 @@
           "single": "heading2"
         },
         "type": "StructuredText"
+      },
+      "linked": {
+        "config": {
+          "label": "linked",
+          "customtypes": [
+            "page"
+          ],
+          "select": "document"
+        },
+        "type": "Link"
+      },
+      "link": {
+        "config": {
+          "label": "link",
+          "placeholder": "",
+          "allowTargetBlank": false
+        },
+        "type": "Link"
       }
     }
   }

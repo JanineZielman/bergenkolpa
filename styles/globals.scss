@@ -23,6 +23,7 @@ body {
   font-family: favorit, sans-serif;
   position: relative;
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -36,7 +37,7 @@ a {
 
 .main-container{
   margin:0;
-  padding: 135px 48px 0 48px;
+  padding: 115px 48px 0 48px;
   position: relative;
 }
 
@@ -59,12 +60,66 @@ a {
     }
   }
   .menu-items{
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     .menu-item {
-      padding: 21px 36px;
+      padding: 21px 0px;
       font-size: 21px;
       font-weight: 400;
+      position: relative;
+      text-align: left;
+      width: 100%;
+      a{
+        padding: 21px 36px;
+      }
+      .dropdown {
+        a {
+          display: block;
+          padding: 10px 0px;
+        }
+      }
+      .Collapsible{
+        width: 100%;
+        padding: 0px 36px;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        span{
+          &.is-closed:after{
+            content: " ";
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            position: absolute;
+            right: 36px;
+            top: 28px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+          &.is-open:after {
+            content: " ";
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            position: absolute;
+            right: 36px;
+            top: 30px;
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+          }
+        }
+        .Collapsible__contentOuter{
+          margin-top: 10px;
+          background-color: white;
+          padding: 0px 36px;
+          width: 100%;
+        }
+      }
     }
   }
   .language-switcher{

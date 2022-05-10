@@ -1,0 +1,37 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "nav_item",
+    "items": [
+      {
+        "subLabel": "e-enable scalable solutions",
+        "subLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "subLabel": "evolve enterprise platforms",
+        "subLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "subLabel": "facilitate clicks-and-mortar experiences",
+        "subLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      }
+    ],
+    "primary": {
+      "label": "facilitate global e-commerce",
+      "link": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      }
+    }
+  }
+]

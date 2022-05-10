@@ -2,39 +2,20 @@
   "id": "menu",
   "label": "Menu",
   "repeatable": false,
+  "status": true,
   "json": {
     "Main": {
-      "title": {
-        "type": "StructuredText",
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
         "config": {
-          "placeholder": "Menu title...",
-          "single": "heading1"
-        }
-      },
-      "menu_links": {
-        "type": "Group",
-        "config": {
-          "fields": {
-            "label": {
-              "type": "StructuredText",
-              "config": {
-                "single": "paragraph",
-                "label": "Link Label",
-                "placeholder": "Link Label..."
-              }
-            },
-            "link": {
-              "type": "Link",
-              "config": {
-                "label": "Link",
-                "placeholder": "Select a Link..."
-              }
+          "choices": {
+            "nav_item": {
+              "type": "SharedSlice"
             }
-          },
-          "label": "Menu Links"
+          }
         }
       }
     }
-  },
-  "status": true
+  }
 }

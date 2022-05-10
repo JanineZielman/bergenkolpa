@@ -1,5 +1,7 @@
 import Link from "next/link"
 import LanguageSwitcher from "./language"
+import React from 'react';
+import Collapsible from 'react-collapsible';
 
 const Layout = ({children, altLangs, menu, lang}) => {
 	console.log('menu', menu)
@@ -18,12 +20,27 @@ const Layout = ({children, altLangs, menu, lang}) => {
 					</Link>
 				</div>
 				<div className="menu-items">
-					{menu.menu_links.map((item, i) => {
+					{menu.slices.map((item, i) => {
 						return(
 							<div className="menu-item">
-								<Link href={'/'+item.link.uid}>
-									<a>{item.label[0].text}</a>
-								</Link>
+								{item.items.length > 1 ?
+									<div className="dropdown">
+										<Collapsible trigger={item.primary.label}>
+											{item.items.map((sub, i) => {
+												return(
+													<Link href={'/'+sub.subLink.slug+'#projects'}>
+														<a>{sub.subLabel}</a>
+													</Link>
+												)
+											})}
+										</Collapsible>
+									</div>
+								:
+									<Link href={'/'+item.primary.link.uid}>
+										<a>{item.primary.label}</a>
+									</Link>
+								}
+							
 							</div>
 						)
 					})}

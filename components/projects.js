@@ -4,7 +4,7 @@ import { RichText } from 'prismic-reactjs'
 const Projects = ({projects}) => {
 	console.log(projects)
   return(
-		<section className="projects">
+		<section className="projects" id="projects">
 			{projects.map((item,i) => {
 				return(
 					<div className="project-item">

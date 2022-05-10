@@ -2,7 +2,20 @@
   "_cts": {
     "footer": {},
     "homepage": {},
-    "bureau": {},
+    "bureau": {
+      "intro": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "contact": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
     "project": {
       "cover-text": {
         "config": {
@@ -10,7 +23,9 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "menu": {},
+    "page": {}
   },
   "slices": {
     "Slider": [
@@ -121,6 +136,64 @@
           }
         ],
         "primary": {}
+      }
+    ],
+    "NavItem": [
+      {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "nav_item",
+        "items": [
+          {
+            "subLabel": "reinvent e-business schemas",
+            "subLink": {
+              "link_type": "Web",
+              "url": "https://prismic.io"
+            }
+          },
+          {
+            "subLabel": "target robust platforms",
+            "subLink": {
+              "link_type": "Web",
+              "url": "https://prismic.io"
+            }
+          },
+          {
+            "subLabel": "disintermediate out-of-the-box architectures",
+            "subLink": {
+              "link_type": "Web",
+              "url": "https://slicemachine.dev"
+            }
+          },
+          {
+            "subLabel": "streamline B2C synergies",
+            "subLink": {
+              "link_type": "Web",
+              "url": "http://google.com"
+            }
+          },
+          {
+            "subLabel": "deploy sticky technologies",
+            "subLink": {
+              "link_type": "Web",
+              "url": "https://prismic.io"
+            }
+          },
+          {
+            "subLabel": "unleash front-end technologies",
+            "subLink": {
+              "link_type": "Web",
+              "url": "http://google.com"
+            }
+          }
+        ],
+        "primary": {
+          "label": "transition innovative e-business",
+          "link": {
+            "link_type": "Web",
+            "url": "https://slicemachine.dev"
+          }
+        }
       }
     ]
   }

@@ -7,45 +7,28 @@ import * as Slices from "../slices";
 const resolver = ({ sliceName }) => Slices[sliceName];
 
 import Layout from "../components/layout"
-import Projects from "../components/projects"
-
 
 const Page = (props) => {
-  const {doc, menu, projects, homepage} = props
+  const {doc, menu} = props
   console.log(doc)
-  
   return(
    <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang}>
-    <SliceZone slices={props.homepage} resolver={resolver} />
-    <Projects projects={projects}/>
+     {doc.data.title}
    </Layout>
+    // <SliceZone slices={props.slices} resolver={resolver} />
   )
 }
 
 export async function getStaticProps({ params, locale }) {
   const client = createClient();
-  const prismic = require("@prismicio/client");
 
-  const homepage = await client.getByUID("homepage", "home", { lang: locale });
-  const page = await client.getByUID("page", params.uid, { lang: locale });
+  const page = await client.getByUID("project", params.uid, { lang: locale });
   const menu = await client.getSingle("menu");
-  // const projects = await client.getAllByType('project' );
-
-  const projects = await client.getAllByType('project', {
-    predicates: [
-      prismic.predicate.at(
-        'my.project.link',
-        'YnpyvBEAACIAsWAi'
-      ),
-    ],
-  })
 
   return {
     props: {
-      homepage: homepage.data.slices,
       menu: menu.data,
       doc: page,
-      projects: projects,
     },
   };
 }
@@ -53,7 +36,7 @@ export async function getStaticProps({ params, locale }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const documents = await client.getAllByType("page", { lang: "*" });
+  const documents = await client.getAllByType("project", { lang: "*" });
 
   return {
     paths: documents.map((doc) => {

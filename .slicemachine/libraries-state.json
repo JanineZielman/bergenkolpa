@@ -1,6 +1,110 @@
 {
   "slices": {
     "components": {
+      "nav_item": {
+        "library": "slices",
+        "id": "nav_item",
+        "name": "NavItem",
+        "description": "NavItem",
+        "model": {
+          "id": "nav_item",
+          "type": "SharedSlice",
+          "name": "NavItem",
+          "description": "NavItem",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "NavItem",
+              "primary": {
+                "label": {
+                  "config": {
+                    "label": "label",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "link": {
+                  "config": {
+                    "label": "link",
+                    "placeholder": "",
+                    "allowTargetBlank": false
+                  },
+                  "type": "Link"
+                }
+              },
+              "items": {
+                "subLabel": {
+                  "config": {
+                    "label": "sub label",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "subLink": {
+                  "config": {
+                    "label": "sub link",
+                    "placeholder": "",
+                    "allowTargetBlank": false
+                  },
+                  "type": "Link"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "nav_item",
+            "items": [
+              {
+                "subLabel": "e-enable scalable solutions",
+                "subLink": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              },
+              {
+                "subLabel": "evolve enterprise platforms",
+                "subLink": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              },
+              {
+                "subLabel": "facilitate clicks-and-mortar experiences",
+                "subLink": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              }
+            ],
+            "primary": {
+              "label": "facilitate global e-commerce",
+              "link": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/NavItem/default-slice/preview.png",
+            "width": 800,
+            "height": 70
+          }
+        }
+      },
       "slider": {
         "library": "slices",
         "id": "slider",

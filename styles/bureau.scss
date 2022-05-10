@@ -1,0 +1,25 @@
+.bureau{
+	display: flex;
+	flex-wrap: wrap;
+	h2{
+		margin: 0;
+		font-size: 36px;
+		font-weight: 400;
+	}
+	.content{
+		border-top: 2px solid black;
+	}
+	.intro{
+		width: 60%;
+		p{
+			font-size: 36px;
+		}
+	}
+	.contact{
+		width: 35%;
+		margin-left: 5%;
+		p {
+			font-size: 28px;
+		}
+	}
+}
