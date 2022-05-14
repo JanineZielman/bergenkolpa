@@ -8,10 +8,10 @@ import Layout from "../components/layout"
 import Projects from "../components/projects"
 
 const Page = (props) => {
-  const {doc, menu, projects, slices} = props
+  const {doc, menu, projects, slices, footer} = props
   console.log('projects', projects)
   return(
-    <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang}>
+    <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer}>
       <SliceZone slices={props.slices} resolver={resolver} />
       <Projects projects={projects}/>
     </Layout>
@@ -24,12 +24,14 @@ export async function getStaticProps({ locale }) {
 
   const page = await client.getByUID("homepage", "home", { lang: locale });
   const menu = await client.getSingle("menu");
+  const footer = await client.getSingle("footer");
   const projects = await client.getAllByType('project');
 
   return {
     props: {
       menu: menu.data,
       doc: page,
+      footer: footer,
       slices: page.data.slices,
       projects: projects
     },

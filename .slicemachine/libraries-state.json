@@ -1,6 +1,91 @@
 {
   "slices": {
     "components": {
+      "footer": {
+        "library": "slices",
+        "id": "footer",
+        "name": "Footer",
+        "description": "Footer",
+        "model": {
+          "id": "footer",
+          "type": "SharedSlice",
+          "name": "Footer",
+          "description": "Footer",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Footer",
+              "primary": {},
+              "items": {
+                "text": {
+                  "config": {
+                    "label": "text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  },
+                  "type": "StructuredText"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "footer",
+            "items": [
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Eiusmod est exercitation aliquip sunt mollit est. Ut ipsum cupidatat adipisicing incididunt commodo proident eiusmod sit fugiat. Non ad nostrud mollit ea aute.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Aute voluptate exercitation mollit dolor adipisicing elit occaecat adipisicing. Magna consequat est consectetur laboris dolore ullamco sint. Cupidatat duis cupidatat est qui excepteur aliquip ex culpa exercitation velit laborum.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Dolore laboris in ex quis ad esse quis cupidatat sint sint ullamco laboris cillum sit laborum.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Qui duis culpa exercitation dolor sint tempor esse magna sit.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {}
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "nav_item": {
         "library": "slices",
         "id": "nav_item",

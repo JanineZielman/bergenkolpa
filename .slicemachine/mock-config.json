@@ -196,6 +196,19 @@
           }
         }
       }
-    ]
+    ],
+    "Footer": {
+      "default-slice": {
+        "primary": {},
+        "items": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   }
 }

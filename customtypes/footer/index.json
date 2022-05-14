@@ -4,6 +4,18 @@
   "repeatable": false,
   "status": true,
   "json": {
-    "Main": {}
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "footer": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
   }
 }

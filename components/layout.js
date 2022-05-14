@@ -1,10 +1,10 @@
 import Link from "next/link"
 import LanguageSwitcher from "./language"
 import React from 'react';
+import { RichText } from 'prismic-reactjs'
 import Collapsible from 'react-collapsible';
 
-const Layout = ({children, altLangs, menu, lang}) => {
-	console.log('menu', menu)
+const Layout = ({children, altLangs, menu, lang, footer}) => {
   return(
 		<section className="main-container">
 			<div className="menu">
@@ -36,7 +36,7 @@ const Layout = ({children, altLangs, menu, lang}) => {
 										</Collapsible>
 									</div>
 								:
-									<Link href={'/'+item.primary.link.uid}>
+									<Link href={'/'+item.primary.link.uid+'#projects'}>
 										<a>{item.primary.label}</a>
 									</Link>
 								}
@@ -48,6 +48,21 @@ const Layout = ({children, altLangs, menu, lang}) => {
 				<LanguageSwitcher altLangs={altLangs} lang={lang}/>
 			</div>
 			{children}
+			<footer>
+				{footer.data.slices.map((item, i) => {
+					return(
+						<div className="column-wrapper">
+							{item.items.map((content, i) => {
+								return(
+									<div className="column">
+										<RichText render={content.text} />
+									</div>
+								)
+							})}
+						</div>
+					)
+				})}
+			</footer>
 		</section>
   )
   
