@@ -1,9 +1,9 @@
 {
-  "id": "62a976c1-07af-496a-9602-dffbe12f89e1",
-  "uid": "odio-et-voluptatibus",
+  "id": "b6cb4750-dc77-4a10-92e4-1a70c9e1348d",
+  "uid": "corrupti-aut-atque",
   "type": "project",
   "data": {
-    "title": "extend enterprise experiences",
+    "title": "transition turn-key synergies",
     "cover-image": {
       "dimensions": {
         "width": 900,
@@ -11,15 +11,15 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
     },
     "cover-text": [
       {
         "type": "heading2",
-        "text": "Iterate viral e-tailers",
+        "text": "Iterate efficient schemas",
         "spans": []
       }
     ],
-    "theme": "sociale_cohesie"
+    "theme": "voedsel"
   }
 }

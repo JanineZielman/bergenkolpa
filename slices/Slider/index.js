@@ -22,17 +22,19 @@ const Slider = ({ slice }) => {
       {slice.items.map((item, i) => {
         return(
           <div className='slide-item'>
-            <div className={`title ${item.position} ${item.color}`}>
-              {item.title}
-            </div>
-            <div className='image img-effect'>
-              <a href={`/theme/${slugify(item.title, {
-                replacement: '_', 
-                lower: true,      // convert to lower case, defaults to `false`
-              })}`}>
-                <img src={item.image.url}/>
-              </a>
-            </div>
+            <a href={`/theme/${slugify(item.title, {
+              replacement: '-', 
+              lower: true,
+            })}#projects`}>
+              <div className={`title ${item.position} ${item.color}`}>
+                {item.title}
+              </div>
+              <div className='image img-effect'>
+              
+                  <img src={item.image.url}/>
+            
+              </div>
+            </a>
             <div className='description'>
               <RichText render={item.description} />
             </div>
