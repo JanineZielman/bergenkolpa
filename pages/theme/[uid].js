@@ -1,16 +1,14 @@
-// import { Client } from "../utils/prismicHelpers";
-import { createClient } from '../prismicConfiguration'
-import { queryRepeatableDocuments } from '../utils/queries';
+import { createClient } from '../../prismicConfiguration'
 import SliceZone from "next-slicezone";
 
-import * as Slices from "../slices";
+import * as Slices from "../../slices";
 const resolver = ({ sliceName }) => Slices[sliceName];
 
-import Layout from "../components/layout"
-import Projects from "../components/projects"
+import Layout from "../../components/layout"
+import Projects from "../../components/projects"
 
 
-const Page = (props) => {
+const Theme = (props) => {
   const {doc, menu, projects, homepage, params} = props
   console.log(params)
   
@@ -27,15 +25,15 @@ export async function getStaticProps({ params, locale }) {
   const prismic = require("@prismicio/client");
 
   const homepage = await client.getByUID("homepage", "home", { lang: locale });
-  const page = await client.getByUID("page", params.uid, { lang: locale });
+  const page = await client.getByUID("theme", params.uid, { lang: locale });
   const menu = await client.getSingle("menu");
   // const projects = await client.getAllByType('project' );
 
   const projects = await client.getAllByType('project', {
     predicates: [
       prismic.predicate.at(
-        'document.tags',
-        [params.uid]
+        'my.project.theme',
+        params.uid
       ),
     ],
   })
@@ -54,7 +52,7 @@ export async function getStaticProps({ params, locale }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const documents = await client.getAllByType("page", { lang: "*" });
+  const documents = await client.getAllByType("theme", { lang: "*" });
 
   return {
     paths: documents.map((doc) => {
@@ -64,4 +62,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default Page;
+export default Theme;

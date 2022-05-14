@@ -36,23 +36,18 @@
         },
         "type": "StructuredText"
       },
-      "linked": {
+      "theme": {
         "config": {
-          "label": "linked",
-          "customtypes": [
-            "page"
-          ],
-          "select": "document"
-        },
-        "type": "Link"
-      },
-      "link": {
-        "config": {
-          "label": "link",
+          "label": "Theme",
           "placeholder": "",
-          "allowTargetBlank": false
+          "options": [
+            "voedsel",
+            "sociale_cohesie",
+            "houtbouw",
+            "circulair"
+          ]
         },
-        "type": "Link"
+        "type": "Select"
       }
     }
   }

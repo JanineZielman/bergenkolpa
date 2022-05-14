@@ -1,0 +1,15 @@
+@media only screen and (max-width: 600px) {
+	.main-container{
+		padding: 0;
+	}
+	.slick-slider {
+		height: calc(100vh - 80px);
+		width: 100%;
+	
+		.slick-slide {
+			.description{
+				width: auto;
+			}
+		}
+	}
+}

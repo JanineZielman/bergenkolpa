@@ -3,15 +3,17 @@ import { RichText } from 'prismic-reactjs'
 import Slick from "react-slick";
 
 const Slider = ({ slice }) => {
-  console.log(slice)
+  var slugify = require('slugify')
   const settings = {
     dots: true,
     arrows: true,
     infinite: true,
     speed: 500,
-    // slidesToShow: 1,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    variableWidth: true,
+    // fade: true,
+    lazyLoad: true,
+    // variableWidth: true,
     autoplay: true,
     autoplaySpeed: 4000,
   };
@@ -23,8 +25,13 @@ const Slider = ({ slice }) => {
             <div className={`title ${item.position} ${item.color}`}>
               {item.title}
             </div>
-            <div className='image'>
-              <img src={item.image.url}/>
+            <div className='image img-effect'>
+              <a href={`/theme/${slugify(item.title, {
+                replacement: '_', 
+                lower: true,      // convert to lower case, defaults to `false`
+              })}`}>
+                <img src={item.image.url}/>
+              </a>
             </div>
             <div className='description'>
               <RichText render={item.description} />

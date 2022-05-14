@@ -1,9 +1,9 @@
 {
-  "id": "59d07480-92f7-4b18-8648-4b007eb0347d",
-  "uid": "omnis-sint-deleniti",
+  "id": "62a976c1-07af-496a-9602-dffbe12f89e1",
+  "uid": "odio-et-voluptatibus",
   "type": "project",
   "data": {
-    "title": "streamline sexy blockchains",
+    "title": "extend enterprise experiences",
     "cover-image": {
       "dimensions": {
         "width": 900,
@@ -11,22 +11,15 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
     },
     "cover-text": [
       {
         "type": "heading2",
-        "text": "Deploy rich e-business",
+        "text": "Iterate viral e-tailers",
         "spans": []
       }
     ],
-    "linked": {
-      "link_type": "Web",
-      "url": "http://twitter.com"
-    },
-    "link": {
-      "link_type": "Web",
-      "url": "http://google.com"
-    }
+    "theme": "sociale_cohesie"
   }
 }

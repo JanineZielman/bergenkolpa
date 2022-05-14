@@ -1,0 +1,17 @@
+{
+  "id": "theme",
+  "label": "Theme",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        },
+        "type": "UID"
+      }
+    }
+  }
+}

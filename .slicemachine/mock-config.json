@@ -25,7 +25,8 @@
       }
     },
     "menu": {},
-    "page": {}
+    "page": {},
+    "theme": {}
   },
   "slices": {
     "Slider": [
