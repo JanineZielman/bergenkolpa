@@ -25,9 +25,7 @@ const Projects = ({projects}) => {
     slidesToShow: 1,
     slidesToScroll: 1,
 		variableWidth: true,
-    // fade: true,
     lazyLoad: true,
-    // variableWidth: true,
     autoplay: true,
     autoplaySpeed: 4000,
   };
@@ -55,7 +53,7 @@ const Projects = ({projects}) => {
 								<RichText render={item.data['description']} />
 							</div>
 						</div>
-						{item.data['caption'] && 
+						{item.data.caption[0] && 
 							<div className="caption">
 								<div>Caption</div>
 								<RichText render={item.data['caption']} />
