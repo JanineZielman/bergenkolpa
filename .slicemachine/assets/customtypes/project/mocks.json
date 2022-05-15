@@ -1,9 +1,9 @@
 {
-  "id": "b6cb4750-dc77-4a10-92e4-1a70c9e1348d",
-  "uid": "corrupti-aut-atque",
+  "id": "ffe143ea-0cfd-4bbf-acc6-ef6d92de1f15",
+  "uid": "saepe-animi-vel",
   "type": "project",
   "data": {
-    "title": "transition turn-key synergies",
+    "title": "deliver virtual users",
     "cover-image": {
       "dimensions": {
         "width": 900,
@@ -11,15 +11,29 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
     },
     "cover-text": [
       {
         "type": "heading2",
-        "text": "Iterate efficient schemas",
+        "text": "Disintermediate next-generation models",
         "spans": []
       }
     ],
-    "theme": "voedsel"
+    "theme": "circulair",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Ad esse do amet eu exercitation do nisi magna minim id aute amet. Deserunt ea esse amet aute amet aliquip excepteur esse duis fugiat minim Lorem magna officia qui.",
+        "spans": []
+      }
+    ],
+    "caption": [
+      {
+        "type": "paragraph",
+        "text": "Consectetur duis proident pariatur do non adipisicing Lorem velit tempor pariatur elit amet et dolor. Reprehenderit amet in commodo incididunt duis id.",
+        "spans": []
+      }
+    ]
   }
 }

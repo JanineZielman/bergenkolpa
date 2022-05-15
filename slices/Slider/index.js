@@ -30,9 +30,7 @@ const Slider = ({ slice }) => {
                 {item.title}
               </div>
               <div className='image img-effect'>
-              
-                  <img src={item.image.url}/>
-            
+                <img src={item.image.url}/>
               </div>
             </a>
             <div className='description'>

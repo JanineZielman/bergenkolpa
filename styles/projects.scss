@@ -1,17 +1,85 @@
 .projects{
 	padding-top: 120px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-auto-flow: dense;
-	grid-template-rows: masonry;
-	gap: 24px;
+	display: flex;
+	flex-wrap: wrap;
+	// justify-content: center;
 	.project-item{
-		margin: 0;
+		margin-bottom: 24px;
+		margin-right: 24px;
+		width: calc(33% - 22px);
+		transition: width 1s linear;
+		position: relative;
+		.description, .caption, .extra-info{
+			display: none;
+		}
+		&.selected{
+			width: 100%;
+			.title{
+				display: flex;
+				justify-content: space-between;
+				&:after{
+					content: "x";
+					cursor: pointer;
+				}
+			}
+			.flex{
+				display: flex;
+			}
+			.cover{
+				width: 65%;
+			}
+			.description{
+				width: 31%;
+				margin-left: 4%;
+				display: block;
+				font-size: 20px;
+			}
+			.caption{
+				margin: 36px 0;
+				display: flex;
+				align-items: flex-start;
+				p{
+					width: 65%;
+					font-size: 48px;
+					margin: 0;
+					line-height: 1.1;
+				}
+				div{
+					width: 30%;
+					margin-right: 5%;
+					border-top: 2px solid black;
+					font-size: 18px;
+					padding-top: 5px;
+				}
+			}
+			.extra-info{
+				display: block;
+				margin: 24px 0 48px 0;
+				.slick-slider{
+					height: auto;
+				}
+				.slick-slide{
+					margin-right: 48px;
+				}
+				.info{
+					margin-top: 24px;
+					margin-left: 10%;
+					display: flex;
+					justify-content: flex-end;
+					width: 90%;
+					div{
+						width: 30%;
+						margin-left: 24px;
+					}
+				}
+			}
+		}
 		h2{
 			margin: 0;
 		}
 		.title {
 			font-size: 34px;
+			cursor: pointer;
 			border-bottom: 2px solid #000;
 		}
 		height: auto;
