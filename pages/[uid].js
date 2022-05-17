@@ -27,7 +27,7 @@ export async function getStaticProps({ params, locale }) {
   const prismic = require("@prismicio/client");
 
   const homepage = await client.getByUID("homepage", "home", { lang: locale });
-  const page = await client.getByUID("page", params.uid, { lang: locale });
+  const page = await client.getByUID("tag", params.uid, { lang: locale });
   const menu = await client.getSingle("menu");
   const footer = await client.getSingle("footer");
   // const projects = await client.getAllByType('project' );
@@ -35,8 +35,8 @@ export async function getStaticProps({ params, locale }) {
   const projects = await client.getAllByType('project', {
     predicates: [
       prismic.predicate.at(
-        'document.tags',
-        [params.uid]
+        'my.project.category',
+        params.uid
       ),
     ],
   })
@@ -56,7 +56,7 @@ export async function getStaticProps({ params, locale }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const documents = await client.getAllByType("page", { lang: "*" });
+  const documents = await client.getAllByType("tag", { lang: "*" });
 
   return {
     paths: documents.map((doc) => {

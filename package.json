@@ -31,7 +31,7 @@
   "devDependencies": {
     "@prismicio/slice-simulator-react": "^0.1.1",
     "shx": "^0.3.3",
-    "slice-machine-ui": "^0.2.0",
+    "slice-machine-ui": "^0.3.7",
     "sm-commons": "^0.0.23"
   }
 }

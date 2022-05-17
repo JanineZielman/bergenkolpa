@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import LanguageSwitcher from "./language"
 import React from 'react';
 import { RichText } from 'prismic-reactjs'
@@ -11,11 +12,7 @@ const Layout = ({children, altLangs, menu, lang, footer}) => {
 				<div className="logo">
 					<Link href="/">
 						<a>
-							<h1>
-								van<br/>
-								Bergen Kolpa<br/>
-								Architecten
-							</h1>
+							<img src="logo.svg"/>
 						</a>
 					</Link>
 				</div>

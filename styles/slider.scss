@@ -2,8 +2,13 @@
 	height: calc(100vh - 80px);
 	position: relative;
 	overflow-y: hidden;
+	.slick-list {
+		margin: 0 -20px;
+	}
+	.slick-slide>div {
+		padding: 0 20px;
+	}
 	.slick-slide{
-		// margin-right: 48px;
 		position: relative;
 		height: 100%;
 		.slide-item {

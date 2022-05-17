@@ -8,14 +8,14 @@ const Slider = ({ slice }) => {
     dots: true,
     arrows: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     // fade: true,
     lazyLoad: true,
     // variableWidth: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 5000,
   };
   return(
    <Slick {...settings}>
@@ -29,7 +29,7 @@ const Slider = ({ slice }) => {
               <div className={`title ${item.position} ${item.color}`}>
                 {item.title}
               </div>
-              <div className='image img-effect'>
+              <div className='image'>
                 <img src={item.image.url}/>
               </div>
             </a>

@@ -34,8 +34,14 @@ const Projects = ({projects}) => {
 		<section className="projects" id="projects">
 			{projects.map((item,i) => {
 				return(
-					<div className="project-item" id={item.uid}>
+					<div className={`project-item ${item.data.themes[0].theme}`} id={item.uid}>
 						<div className="title" onClick={ToggleClass}>{item.data.title}</div>
+						<div className="tags">
+							<a href={item.data.category + '#projects'}>{item.data.category}</a>
+							{item.data.themes.map((item,i) => (
+								<a href={'theme/' + item.theme + '#projects'}>{item.theme.replace('-', ' ')}</a>
+							))}
+						</div>
 						<div className="flex">
 							<div className="cover">
 								{item.data['cover-image'].url && 
@@ -45,8 +51,8 @@ const Projects = ({projects}) => {
 										</div>
 									</LazyLoad>
 								}
-								{item.data['cover-text'] &&
-									<h2><RichText render={item.data['cover-text']} /></h2>
+								{item.data['cover-text'][0] &&
+									<h2 className="img-effect"><RichText render={item.data['cover-text']} /></h2>
 								}
 							</div>
 							<div className="description">
@@ -61,11 +67,10 @@ const Projects = ({projects}) => {
 						}
 						<div className="extra-info">
 							{item.data.slices.map((slice,i) => {
-								console.log(slice)
 								return(
 									<>
 									{slice.slice_type == 'images' && 
-										<div className="images">
+										<div className="images" id={'images'+i}>
 											<Slick {...settings}>
 													{slice.items.map((item,i) => {
 														return(
@@ -78,7 +83,7 @@ const Projects = ({projects}) => {
 										</div>
 									}
 									{slice.slice_type == 'info' && 
-										<div className="info">
+										<div className="info" id={'info'+i}>
 											{slice.items.map((item,i) => {
 												return(
 													<div>

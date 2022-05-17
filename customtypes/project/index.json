@@ -12,6 +12,41 @@
         },
         "type": "UID"
       },
+      "category": {
+        "config": {
+          "label": "Category",
+          "placeholder": "",
+          "options": [
+            "wonen",
+            "publiek",
+            "agricultuur",
+            "gebiedsontwerp",
+            "onderzoek"
+          ]
+        },
+        "type": "Select"
+      },
+      "themes": {
+        "type": "Group",
+        "config": {
+          "label": "Themes",
+          "fields": {
+            "theme": {
+              "type": "Select",
+              "config": {
+                "label": "Theme",
+                "placeholder": "",
+                "options": [
+                  "sociale-cohesie",
+                  "circulair",
+                  "houtbouw",
+                  "voedsel"
+                ]
+              }
+            }
+          }
+        }
+      },
       "title": {
         "config": {
           "label": "Title",
@@ -35,19 +70,6 @@
           "single": "heading2"
         },
         "type": "StructuredText"
-      },
-      "theme": {
-        "config": {
-          "label": "Theme",
-          "placeholder": "",
-          "options": [
-            "voedsel",
-            "sociale-cohesie",
-            "houtbouw",
-            "circulair"
-          ]
-        },
-        "type": "Select"
       },
       "description": {
         "config": {

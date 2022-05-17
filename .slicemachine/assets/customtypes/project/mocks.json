@@ -1,9 +1,10 @@
 {
-  "id": "ffe143ea-0cfd-4bbf-acc6-ef6d92de1f15",
-  "uid": "saepe-animi-vel",
+  "id": "155eb751-4008-402b-963d-fd5948952fc7",
+  "uid": "inventore-natus-ex",
   "type": "project",
   "data": {
-    "title": "deliver virtual users",
+    "category": "onderzoek",
+    "title": "repurpose 24/365 platforms",
     "cover-image": {
       "dimensions": {
         "width": 900,
@@ -11,28 +12,38 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
     },
     "cover-text": [
       {
         "type": "heading2",
-        "text": "Disintermediate next-generation models",
+        "text": "Generate cutting-edge experiences",
         "spans": []
       }
     ],
-    "theme": "circulair",
     "description": [
       {
         "type": "paragraph",
-        "text": "Ad esse do amet eu exercitation do nisi magna minim id aute amet. Deserunt ea esse amet aute amet aliquip excepteur esse duis fugiat minim Lorem magna officia qui.",
+        "text": "Consectetur do est nisi ad incididunt ut exercitation. Veniam enim sint voluptate do Lorem non ea aute ipsum labore deserunt proident sit ad deserunt. Et anim minim labore et.",
         "spans": []
       }
     ],
     "caption": [
       {
         "type": "paragraph",
-        "text": "Consectetur duis proident pariatur do non adipisicing Lorem velit tempor pariatur elit amet et dolor. Reprehenderit amet in commodo incididunt duis id.",
+        "text": "Laborum eu exercitation aute sint labore est officia et laboris veniam adipisicing labore enim. Qui commodo quis eu laboris quis tempor pariatur. Ex reprehenderit reprehenderit pariatur nulla ex.",
         "spans": []
+      }
+    ],
+    "themes": [
+      {
+        "theme": "sociale-cohesie"
+      },
+      {
+        "theme": "sociale-cohesie"
+      },
+      {
+        "theme": "sociale-cohesie"
       }
     ]
   }
