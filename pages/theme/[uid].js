@@ -10,7 +10,7 @@ import Projects from "../../components/projects"
 
 const Theme = (props) => {
   const {doc, menu, projects, homepage, params, footer} = props
-  console.log(params)
+
   return(
    <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer}>
     <SliceZone slices={props.homepage} resolver={resolver} />

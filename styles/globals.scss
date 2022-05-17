@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: circular;
-  src: url(/fonts/circular-book.woff2);
-  font-weight: 400;
+  src: url(/fonts/circular-book.otf);
+  font-weight: 300;
 }
 
 html,
@@ -28,7 +28,6 @@ body {
   margin: 0;
   font-family: circular, sans-serif;
   position: relative;
-  font-weight: 400;
   scroll-padding-top: 115px;
   scroll-behavior: smooth;
 }
@@ -72,14 +71,14 @@ a {
     display: flex;
     justify-content: center;
     .menu-item {
-      padding: 21px 0px;
+      padding: 17px 0px;
       font-size: 18px;
       font-weight: 400;
       position: relative;
       text-align: left;
       width: 100%;
       a{
-        padding: 21px 2vw;
+        padding: 0px 2vw;
       }
       // .dropdown {
       //   a {
@@ -203,7 +202,7 @@ footer{
   &::after {
     content: " ";
     position: absolute;
-    width: 20px;
+    width: 0;
     height: 100%;
     // background-color: #fff;
     z-index: 5;
@@ -244,6 +243,6 @@ footer{
   }
 
   100% {
-    width: 20px;
+    width: 0;
   }
 }

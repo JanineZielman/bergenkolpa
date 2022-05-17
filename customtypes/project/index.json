@@ -12,19 +12,28 @@
         },
         "type": "UID"
       },
-      "category": {
+      "categories": {
+        "type": "Group",
         "config": {
-          "label": "Category",
-          "placeholder": "",
-          "options": [
-            "wonen",
-            "publiek",
-            "agricultuur",
-            "gebiedsontwerp",
-            "onderzoek"
-          ]
-        },
-        "type": "Select"
+          "label": "Categories",
+          "fields": {
+            "category": {
+              "type": "Select",
+              "config": {
+                "label": "Category",
+                "placeholder": "",
+                "options": [
+                  "wonen",
+                  "publiek",
+                  "agricultuur",
+                  "gebiedsontwerp",
+                  "onderzoek",
+                  "bouwrealisaties"
+                ]
+              }
+            }
+          }
+        }
       },
       "themes": {
         "type": "Group",

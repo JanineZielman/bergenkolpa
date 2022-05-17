@@ -1,10 +1,9 @@
 {
-  "id": "155eb751-4008-402b-963d-fd5948952fc7",
-  "uid": "inventore-natus-ex",
+  "id": "acc3fb92-8db1-485c-a466-d5f91b14ffe1",
+  "uid": "porro-temporibus-voluptates",
   "type": "project",
   "data": {
-    "category": "onderzoek",
-    "title": "repurpose 24/365 platforms",
+    "title": "reintermediate open-source platforms",
     "cover-image": {
       "dimensions": {
         "width": 900,
@@ -12,38 +11,64 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
     },
     "cover-text": [
       {
         "type": "heading2",
-        "text": "Generate cutting-edge experiences",
+        "text": "Envisioneer customized functionalities",
         "spans": []
       }
     ],
     "description": [
       {
         "type": "paragraph",
-        "text": "Consectetur do est nisi ad incididunt ut exercitation. Veniam enim sint voluptate do Lorem non ea aute ipsum labore deserunt proident sit ad deserunt. Et anim minim labore et.",
+        "text": "Labore officia proident amet cupidatat ipsum.",
         "spans": []
       }
     ],
     "caption": [
       {
         "type": "paragraph",
-        "text": "Laborum eu exercitation aute sint labore est officia et laboris veniam adipisicing labore enim. Qui commodo quis eu laboris quis tempor pariatur. Ex reprehenderit reprehenderit pariatur nulla ex.",
+        "text": "Duis aliquip officia pariatur quis enim do.",
         "spans": []
+      }
+    ],
+    "categories": [
+      {
+        "category": "agricultuur"
+      },
+      {
+        "category": "agricultuur"
+      },
+      {
+        "category": "agricultuur"
+      },
+      {
+        "category": "bouwrealisaties"
+      },
+      {
+        "category": "wonen"
+      },
+      {
+        "category": "publiek"
       }
     ],
     "themes": [
       {
-        "theme": "sociale-cohesie"
+        "theme": "houtbouw"
+      },
+      {
+        "theme": "voedsel"
+      },
+      {
+        "theme": "voedsel"
       },
       {
         "theme": "sociale-cohesie"
       },
       {
-        "theme": "sociale-cohesie"
+        "theme": "circulair"
       }
     ]
   }

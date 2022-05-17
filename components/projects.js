@@ -37,8 +37,10 @@ const Projects = ({projects}) => {
 					<div className={`project-item ${item.data.themes[0].theme}`} id={item.uid}>
 						<div className="title" onClick={ToggleClass}>{item.data.title}</div>
 						<div className="tags">
-							<a href={item.data.category + '#projects'}>{item.data.category}</a>
-							{item.data.themes.map((item,i) => (
+							{item.data.categories?.map((item,i) => (
+								<a href={item.category + '#projects'}>{item.category}</a>
+							))}
+							{item.data.themes?.map((item,i) => (
 								<a href={'theme/' + item.theme + '#projects'}>{item.theme.replace('-', ' ')}</a>
 							))}
 						</div>
