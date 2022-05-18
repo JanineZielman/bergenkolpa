@@ -1,9 +1,9 @@
 {
-  "id": "acc3fb92-8db1-485c-a466-d5f91b14ffe1",
-  "uid": "porro-temporibus-voluptates",
+  "id": "027ece05-86e6-460a-9710-83371e6abfd6",
+  "uid": "voluptatem-hic-voluptas",
   "type": "project",
   "data": {
-    "title": "reintermediate open-source platforms",
+    "title": "iterate strategic infrastructures",
     "cover-image": {
       "dimensions": {
         "width": 900,
@@ -11,26 +11,26 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
     },
     "cover-text": [
       {
         "type": "heading2",
-        "text": "Envisioneer customized functionalities",
+        "text": "Implement out-of-the-box systems",
         "spans": []
       }
     ],
     "description": [
       {
         "type": "paragraph",
-        "text": "Labore officia proident amet cupidatat ipsum.",
+        "text": "Laborum amet exercitation occaecat dolore qui fugiat eu amet velit magna magna eu. Aliquip officia ipsum nisi voluptate sit culpa deserunt proident ea nulla labore est eu et. Officia est consequat amet quis deserunt mollit enim.",
         "spans": []
       }
     ],
     "caption": [
       {
         "type": "paragraph",
-        "text": "Duis aliquip officia pariatur quis enim do.",
+        "text": "Quis velit incididunt in et commodo. Amet labore non esse sunt pariatur esse qui.",
         "spans": []
       }
     ],
@@ -39,19 +39,13 @@
         "category": "agricultuur"
       },
       {
-        "category": "agricultuur"
-      },
-      {
-        "category": "agricultuur"
-      },
-      {
-        "category": "bouwrealisaties"
-      },
-      {
         "category": "wonen"
       },
       {
-        "category": "publiek"
+        "category": "agricultuur"
+      },
+      {
+        "category": "wonen"
       }
     ],
     "themes": [
@@ -59,7 +53,7 @@
         "theme": "houtbouw"
       },
       {
-        "theme": "voedsel"
+        "theme": "circulair"
       },
       {
         "theme": "voedsel"
@@ -68,7 +62,10 @@
         "theme": "sociale-cohesie"
       },
       {
-        "theme": "circulair"
+        "theme": "voedsel"
+      },
+      {
+        "theme": "sociale-cohesie"
       }
     ]
   }
