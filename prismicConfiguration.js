@@ -35,8 +35,12 @@ export function linkResolver(doc) {
   switch (doc.type) {
     case 'home':
       return '/'
-    case 'project':
+    case 'page':
       return `/${doc.uid}`
+    case 'tag':
+      return `/${doc.uid}`
+    case 'project':
+      return `/#${doc.uid}`
     default:
       return null
   }
