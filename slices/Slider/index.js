@@ -11,7 +11,7 @@ const Slider = ({ slice }) => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // fade: true,
+    fade: true,
     lazyLoad: true,
     // variableWidth: true,
     autoplay: true,
