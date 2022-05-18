@@ -19,8 +19,8 @@ const Theme = (props) => {
   )
 }
 
-export async function getStaticProps({ params, locale }) {
-  const client = createClient();
+export async function getStaticProps({ params, locale, previewData }) {
+  const client = createClient({ previewData })
   const prismic = require("@prismicio/client");
 
   const homepage = await client.getByUID("homepage", "home", { lang: locale });
@@ -50,8 +50,8 @@ export async function getStaticProps({ params, locale }) {
   };
 }
 
-export async function getStaticPaths() {
-  const client = createClient();
+export async function getStaticPaths({previewData}) {
+  const client = createClient({ previewData })
 
   const documents = await client.getAllByType("theme", { lang: "*" });
 

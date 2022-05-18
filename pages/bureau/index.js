@@ -31,8 +31,8 @@ const Bureau = (props) => {
   
 }
 
-export async function getStaticProps({ locale }) {
-  const client = createClient();
+export async function getStaticProps({ locale, previewData }) {
+  const client = createClient({ previewData })
 
   const page = await client.getSingle("bureau", { lang: locale });
   const menu = await client.getSingle("menu");

@@ -1,6 +1,7 @@
 // import { Client } from './prismicHelpers'
 import { createClient } from '../prismicConfiguration'
 
+
 async function fetchDocs(page = 1, routes = []) {
   const client = createClient()
   const response = await client.query('', { pageSize: 100, lang: '*', page });
