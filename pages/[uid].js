@@ -12,13 +12,13 @@ import Projects from "../components/projects"
 
 const Page = (props) => {
   const {doc, menu, projects, homepage, params, footer} = props
-  console.log(params)
+  console.log(doc)
   
   return(
-   <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer}>
-    <SliceZone slices={props.homepage} resolver={resolver} />
-    <Projects projects={projects}/>
-   </Layout>
+    <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer}>
+      <SliceZone slices={props.homepage} resolver={resolver} />
+      <Projects projects={projects}/>
+    </Layout>
   )
 }
 
@@ -35,7 +35,7 @@ export async function getStaticProps({ params, locale, previewData }) {
   const projects = await client.getAllByType('project', {
     predicates: [
       prismic.predicate.at(
-        'my.project.category',
+        'my.project.categories.category',
         params.uid
       ),
     ],
