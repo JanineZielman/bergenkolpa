@@ -37,8 +37,12 @@ export function linkResolver(doc) {
       return '/'
     case 'page':
       return `/${doc.uid}`
+    case 'bureau':
+      return `/bureau`
     case 'tag':
-      return `/${doc.uid}`
+      return `/${doc.uid}#${doc.uid}`
+    case 'theme':
+      return `/theme/${doc.uid}#${doc.uid}`
     case 'project':
       return `/#${doc.uid}`
     default:
