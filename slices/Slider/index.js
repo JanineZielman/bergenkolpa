@@ -8,11 +8,11 @@ const Slider = ({ slice }) => {
     dots: true,
     arrows: true,
     infinite: true,
-    speed: 1000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    lazyLoad: true,
+    lazyLoad: false,
     autoplay: true,
     autoplaySpeed: 5000,
   };

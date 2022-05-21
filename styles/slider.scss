@@ -13,7 +13,7 @@
 			height: 100%;
 			overflow: hidden;
 			transition: all 0s;
-			transition-delay: 1s;
+			transition-delay: 2s;
 			// position: fixed;
 			.image {
 				display: inline-block;
@@ -138,7 +138,7 @@
 	z-index: 10 !important;
 	.slide-item{
 		width: 100%!important;
-		transition: all 1s;
+		transition: all 2s;
 		.title{
 			opacity: 1;
 		}
