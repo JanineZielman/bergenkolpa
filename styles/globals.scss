@@ -30,6 +30,7 @@ body {
   position: relative;
   scroll-padding-top: 115px;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -131,20 +132,45 @@ a {
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
+    position: relative;
+    width: 40px;
+    height: 36px;
     .current-language a{
-      text-decoration: underline;
+      border-bottom: 1.5px solid black;
     }
-    div{
-      margin-left: 5px;
-      &:after{
-        content: ' /';
-      }
-      &:last-child{
+    .lang{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      &#nl-nl {
+        left: -80px;
         &:after {
-          content: '';
+          content: ' /';
+          padding-left: 5px;
         }
       }
+      &#en-gb{
+        left: -40px;
+        &:after {
+          content: ' /';
+          padding-left: 5px;
+        }
+      }
+      &#zh-cn {
+        margin-left: 0px;
+      }
     }
+    // div{
+    //   &:after{
+    //     content: ' /';
+    //   }
+    //   &:last-child{
+    //     &:after {
+    //       content: '';
+    //     }
+    //   }
+    // }
   }
 }
 

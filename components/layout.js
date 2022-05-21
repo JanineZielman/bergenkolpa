@@ -19,13 +19,13 @@ const Layout = ({children, altLangs, menu, lang, footer}) => {
 				<div className="menu-items">
 					{menu.slices.map((item, i) => {
 						return(
-							<div className="menu-item">
+							<div key={`menuitem${i}`} className="menu-item">
 								{item.items.length > 1 ?
 									<div className="dropdown">
 										<Collapsible trigger={item.primary.label}>
 											{item.items.map((sub, i) => {
 												return(
-													<Link href={'/'+sub.subLink.slug+'#projects'}>
+													<Link key={`menulink${i}`} href={'/'+sub.subLink.slug+'#projects'}>
 														<a>{sub.subLabel}</a>
 													</Link>
 												)
@@ -48,10 +48,10 @@ const Layout = ({children, altLangs, menu, lang, footer}) => {
 			<footer>
 				{footer.data.slices.map((item, i) => {
 					return(
-						<div className="column-wrapper">
+						<div key={`footer${i}`} className="column-wrapper">
 							{item.items.map((content, i) => {
 								return(
-									<div className="column">
+									<div key={`column${i}`} className="column">
 										<RichText render={content.text} />
 									</div>
 								)

@@ -12,7 +12,6 @@ import Projects from "../components/projects"
 
 const Page = (props) => {
   const {doc, menu, projects, homepage, params, footer} = props
-  console.log(doc)
   
   return(
     <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer}>

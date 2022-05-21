@@ -9,26 +9,30 @@
 		width: calc(33% - 22px);
 		transition: width 1s linear;
 		position: relative;
-		.description, .caption, .extra-info{
+		.flex{
+			cursor: pointer;
+		}
+		.description, .caption, .extra-info, .close{
 			display: none;
 		}
 		&.selected{
 			width: 100%;
 			.title{
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				&:after{
-					content: " ";
-					background-image: url(../public/cross.svg);
-					width: 25px;
-					height: 25px;
-					background-repeat: no-repeat;
-					cursor: pointer;
-				}
+				display: inline-block;
+				width: calc(100% - 25px);
+			}
+			.close {
+				display: inline-block;
+				width: 25px;
+				height: 30px;
+				margin-bottom: -13.5px;
+				cursor: pointer;
+				border-bottom: 2px solid black;
+				padding-bottom: 5px;
 			}
 			.flex{
 				display: flex;
+				cursor: default;
 			}
 			.cover{
 				width: 65%;
@@ -105,7 +109,7 @@
 		}
 		.tags{
 			display: flex;
-			justify-content: end;
+			justify-content: flex-end;
 			a{
 				margin-top: 5px;
 				margin-left: 5px;

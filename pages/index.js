@@ -9,7 +9,6 @@ import Projects from "../components/projects"
 
 const Page = (props) => {
   const {doc, menu, projects, slices, footer} = props
-  console.log('projects', projects)
   return(
     <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer}>
       <SliceZone slices={props.slices} resolver={resolver} />
