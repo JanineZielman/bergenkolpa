@@ -61,10 +61,23 @@
 				display: block;
 				margin: 24px 0 48px 0;
 				.slick-slider{
-					height: auto;
-				}
-				.slick-slide{
-					margin-right: 48px;
+					height: 500px;
+					.slick-next:before, .slick-prev:before{
+						color: black;
+					}
+					.slick-slide {
+						height: 500px;
+						margin-right: 48px;
+						position: relative;
+						.slide-item{
+							height: 500px;
+							position: relative;
+						}
+						img{
+							height: 100%;
+							width: auto;
+						}
+					}
 				}
 				.info{
 					margin-top: 24px;

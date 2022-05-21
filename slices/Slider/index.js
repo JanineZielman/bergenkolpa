@@ -13,12 +13,11 @@ const Slider = ({ slice }) => {
     slidesToScroll: 1,
     fade: true,
     lazyLoad: true,
-    // variableWidth: true,
     autoplay: true,
     autoplaySpeed: 5000,
   };
   return(
-   <Slick {...settings}>
+   <Slick {...settings} className="main-slider">
       {slice.items.map((item, i) => {
         return(
           <div className='slide-item'>
@@ -29,7 +28,7 @@ const Slider = ({ slice }) => {
               <div className={`title ${item.position} ${item.color}`}>
                 {item.title}
               </div>
-              <div className='image'>
+              <div className='image slide-img'>
                 <img src={item.image.url}/>
               </div>
             </a>
