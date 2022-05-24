@@ -166,28 +166,6 @@
 		}
 	}
 
-	.voedsel.selected {
-		width: 106vw;
-		max-width: 106vw;
-		padding-left: 3vw;
-		padding-right: 3vw;
-		margin-right: -3vw;
-		margin-left: -3vw;
-
-		&:after {
-			position: absolute;
-			top: 0;
-			left: -130%;
-			width: 120%;
-			height: 100%;
-			box-shadow: 120vw 0px #fff100;
-			content: "";
-			z-index: -1;
-			opacity: 0.2;
-		}
-	}
-
-
 	.project-item.selected {
 		width: 106vw;
 		max-width: 106vw;
@@ -203,12 +181,34 @@
 				height: 100%;
 				padding-right: 3px;
 				background-color: transparent;
-				box-shadow: 110vw 0px transparent;
+				box-shadow: 110vw 0px white;
 				content: "";
 				z-index: -1;
 				opacity: 0.2;
 		}
 	}
+	
+	.sociale-cohesie.selected {
+		width: 106vw;
+		max-width: 106vw;
+		padding-left: 3vw;
+		padding-right: 3vw;
+		margin-right: -3vw;
+		margin-left: -3vw;
+
+		&:after {
+			position: absolute;
+			top: 0;
+			left: -130%;
+			width: 120%;
+			height: 100%;
+			box-shadow: 120vw 0px #c0a8b3;
+			content: "";
+			z-index: -1;
+			opacity: 0.2;
+		}
+	}
+
 	.circulair.selected {
 		width: 106vw;
 		max-width: 106vw;

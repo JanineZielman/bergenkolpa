@@ -216,6 +216,13 @@ footer{
   }
 }
 
+.project-item .img-effect::after {
+  background-color: #fff;
+  // mix-blend-mode: multiply;
+  opacity: 0.3;
+  height: calc(100% - 4px);
+}
+
 .sociale-cohesie .img-effect::after{
   background-color: #c0a8b3;
   mix-blend-mode: multiply;
@@ -239,6 +246,7 @@ footer{
   mix-blend-mode: multiply;
   height: calc(100% - 4px);
 }
+
 
 @keyframes loading {
   0% {
