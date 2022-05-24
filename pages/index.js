@@ -22,9 +22,9 @@ export async function getStaticProps({ locale, previewData }) {
   const client = createClient({ previewData })
 
   const page = await client.getByUID("homepage", "home", { lang: locale });
-  const menu = await client.getSingle("menu");
+  const menu = await client.getSingle("menu", { lang: locale });
   const footer = await client.getSingle("footer");
-  const projects = await client.getAllByType('project');
+  const projects = await client.getAllByType('project', { lang: locale });
 
   return {
     props: {

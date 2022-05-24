@@ -27,11 +27,12 @@ export async function getStaticProps({ params, locale, previewData }) {
 
   const homepage = await client.getByUID("homepage", "home", { lang: locale });
   const page = await client.getByUID("tag", params.uid, { lang: locale });
-  const menu = await client.getSingle("menu");
+  const menu = await client.getSingle("menu", { lang: locale });
   const footer = await client.getSingle("footer");
   // const projects = await client.getAllByType('project' );
 
   const projects = await client.getAllByType('project', {
+    lang: locale,
     predicates: [
       prismic.predicate.at(
         'my.project.categories.category',
