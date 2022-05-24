@@ -6,42 +6,63 @@
 	.project-item{
 		margin: 0px 12px 24px 12px;
 		padding-top: 10px;
-		width: calc(33% - 22px);
+		// width: calc(33% - 22px);
+		width: auto;
+		// max-width: 45%;
+		height: auto;
+		overflow: hidden;
 		transition: width 1s linear;
 		position: relative;
+		&.cover-text {
+			width: calc(33% - 22px);
+		}
 		.flex{
 			cursor: pointer;
+			position: relative;
 		}
 		.description, .caption, .extra-info, .close{
 			display: none;
 		}
 		&.selected{
 			width: 100%;
+			position: relative;
 			.title{
 				display: inline-block;
-				width: calc(100% - 25px);
+				width: 100%;
 			}
 			.close {
-				display: inline-block;
+				display: block;
+				position: absolute;
 				width: 25px;
 				height: 30px;
-				margin-bottom: -13.5px;
 				cursor: pointer;
-				border-bottom: 2px solid black;
-				padding-bottom: 5px;
+				top: 14px;
+				right: 3vw;
 			}
 			.flex{
 				display: flex;
 				cursor: default;
-			}
-			.cover{
-				width: 65%;
-			}
-			.description{
-				width: 31%;
-				margin-left: 4%;
-				display: block;
-				font-size: 20px;
+				div{
+					width: 65%;
+				}
+				.cover {
+					width: 100%;
+					height: auto;
+					img{
+						height: auto;
+					}
+					.img-effect{
+						width: 100%;
+						height: auto;
+					}
+				}
+
+				.description {
+					width: 31%;
+					margin-left: 4%;
+					display: block;
+					font-size: 20px;
+				}
 			}
 			.caption{
 				margin: 36px 0;
@@ -129,12 +150,13 @@
 				}
 			}
 		}
-		height: auto;
 		.cover{
 			padding-top: 10px;
+			position: relative;
 			img{
-				width: 100%;
-				height: auto;
+				width: auto;
+				min-width: 100%;
+				height: 400px;
 			}
 			h2{
 				font-size: 48px;
@@ -144,7 +166,33 @@
 		}
 	}
 
-	.sociale-cohesie.selected {
+	.voedsel.selected {
+		width: 106vw;
+		padding-left: 3vw;
+		padding-right: 3vw;
+		margin-right: -3vw;
+		margin-left: -3vw;
+
+		&:after {
+			position: absolute;
+			top: 0;
+			left: -130%;
+			width: 120%;
+			height: 100%;
+			box-shadow: 120vw 0px #fff100;
+			content: "";
+			z-index: -1;
+			opacity: 0.2;
+		}
+	}
+
+
+	.project-item.selected {
+		width: 106vw;
+		padding-left: 3vw;
+		padding-right: 3vw;
+		margin-right: -3vw;
+		margin-left: -3vw;
 		&:after{
 				position: absolute;
 				top: 0;
@@ -153,13 +201,18 @@
 				height: 100%;
 				padding-right: 3px;
 				background-color: transparent;
-				box-shadow: 110vw 0px #c0a8b3;
+				box-shadow: 110vw 0px transparent;
 				content: "";
 				z-index: -1;
 				opacity: 0.2;
 		}
 	}
 	.circulair.selected {
+		width: 106vw;
+		padding-left: 3vw;
+		padding-right: 3vw;
+		margin-right: -3vw;
+		margin-left: -3vw;
 		&:after {
 			position: absolute;
 			top: 0;
@@ -175,6 +228,11 @@
 		}
 	}
 	.houtbouw.selected {
+		width: 106vw;
+		padding-left: 3vw;
+		padding-right: 3vw;
+		margin-right: -3vw;
+		margin-left: -3vw;
 		&:after {
 			position: absolute;
 			top: 0;
@@ -190,15 +248,18 @@
 		}
 	}
 	.voedsel.selected {
+		width: 106vw;
+		padding-left:  3vw;
+		padding-right: 3vw;
+		margin-right: -3vw;
+		margin-left: -3vw;
 		&:after {
 			position: absolute;
 			top: 0;
 			left: -130%;
 			width: 120%;
 			height: 100%;
-			padding-right: 3px;
-			background-color: transparent;
-			box-shadow: 110vw 0px #fff100;
+			box-shadow: 120vw 0px #fff100;
 			content: "";
 			z-index: -1;
 			opacity: 0.2;

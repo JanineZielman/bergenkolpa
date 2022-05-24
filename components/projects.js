@@ -44,7 +44,7 @@ const Projects = ({projects}) => {
     slidesToShow: 1,
     slidesToScroll: 1,
 		variableWidth: true,
-    lazyLoad: true,
+    lazyLoad: false,
     autoplay: true,
     autoplaySpeed: 4000,
   };
@@ -53,7 +53,7 @@ const Projects = ({projects}) => {
 		<section className="projects" id="projects">
 			{projects.map((item,i) => {
 				return(
-					<div key={`project${i}`} className={`project-item ${item.data.themes[0].theme}`} id={item.uid}>
+					<div key={`project${i}`} className={`project-item ${item.data.themes[0].theme} ${item.data['cover-image'].url ? '' : 'cover-text'}`} id={item.uid}>
 						<div className="title" onClick={AddClass}>{item.data.title}</div>
 						<img className='close' onClick={RemoveClass} src="cross.svg"/>
 						<div className="tags">
@@ -64,7 +64,7 @@ const Projects = ({projects}) => {
 								<a key={`theme${i}`} href={'theme/' + item.theme + '#projects'}>{item.theme?.replace('-', ' ')}</a>
 							))}
 						</div>
-						<div className="flex" onClick={AddClass}>
+						<div className={`flex`} onClick={AddClass} >
 							<LazyLoad height={600}>
 								<div className="cover">
 									{item.data['cover-image'].url && 
