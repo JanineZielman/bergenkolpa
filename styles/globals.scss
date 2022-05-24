@@ -224,6 +224,7 @@ footer{
   height: 100%;
   position: relative;
   overflow: hidden;
+  transition: all 0.4s ease-in-out;
 
   &::after {
     content: " ";

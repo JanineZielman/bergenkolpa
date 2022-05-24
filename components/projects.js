@@ -61,7 +61,7 @@ const Projects = ({projects}) => {
 								<a key={`category${i}`} href={item.category + '#projects'}>{item.category}</a>
 							))}
 							{item.data.themes?.map((item,i) => (
-								<a key={`theme${i}`} href={'theme/' + item.theme + '#projects'}>{item.theme.replace('-', ' ')}</a>
+								<a key={`theme${i}`} href={'theme/' + item.theme + '#projects'}>{item.theme?.replace('-', ' ')}</a>
 							))}
 						</div>
 						<div className="flex" onClick={AddClass}>
