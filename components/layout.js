@@ -1,9 +1,11 @@
 import Link from "next/link"
 import Image from "next/image"
 import LanguageSwitcher from "./language"
-import React from 'react';
+import React, {useState} from 'react';
 import { RichText } from 'prismic-reactjs'
 import Collapsible from 'react-collapsible';
+
+import Menu from './menu';
 
 const Layout = ({children, altLangs, menu, lang, footer}) => {
   return(
@@ -12,11 +14,11 @@ const Layout = ({children, altLangs, menu, lang, footer}) => {
 				<div className="logo">
 					<Link href="/">
 						<a>
-							<img src="logo.svg"/>
+							<img src="/logo.svg"/>
 						</a>
 					</Link>
 				</div>
-				<div className="menu-items">
+				<div className="menu-items" id="menu-items">
 					{menu.slices.map((item, i) => {
 						return(
 							<div key={`menuitem${i}`} className="menu-item">
@@ -43,6 +45,7 @@ const Layout = ({children, altLangs, menu, lang, footer}) => {
 					})}
 				</div>
 				<LanguageSwitcher altLangs={altLangs} lang={lang}/>
+				<Menu menu={menu} altLangs={altLangs} lang={lang}/>
 			</div>
 			{children}
 			<footer>
