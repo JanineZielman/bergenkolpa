@@ -7,10 +7,15 @@ import "../styles/mobile.scss";
 import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import {linkResolver} from '../prismicConfiguration'
+import Head from 'next/head'
+
 
 function MyApp({ Component, pageProps }) {
   return (
-  // <Component {...pageProps} />
+    <>
+    <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    </Head>
    <PrismicProvider
       linkResolver={linkResolver}
       internalLinkComponent={({ href, children, ...props }) => (
@@ -25,6 +30,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </PrismicPreview>
     </PrismicProvider>
+    </>
   )
 };
 

@@ -1,0 +1,17 @@
+{
+  "id": "recent",
+  "label": "Recent",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

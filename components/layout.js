@@ -27,7 +27,7 @@ const Layout = ({children, altLangs, menu, lang, footer}) => {
 										<Collapsible trigger={item.primary.label}>
 											{item.items.map((sub, i) => {
 												return(
-													<Link key={`menulink${i}`} href={'/'+sub.subLink.slug+'#projects'}>
+													<Link key={`menulink_${i}`} href={'/'+sub.subLink.slug+'#projects'}>
 														<a>{sub.subLabel}</a>
 													</Link>
 												)

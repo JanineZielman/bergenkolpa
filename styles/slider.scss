@@ -12,9 +12,12 @@
 		.slide-item {
 			height: 100%;
 			overflow: hidden;
-			transition: all 0s;
+			transition: all 2s;
 			transition-delay: 2s;
-			clip-path: inset(0 0 0 100%);
+			box-sizing: border-box;
+			width: 0%!important;
+			border: 1px solid white;
+			// clip-path: inset(0 0 0 100%);
 			background-color: #fff;
 			.image {
 				display: flex;
@@ -23,52 +26,54 @@
 				height: calc(100vh - 205px);
 				position: relative;
 				overflow: hidden;
+				background-color: #fff;
 				img {
 					min-width: 100%;
-					width: auto;
+					width: 100%;
+					// width: auto;
 					height: calc(100vh - 200px);
-					object-fit: contain;
+					object-fit: cover;
 				}
 			}
 			.title{
 				position: absolute;
 				text-align: center;
 				font-weight: 100;
-				font-size: 5vw;
+				font-size: 4.5vw;
 				line-height: 1.2;
 				z-index: 3;
 				margin: 24px 24px 175px 24px;
 				opacity: 0;
 				transition: all 2s;
-				top: 40%;
-				left: 1%;
-				transform: translate(-50%, -50%) rotate(-90deg);
+				// top: 40%;
+				// left: 1%;
+				// transform: translate(-50%, -50%) rotate(-90deg);
 				&.white{
-					// color: #fff;
-					// border-bottom: 7px solid #fff;
-					color: #000;
-					border-bottom: 7px solid #000;
+					color: #fff;
+					border-bottom: 7px solid #fff;
+					// color: #000;
+					// border-bottom: 7px solid #000;
 				}
 				&.black {
 					color: #000;
 					border-bottom: 7px solid #000;
 				}
-				// &.top-right{
-				// 	top: 0;
-				// 	right: 48px;
-				// }
-				// &.top-left {
-				// 	top: 0;
-				// 	left: 48px;
-				// }
-				// &.bottom-right {
-				// 	bottom: 0px;
-				// 	right: 48px;
-				// }
-				// &.bottom-left {
-				// 	bottom: 0px;
-				// 	left: 48px;
-				// }
+				&.top-right{
+					top: 0;
+					right: 48px;
+				}
+				&.top-left {
+					top: 0;
+					left: 48px;
+				}
+				&.bottom-right {
+					bottom: 0px;
+					right: 48px;
+				}
+				&.bottom-left {
+					bottom: 0px;
+					left: 48px;
+				}
 			}
 			.description{
 				width: 600px;
@@ -111,7 +116,7 @@
 		z-index: 8;
 		margin-top: -50px;
 		&.slick-prev{
-			left: 8%;
+			left: 14px;
 		}
 		&.slick-next {
 			right: 14px;
@@ -162,7 +167,9 @@
 .slick-slider .slick-slide.slick-active{
 	z-index: 8 !important;
 	.slide-item{
-		clip-path: inset(0 0);
+		width: 100%!important;
+		border-right: 10px solid white;
+		// clip-path: inset(0 0 0 0 );
 		transition: all 2s;
 		.title{
 			opacity: 1;

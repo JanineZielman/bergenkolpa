@@ -37,7 +37,7 @@ const Menu = ({children, altLangs, menu, lang, footer}) => {
   // }
   return(
 		<div className="mobile-menu">
-			<div onClick={openModal} class={`hamburger ${modalIsOpen}`}> </div>
+			<div onClick={openModal} className={`hamburger ${modalIsOpen}`}> </div>
 				<Modal
 					isOpen={modalIsOpen}
 					style={customStyles}

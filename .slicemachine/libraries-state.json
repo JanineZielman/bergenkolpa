@@ -314,24 +314,7 @@
                   "type": "Link"
                 }
               },
-              "items": {
-                "subLabel": {
-                  "config": {
-                    "label": "sub label",
-                    "placeholder": ""
-                  },
-                  "type": "Text"
-                },
-                "subLink": {
-                  "config": {
-                    "label": "sub link",
-                    "placeholder": "",
-                    "allowTargetBlank": false,
-                    "select": null
-                  },
-                  "type": "Link"
-                }
-              },
+              "items": {},
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -341,31 +324,9 @@
             "variation": "default-slice",
             "name": "Default slice",
             "slice_type": "nav_item",
-            "items": [
-              {
-                "subLabel": "e-enable scalable solutions",
-                "subLink": {
-                  "link_type": "Web",
-                  "url": "https://slicemachine.dev"
-                }
-              },
-              {
-                "subLabel": "evolve enterprise platforms",
-                "subLink": {
-                  "link_type": "Web",
-                  "url": "https://slicemachine.dev"
-                }
-              },
-              {
-                "subLabel": "facilitate clicks-and-mortar experiences",
-                "subLink": {
-                  "link_type": "Web",
-                  "url": "https://slicemachine.dev"
-                }
-              }
-            ],
+            "items": [],
             "primary": {
-              "label": "facilitate global e-commerce",
+              "label": "expedite visionary niches",
               "link": {
                 "link_type": "Web",
                 "url": "http://twitter.com"
@@ -381,7 +342,7 @@
           "default-slice": {
             "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/NavItem/default-slice/preview.png",
             "width": 800,
-            "height": 70
+            "height": 71
           }
         }
       },

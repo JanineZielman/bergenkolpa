@@ -41,7 +41,9 @@
     "menu": {},
     "page": {},
     "theme": {},
-    "tag": {}
+    "tag": {},
+    "news-item": {},
+    "recent": {}
   },
   "slices": {
     "Slider": [
@@ -154,8 +156,8 @@
         "primary": {}
       }
     ],
-    "NavItem": [
-      {
+    "NavItem": {
+      "0": {
         "variation": "default-slice",
         "name": "Default slice",
         "slice_type": "nav_item",
@@ -210,8 +212,11 @@
             "url": "https://slicemachine.dev"
           }
         }
+      },
+      "default-slice": {
+        "items": {}
       }
-    ],
+    },
     "Footer": {
       "default-slice": {
         "primary": {},

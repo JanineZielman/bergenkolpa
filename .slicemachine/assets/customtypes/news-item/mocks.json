@@ -1,0 +1,24 @@
+{
+  "id": "c996968d-b8f2-4ebd-a0ef-49563fb0ab0a",
+  "uid": "officiis-molestiae-possimus",
+  "type": "news-item",
+  "data": {
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+    },
+    "date": "2013-10-10",
+    "text": [
+      {
+        "type": "paragraph",
+        "text": "Excepteur non elit et dolore. Esse cupidatat ex qui fugiat ea labore ullamco eiusmod. Aute est nisi cupidatat nostrud pariatur ullamco sint ad non deserunt ex.",
+        "spans": []
+      }
+    ]
+  }
+}

@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Link from "next/link";
 import { useRouter } from 'next/router';
 import { RichText } from 'prismic-reactjs'
 import LazyLoad from 'react-lazyload';
@@ -55,7 +54,7 @@ const Projects = ({projects}) => {
 				return(
 					<div key={`project${i}`} className={`project-item ${item.data.themes[0].theme} ${item.data['cover-image'].url ? '' : 'cover-text'}`} id={item.uid}>
 						<div className="title" onClick={AddClass}>{item.data.title}</div>
-						<img className='close' onClick={RemoveClass} src="cross.svg"/>
+						<img className='close' onClick={RemoveClass} src="/cross.svg"/>
 						<div className="tags">
 							{item.data.categories?.map((item,i) => (
 								<a key={`category${i}`} href={item.category + '#projects'}>{item.category}</a>
@@ -65,7 +64,7 @@ const Projects = ({projects}) => {
 							))}
 						</div>
 						<div className={`flex`} onClick={AddClass} >
-							<LazyLoad height={600}>
+							<LazyLoad height={600} offset={600}>
 								<div className="cover">
 									{item.data['cover-image'].url && 
 										<div className="img-effect">
