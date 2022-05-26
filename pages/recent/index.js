@@ -1,16 +1,12 @@
 import { createClient } from '../../prismicConfiguration'
-import SliceZone from "next-slicezone";
-import * as Slices from "../../slices";
 import { RichText } from 'prismic-reactjs'
 import Moment from 'moment';
-
 import Layout from "../../components/layout"
 
 const Recent = (props) => {
-  const {doc, menu, footer, news} = props
-	console.log(news)
+  const {doc, menu, footer, news, global} = props
   return(
-    <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer}>
+    <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
       <div className="recent">
 				<h2>Recent</h2>
 				<div className="content">
@@ -47,6 +43,7 @@ export async function getStaticProps({ locale, previewData }) {
 			direction: 'desc',
 		},
 	});
+	const global = await client.getSingle("global");
 
   return {
     props: {
@@ -54,7 +51,7 @@ export async function getStaticProps({ locale, previewData }) {
       doc: page,
       footer: footer,
 			news: news,
-      // slices: page.data,
+			global: global.data,
     },
   };
 }

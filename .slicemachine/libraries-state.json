@@ -525,6 +525,88 @@
             "height": 485
           }
         }
+      },
+      "socials": {
+        "library": "slices",
+        "id": "socials",
+        "name": "Socials",
+        "description": "Socials",
+        "model": {
+          "id": "socials",
+          "type": "SharedSlice",
+          "name": "Socials",
+          "description": "Socials",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Socials",
+              "primary": {},
+              "items": {
+                "social": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Social",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "socials",
+            "items": [
+              {
+                "social": "scale ubiquitous web services",
+                "link": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              },
+              {
+                "social": "maximize visionary experiences",
+                "link": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              },
+              {
+                "social": "mesh B2C technologies",
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              }
+            ],
+            "primary": {}
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/Socials/default/preview.png",
+            "width": 800,
+            "height": 71
+          }
+        }
       }
     }
   }

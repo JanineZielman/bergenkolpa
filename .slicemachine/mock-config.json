@@ -43,7 +43,8 @@
     "theme": {},
     "tag": {},
     "news-item": {},
-    "recent": {}
+    "recent": {},
+    "global": {}
   },
   "slices": {
     "Slider": [
@@ -309,6 +310,12 @@
         ],
         "primary": {}
       }
-    ]
+    ],
+    "Socials": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
   }
 }

@@ -176,9 +176,13 @@ a {
 
 
 footer{
-  display: flex;
-  justify-content: space-between;
   margin-top: 40px;
+  position: relative;
+  .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
   .column-wrapper{
     display: flex;
     width: 100%;
@@ -189,6 +193,14 @@ footer{
         margin-right: 0;
         margin-left: 24px;
       }
+    }
+  }
+  .socials{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    .social-link{
+      margin: 0 5px;
     }
   }
 }

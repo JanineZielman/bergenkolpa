@@ -7,7 +7,8 @@ import Collapsible from 'react-collapsible';
 
 import Menu from './menu';
 
-const Layout = ({children, altLangs, menu, lang, footer}) => {
+const Layout = ({children, altLangs, menu, lang, footer, global}) => {
+	console.log(global)
   return(
 		<section className="main-container">
 			<div className="menu">
@@ -49,19 +50,38 @@ const Layout = ({children, altLangs, menu, lang, footer}) => {
 			</div>
 			{children}
 			<footer>
-				{footer.data.slices.map((item, i) => {
-					return(
-						<div key={`footer${i}`} className="column-wrapper">
-							{item.items.map((content, i) => {
-								return(
-									<div key={`column${i}`} className="column">
-										<RichText render={content.text} />
-									</div>
-								)
-							})}
-						</div>
-					)
-				})}
+				<div className="content">
+					{footer.data.slices.map((item, i) => {
+						return(
+							<div key={`footer${i}`} className="column-wrapper">
+								{item.items.map((content, i) => {
+									return(
+										<div key={`column${i}`} className="column">
+											<RichText render={content.text} />
+										</div>
+									)
+								})}
+							</div>
+						)
+					})}
+				</div>
+				<div className="socials">
+					{global.slices[0].items.map((item, i) => {
+						return(
+							<a key={`social${i}`} className="social-link" href={item.link}>
+								{item.social == 'facebook' &&
+									<img src="/fb.svg"/>
+								}
+								{item.social == 'twitter' &&
+									<img src="/twitter.svg"/>
+								}
+								{item.social == 'instagram' &&
+									<img src="/insta.svg"/>
+								}
+							</a>
+						)
+					})}
+				</div>
 			</footer>
 		</section>
   )

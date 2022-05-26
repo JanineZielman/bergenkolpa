@@ -9,11 +9,11 @@ import Projects from "../../components/projects"
 
 
 const Theme = (props) => {
-  const {doc, menu, projects, homepage, params, footer} = props
+  const {doc, menu, projects, homepage, footer, global} = props
 
   return(
-   <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer}>
-    <SliceZone slices={props.homepage} resolver={resolver} />
+   <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
+    <SliceZone slices={homepage} resolver={resolver} />
     <Projects projects={projects}/>
    </Layout>
   )
@@ -27,7 +27,7 @@ export async function getStaticProps({ params, locale, previewData }) {
   const page = await client.getByUID("theme", params.uid, { lang: locale });
   const menu = await client.getSingle("menu", { lang: locale });
 	const footer = await client.getSingle("footer");
-  // const projects = await client.getAllByType('project' );
+  const global = await client.getSingle("global");
 
   const projects = await client.getAllByType('project', {
     lang: locale,
@@ -50,7 +50,7 @@ export async function getStaticProps({ params, locale, previewData }) {
       doc: page,
 			footer: footer,
       projects: projects,
-      params: params.uid
+      global: global.data,
     },
   };
 }

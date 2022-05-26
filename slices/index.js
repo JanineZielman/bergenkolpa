@@ -5,6 +5,7 @@ import Images from './Images';
 import Info from './Info';
 import NavItem from './NavItem';
 import Slider from './Slider';
+import Socials from './Socials';
 
 export {
 	Footer,
@@ -12,6 +13,7 @@ export {
 	Info,
 	NavItem,
 	Slider,
+	Socials,
 };
 
 export const components = {
@@ -20,4 +22,5 @@ export const components = {
 	info: Info,
 	nav_item: NavItem,
 	slider: Slider,
+	socials: Socials,
 };

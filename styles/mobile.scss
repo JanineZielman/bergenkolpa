@@ -314,7 +314,9 @@
 	}
 
 	footer{
-		flex-direction: column;
+		.content{
+			flex-direction: column;
+		}
 		.column-wrapper{
 			&:first-child{
 				flex-direction: column;

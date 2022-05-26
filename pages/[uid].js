@@ -11,11 +11,11 @@ import Projects from "../components/projects"
 
 
 const Page = (props) => {
-  const {doc, menu, projects, homepage, params, footer} = props
+  const {doc, menu, projects, homepage, footer, global} = props
   
   return(
-    <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer}>
-      <SliceZone slices={props.homepage} resolver={resolver} />
+    <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
+      <SliceZone slices={homepage} resolver={resolver} />
       <Projects projects={projects}/>
     </Layout>
   )
@@ -25,11 +25,11 @@ export async function getStaticProps({ params, locale, previewData }) {
   const client = createClient({ previewData })
   const prismic = require("@prismicio/client");
 
+  const global = await client.getSingle("global");
   const homepage = await client.getByUID("homepage", "home", { lang: locale });
   const page = await client.getByUID("tag", params.uid, { lang: locale });
   const menu = await client.getSingle("menu", { lang: locale });
   const footer = await client.getSingle("footer");
-  // const projects = await client.getAllByType('project' );
 
   const projects = await client.getAllByType('project', {
     lang: locale,
@@ -52,7 +52,7 @@ export async function getStaticProps({ params, locale, previewData }) {
       footer: footer,
       doc: page,
       projects: projects,
-      params: params.uid
+      global: global.data,
     },
   };
 }
