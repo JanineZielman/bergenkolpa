@@ -15,7 +15,6 @@ const Slider = ({ slice }) => {
     lazyLoad: false,
     autoplay: true,
     autoplaySpeed: 5000,
-    centerMode: true,
   };
   return(
    <Slick {...settings} className="main-slider">
