@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { RichText } from 'prismic-reactjs'
 import LazyLoad from 'react-lazyload';
 import Slick from "react-slick";
+import Image from 'next/image'
 
 
 const Projects = ({projects, tags, themes}) => {
@@ -85,13 +86,34 @@ const Projects = ({projects, tags, themes}) => {
 									{item.data['cover-image'].url && 
 										<div className={`img-effect ${item.data['aspect-ratio'] ? item.data['aspect-ratio'] : 'Landscape'}`}>
 											{item.data['aspect-ratio'] != 'Portrait' && item.data['aspect-ratio'] != 'Square' &&
-												<img src={item.data['cover-image'].url} alt={item.data['cover-image'].alt}/>
+												<Image 
+													src={item.data['cover-image'].url} 
+													width={item.data['cover-image'].dimensions.width}
+													height={item.data['cover-image'].dimensions.height} 
+													placeholder="blur"
+													blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcOmNGPQAGFQJWi2m7QQAAAABJRU5ErkJggg=="
+													alt={item.data['cover-image'].alt}
+												/>
 											}
 											{item.data['aspect-ratio'] == 'Portrait' &&
-												<img src={item.data['cover-image'].portrait.url} alt={item.data['cover-image'].alt}/>
+												<Image 
+													src={item.data['cover-image'].portrait.url} 
+													width={item.data['cover-image'].portrait.dimensions.width}
+													height={item.data['cover-image'].portrait.dimensions.height} 
+													placeholder="blur"
+													blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcOmNGPQAGFQJWi2m7QQAAAABJRU5ErkJggg=="
+													alt={item.data['cover-image'].alt}
+												/>
 											}
 											{item.data['aspect-ratio'] == 'Square' &&
-												<img src={item.data['cover-image'].square.url} alt={item.data['cover-image'].alt}/>
+												<Image 
+													src={item.data['cover-image'].square.url} 
+													width={item.data['cover-image'].square.dimensions.width}
+													height={item.data['cover-image'].square.dimensions.height} 
+													placeholder="blur"
+													blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcOmNGPQAGFQJWi2m7QQAAAABJRU5ErkJggg=="
+													alt={item.data['cover-image'].alt}
+												/>
 											}
 										</div>
 										
