@@ -19,12 +19,10 @@ const Slider = ({ slice }) => {
   return(
    <Slick {...settings} className="main-slider">
       {slice.items.map((item, i) => {
+        let theme_url = `/theme/${slugify(item.title, {replacement: '-', lower: true,})}#projects`
         return(
           <div key={`slider-item${i}`} className='slide-item'>
-            <a className="title-image" href={`/theme/${slugify(item.title, {
-              replacement: '-', 
-              lower: true,
-            })}#projects`}>
+            <a className="title-image" href={item.link.uid ? item.link.uid : theme_url}>
               <div className={`title ${item.position} ${item.color}`}>
                 {item.title}
               </div>

@@ -11,6 +11,13 @@
           "placeholder": ""
         },
         "type": "UID"
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
       }
     }
   }

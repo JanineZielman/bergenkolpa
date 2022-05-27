@@ -5,9 +5,7 @@ import LazyLoad from 'react-lazyload';
 import Slick from "react-slick";
 
 
-const Projects = ({projects, tags}) => {
-
-	console.log(tags)
+const Projects = ({projects, tags, themes}) => {
 	const router = useRouter();
 
 	const [selectedItems, setSelectedItems] = useState([]);
@@ -70,7 +68,15 @@ const Projects = ({projects, tags}) => {
 								</a>
 							))}
 							{item.data.themes?.map((item,i) => (
-								<a key={`theme${i}`} href={'theme/' + item.theme + '#projects'}>{item.theme?.replace('-', ' ')}</a>
+								<a key={`theme${i}`} href={'theme/' + item.theme + '#projects'}>
+									{themes.map((theme, i) => (
+										<>
+											{theme.uid == item.theme &&
+												theme.slugs[0].replace('-', ' ')
+											}
+										</>
+									))}
+								</a>
 							))}
 						</div>
 						<div className={`flex`} onClick={AddClass} >

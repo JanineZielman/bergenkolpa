@@ -1,6 +1,8 @@
 {
-  "id": "332e1b2a-f43f-4118-959c-7c12ab7f627e",
-  "uid": "error-minima-doloremque",
+  "id": "5a07e73d-8fb0-4337-a7cb-7b2feb78a03b",
+  "uid": "ut-unde-esse",
   "type": "theme",
-  "data": {}
+  "data": {
+    "name": "benchmark end-to-end infrastructures"
+  }
 }

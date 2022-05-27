@@ -1,6 +1,4 @@
-// import { Client } from "../utils/prismicHelpers";
 import { createClient } from '../prismicConfiguration'
-import { queryRepeatableDocuments } from '../utils/queries';
 import SliceZone from "next-slicezone";
 
 import * as Slices from "../slices";
@@ -11,12 +9,12 @@ import Projects from "../components/projects"
 
 
 const Page = (props) => {
-  const {doc, menu, projects, homepage, footer, global, tags} = props
+  const {doc, menu, projects, homepage, footer, global, tags, themes} = props
 
   return(
     <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
       <SliceZone slices={homepage} resolver={resolver} />
-      <Projects projects={projects} tags={tags}/>
+      <Projects projects={projects} tags={tags} themes={themes}/>
     </Layout>
   )
 }
@@ -31,6 +29,7 @@ export async function getStaticProps({ params, locale, previewData }) {
   const menu = await client.getSingle("menu", { lang: locale });
   const footer = await client.getSingle("footer");
   const tags = await client.getAllByType("tag", { lang: locale });
+  const themes = await client.getAllByType("theme", { lang: locale });
 
   const projects = await client.getAllByType('project', {
     lang: locale,
@@ -55,6 +54,7 @@ export async function getStaticProps({ params, locale, previewData }) {
       projects: projects,
       global: global.data,
       tags: tags,
+      themes: themes,
     },
   };
 }
