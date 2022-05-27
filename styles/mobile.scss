@@ -302,13 +302,32 @@
 	}
 
 	.bureau{
-		margin-top: 120px;
+		margin-top: 80px;
 		flex-direction: column;
 		.intro, .contact{
 			width:100%;
 			margin: 0;
 			p {
 				font-size: 20px;
+			}
+		}
+		.contact{
+			margin-top: 24px;
+		}
+		.section{
+			margin-top: 24px;
+			p{
+				width: 100%;
+			}
+			.flex{
+				flex-direction: column;
+				.flex-item{
+					width: 100%;
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
 			}
 		}
 	}

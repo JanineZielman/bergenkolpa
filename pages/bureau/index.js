@@ -1,13 +1,10 @@
 import { createClient } from '../../prismicConfiguration'
-import SliceZone from "next-slicezone";
-import * as Slices from "../../slices";
 import { RichText } from 'prismic-reactjs'
-// const resolver = ({ sliceName }) => Slices[sliceName];
-
 import Layout from "../../components/layout"
 
 const Bureau = (props) => {
   const {doc, menu, content, footer, global} = props
+  console.log(content)
   return(
     <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
       <div className="bureau">
@@ -23,8 +20,25 @@ const Bureau = (props) => {
             <RichText render={content.contact} />
           </div>
         </div>
-     
-      {/* <SliceZone slices={props.slices} resolver={resolver} /> */}
+        {content.slices.map((slice,i) => {
+          return(
+            <div key={`bureau-items${i}`} className="section">
+              <h2>{slice.primary.title}</h2>
+              <RichText render={slice.primary.text} />
+              <div className='flex'>
+                {slice.items.map((item,i) => {
+                  return(
+                    <div className='flex-item'>
+                      <h3>{item.text}</h3>
+                      <img src={item.image.url}/>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )
+        })}
+
       </div>
     </Layout>
   )
@@ -46,7 +60,6 @@ export async function getStaticProps({ locale, previewData }) {
       footer: footer,
       content: page.data,
       global: global.data,
-      // slices: page.data,
     },
   };
 }

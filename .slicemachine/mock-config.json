@@ -316,6 +316,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "ImageText": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

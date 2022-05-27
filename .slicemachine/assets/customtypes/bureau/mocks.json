@@ -1,19 +1,19 @@
 {
-  "id": "eccb9c03-fb00-4277-8654-e76254d9c55d",
-  "uid": "magni-nesciunt-quasi",
+  "id": "eff6d2bc-0895-44cf-93b6-0c2111dd1043",
+  "uid": "quibusdam-blanditiis-expedita",
   "type": "bureau",
   "data": {
     "intro": [
       {
         "type": "paragraph",
-        "text": "Pariatur in eu adipisicing sit excepteur cillum pariatur qui do sint enim ex aliqua nulla velit. Officia ea nostrud nostrud officia.",
+        "text": "Ex excepteur sint cillum enim laborum ut.",
         "spans": []
       }
     ],
     "contact": [
       {
         "type": "paragraph",
-        "text": "Minim occaecat labore cupidatat sint eiusmod ut voluptate et dolor.",
+        "text": "In ad tempor sint do ipsum.",
         "spans": []
       }
     ]
