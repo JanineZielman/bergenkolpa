@@ -66,11 +66,37 @@
           "config": {
             "label": "link",
             "placeholder": "",
-            "allowTargetBlank": false
+            "allowTargetBlank": false,
+            "select": null
           },
           "type": "Link"
+        },
+        "horizontal-crop": {
+          "type": "Select",
+          "config": {
+            "label": "Horizontal Crop",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center",
+              "right"
+            ]
+          }
+        },
+        "vertical-crop": {
+          "type": "Select",
+          "config": {
+            "label": "Vertical Crop",
+            "placeholder": "",
+            "options": [
+              "top",
+              "middle",
+              "bottom"
+            ]
+          }
         }
-      }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

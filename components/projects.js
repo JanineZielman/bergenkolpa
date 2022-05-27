@@ -67,8 +67,16 @@ const Projects = ({projects}) => {
 							<LazyLoad height={600} offset={600}>
 								<div className="cover">
 									{item.data['cover-image'].url && 
-										<div className="img-effect">
-											<img src={item.data['cover-image'].url} alt={item.data['cover-image'].alt}/>
+										<div className={`img-effect ${item.data['aspect-ratio'] ? item.data['aspect-ratio'] : 'Landscape'}`}>
+											{item.data['aspect-ratio'] != 'Portrait' && item.data['aspect-ratio'] != 'Square' &&
+												<img src={item.data['cover-image'].url} alt={item.data['cover-image'].alt}/>
+											}
+											{item.data['aspect-ratio'] == 'Portrait' &&
+												<img src={item.data['cover-image'].portrait.url} alt={item.data['cover-image'].alt}/>
+											}
+											{item.data['aspect-ratio'] == 'Square' &&
+												<img src={item.data['cover-image'].square.url} alt={item.data['cover-image'].alt}/>
+											}
 										</div>
 										
 									}

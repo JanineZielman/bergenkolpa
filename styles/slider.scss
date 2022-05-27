@@ -31,6 +31,31 @@
 					// width: auto;
 					height: calc(100vh - 200px);
 					object-fit: cover;
+					object-position: center center;
+					&.top {
+						object-position: center top;
+					}
+					&.bottom {
+						object-position: center bottom;
+					}
+					&.left{
+						object-position: left center;
+						&.top{
+							object-position: left top;
+						}
+						&.bottom {
+							object-position: left bottom;
+						}
+					}
+					&.right {
+						object-position: right center;
+						&.top {
+							object-position: right top;
+						}
+						&.bottom {
+							object-position: right bottom;
+						}
+					}
 				}
 			}
 			.title{

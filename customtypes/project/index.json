@@ -42,7 +42,9 @@
                   "agricultuur",
                   "gebiedsontwerp",
                   "onderzoek",
-                  "bouwrealisaties"
+                  "bouwrealisaties",
+                  "architectuur",
+                  "stedenbouw"
                 ]
               }
             }
@@ -70,11 +72,37 @@
           }
         }
       },
+      "aspect-ratio": {
+        "type": "Select",
+        "config": {
+          "label": "Aspect Ratio",
+          "placeholder": "",
+          "options": [
+            "Landscape",
+            "Portrait",
+            "Square"
+          ]
+        }
+      },
       "cover-image": {
         "config": {
           "label": "cover-image",
-          "constraint": {},
-          "thumbnails": []
+          "constraint": {
+            "width": 1920,
+            "height": 1080
+          },
+          "thumbnails": [
+            {
+              "name": "portrait",
+              "width": 1080,
+              "height": 1920
+            },
+            {
+              "name": "square",
+              "width": 1080,
+              "height": 1080
+            }
+          ]
         },
         "type": "Image"
       },

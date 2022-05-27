@@ -16,6 +16,7 @@ const Slider = ({ slice }) => {
     autoplay: true,
     autoplaySpeed: 5000,
   };
+  console.log(slice)
   return(
    <Slick {...settings} className="main-slider">
       {slice.items.map((item, i) => {
@@ -29,7 +30,7 @@ const Slider = ({ slice }) => {
                 {item.title}
               </div>
               <div className='image slide-img'>
-                <img src={item.image.url}/>
+                <img src={item.image.url} className={`${item['horizontal-crop']} ${item['vertical-crop']}`}/>
               </div>
             </a>
             <div className='description'>

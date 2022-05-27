@@ -36,7 +36,10 @@
         }
       },
       "themes": {},
-      "categories": {}
+      "categories": {},
+      "aspect-ratio": {
+        "content": "Landscape"
+      }
     },
     "menu": {},
     "page": {},
@@ -47,8 +50,8 @@
     "global": {}
   },
   "slices": {
-    "Slider": [
-      {
+    "Slider": {
+      "0": {
         "variation": "default-slice",
         "name": "Default slice",
         "slice_type": "slider",
@@ -155,8 +158,15 @@
           }
         ],
         "primary": {}
+      },
+      "default-slice": {
+        "items": {
+          "horizontal-crop": {
+            "content": "middle"
+          }
+        }
       }
-    ],
+    },
     "NavItem": {
       "0": {
         "variation": "default-slice",
