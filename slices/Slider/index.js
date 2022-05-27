@@ -16,7 +16,6 @@ const Slider = ({ slice }) => {
     autoplay: true,
     autoplaySpeed: 5000,
   };
-  console.log(slice)
   return(
    <Slick {...settings} className="main-slider">
       {slice.items.map((item, i) => {

@@ -4,7 +4,6 @@ import Layout from "../../components/layout"
 
 const Bureau = (props) => {
   const {doc, menu, content, footer, global} = props
-  console.log(content)
   return(
     <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
       <div className="bureau">

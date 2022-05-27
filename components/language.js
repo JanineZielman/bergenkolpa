@@ -1,7 +1,6 @@
 import Link from "next/link"
 
 export const LanguageSwitcher = ({ altLangs = [] , lang}) => {
-	console.log(lang)
   return (
     <div className="language-switcher">
 			<div className="current-language lang" id={lang}>

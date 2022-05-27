@@ -8,7 +8,6 @@ import Collapsible from 'react-collapsible';
 import Menu from './menu';
 
 const Layout = ({children, altLangs, menu, lang, footer, global}) => {
-	console.log(global)
   return(
 		<section className="main-container">
 			<div className="menu">

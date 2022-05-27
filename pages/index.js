@@ -1,4 +1,3 @@
-// import { Client } from "../utils/prismicHelpers";
 import { createClient } from '../prismicConfiguration'
 import SliceZone from "next-slicezone";
 import * as Slices from "../slices";
@@ -8,11 +7,11 @@ import Layout from "../components/layout"
 import Projects from "../components/projects"
 
 const Page = (props) => {
-  const {doc, menu, projects, slices, footer, global} = props
+  const {doc, menu, projects, slices, footer, global, tags} = props
   return(
     <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
       <SliceZone slices={slices} resolver={resolver} />
-      <Projects projects={projects}/>
+      <Projects projects={projects} tags={tags}/>
     </Layout>
   )
   
@@ -32,6 +31,7 @@ export async function getStaticProps({ locale, previewData }) {
 			direction: 'desc',
 		},
   });
+  const tags = await client.getAllByType("tag", { lang: locale });
 
   return {
     props: {
@@ -41,6 +41,7 @@ export async function getStaticProps({ locale, previewData }) {
       slices: page.data.slices,
       projects: projects,
       global: global.data,
+      tags: tags,
     },
   };
 }

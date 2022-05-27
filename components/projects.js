@@ -5,7 +5,9 @@ import LazyLoad from 'react-lazyload';
 import Slick from "react-slick";
 
 
-const Projects = ({projects}) => {
+const Projects = ({projects, tags}) => {
+
+	console.log(tags)
 	const router = useRouter();
 
 	const [selectedItems, setSelectedItems] = useState([]);
@@ -57,7 +59,15 @@ const Projects = ({projects}) => {
 						<img className='close' onClick={RemoveClass} src="/cross.svg"/>
 						<div className="tags">
 							{item.data.categories?.map((item,i) => (
-								<a key={`category${i}`} href={item.category + '#projects'}>{item.category}</a>
+								<a key={`category${i}`} href={item.category + '#projects'}>
+									{tags.map((tag, i) => (
+										<>
+											{tag.uid == item.category &&
+												tag.slugs[0].replace('-', ' ')
+											}
+										</>
+									))}
+								</a>
 							))}
 							{item.data.themes?.map((item,i) => (
 								<a key={`theme${i}`} href={'theme/' + item.theme + '#projects'}>{item.theme?.replace('-', ' ')}</a>
