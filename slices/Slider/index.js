@@ -1,6 +1,7 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
 import Slick from "react-slick";
+import Image from 'next/image'
 
 const Slider = ({ slice }) => {
   var slugify = require('slugify')
@@ -27,7 +28,11 @@ const Slider = ({ slice }) => {
                 {item.title}
               </div>
               <div className='image slide-img'>
-                <img src={item.image.url} className={`${item['horizontal-crop']} ${item['vertical-crop']}`}/>
+                <Image 
+                  src={item.image.url}
+                  layout="fill"
+                  objectFit='cover'
+                  className={`${item['horizontal-crop']} ${item['vertical-crop']}`}/>
               </div>
             </a>
             <div className='description'>

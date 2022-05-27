@@ -135,6 +135,7 @@ const Projects = ({projects, tags, themes}) => {
 						}
 						<div className="extra-info">
 							{item.data.slices.map((slice,i) => {
+								console.log(slice)
 								return(
 									<>
 									{slice.slice_type == 'images' && 
@@ -143,7 +144,13 @@ const Projects = ({projects, tags, themes}) => {
 													{slice.items.map((item,i) => {
 														return(
 															<div key={`slide-item${i}`} className='slide-item'>
-																<img src={item.image.url}/>
+																{item.image.url && 
+																	<Image 
+																		src={item.image.url}
+																		width={item.image.dimensions.width}
+																		height={item.image.dimensions.height} 
+																	/>
+																}
 															</div>
 														)
 													})}
