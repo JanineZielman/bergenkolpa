@@ -14,7 +14,16 @@ const Projects = ({projects, tags, themes}) => {
 
 	useEffect(() => {
     setSelectedItems(document.getElementsByClassName("selected"));
-  });
+		if(window.location.hash) {
+			const id = window.location.hash.replace('#','');
+			router.push('#'+id);
+			setTimeout(() => {
+				router.push('#'+id);
+				document.getElementById(id).classList.add('selected');
+			}, 1000);
+			setSelectedId(id)
+		} 
+  }, []);
 
   const AddClass = (e) => {
 		document.getElementById(selectedId)?.classList.remove("selected");
