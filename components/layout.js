@@ -10,8 +10,6 @@ import Menu from './menu';
 const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 	const router = useRouter();
 
-	console.log(router)
-
   return(
 		<section className="main-container">
 			<div className="menu">

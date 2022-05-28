@@ -23,7 +23,6 @@ const Theme = (props) => {
       if(window.location.hash != '#projects') {
         let id = window.location.hash.replace('#','');
         let project = projects.filter(project => project.uid == id);
-        console.log(project[0].data['cover-image'].url)
         setTitle(project[0].data.title)
         setDescription(project[0].data.description)
         setImage(project[0].data['cover-image'].url)

@@ -7,6 +7,7 @@ import Image from 'next/image'
 
 
 const Projects = ({projects, tags, themes}) => {
+	console.log(projects)
 	const router = useRouter();
 
 	const [selectedItems, setSelectedItems] = useState([]);
@@ -70,7 +71,7 @@ const Projects = ({projects, tags, themes}) => {
 							<img className='close' onClick={RemoveClass} src="/cross.svg"/>
 							<div className="tags">
 								{item.data.categories?.map((item,i) => (
-									<a key={`category${i}`} href={item.category + '#projects'}>
+									<a key={`category${i}`} href={'/' + item.category + '#projects'}>
 										{tags.map((tag, i) => (
 											<>
 												{tag.uid == item.category &&
@@ -81,7 +82,7 @@ const Projects = ({projects, tags, themes}) => {
 									</a>
 								))}
 								{item.data.themes?.map((item,i) => (
-									<a key={`theme${i}`} href={'theme/' + item.theme + '#projects'}>
+									<a key={`theme${i}`} href={'/theme/' + item.theme + '#projects'}>
 										{themes.map((theme, i) => (
 											<>
 												{theme.uid == item.theme &&

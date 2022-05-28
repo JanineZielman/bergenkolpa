@@ -13,7 +13,7 @@ import Projects from "../components/projects"
 
 const Page = (props) => {
   const {doc, menu, projects, homepage, footer, global, tags, themes} = props
-  
+
   const [title, setTitle] = useState(null);
   const [description, setDescription] = useState(null);
   const [image, setImage] = useState(null);
@@ -23,7 +23,6 @@ const Page = (props) => {
       if(window.location.hash != '#projects') {
         let id = window.location.hash.replace('#','');
         let project = projects.filter(project => project.uid == id);
-        console.log(project[0].data['cover-image'].url)
         setTitle(project[0].data.title)
         setDescription(project[0].data.description)
         setImage(project[0].data['cover-image'].url)
