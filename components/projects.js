@@ -53,6 +53,7 @@ const Projects = ({projects, tags, themes}) => {
 		<section className="projects" id="projects">
 			{projects.map((item,i) => {
 				return(
+					<LazyLoad height={600} offset={600}>
 					<div key={`project${i}`} className={`project-item ${item.data.themes[0].theme} ${item.data['cover-image'].url ? '' : 'cover-text'}`} id={item.uid}>
 						<div className="title" onClick={AddClass}>{item.data.title}</div>
 						<img className='close' onClick={RemoveClass} src="/cross.svg"/>
@@ -81,37 +82,25 @@ const Projects = ({projects, tags, themes}) => {
 							))}
 						</div>
 						<div className={`flex`} onClick={AddClass} >
-							<LazyLoad height={600} offset={600}>
+							
 								<div className="cover">
 									{item.data['cover-image'].url && 
 										<div className={`img-effect ${item.data['aspect-ratio'] ? item.data['aspect-ratio'] : 'Landscape'}`}>
 											{item.data['aspect-ratio'] != 'Portrait' && item.data['aspect-ratio'] != 'Square' &&
-												<Image 
+												<img 
 													src={item.data['cover-image'].url} 
-													width={item.data['cover-image'].dimensions.width}
-													height={item.data['cover-image'].dimensions.height} 
-													placeholder="blur"
-													blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcOmNGPQAGFQJWi2m7QQAAAABJRU5ErkJggg=="
 													alt={item.data['cover-image'].alt}
 												/>
 											}
 											{item.data['aspect-ratio'] == 'Portrait' &&
-												<Image 
+												<img 
 													src={item.data['cover-image'].portrait.url} 
-													width={item.data['cover-image'].portrait.dimensions.width}
-													height={item.data['cover-image'].portrait.dimensions.height} 
-													placeholder="blur"
-													blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcOmNGPQAGFQJWi2m7QQAAAABJRU5ErkJggg=="
 													alt={item.data['cover-image'].alt}
 												/>
 											}
 											{item.data['aspect-ratio'] == 'Square' &&
-												<Image 
+												<img 
 													src={item.data['cover-image'].square.url} 
-													width={item.data['cover-image'].square.dimensions.width}
-													height={item.data['cover-image'].square.dimensions.height} 
-													placeholder="blur"
-													blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcOmNGPQAGFQJWi2m7QQAAAABJRU5ErkJggg=="
 													alt={item.data['cover-image'].alt}
 												/>
 											}
@@ -122,7 +111,7 @@ const Projects = ({projects, tags, themes}) => {
 										<h2 className="img-effect"><RichText render={item.data['cover-text']} /></h2>
 									}
 								</div>
-							</LazyLoad>
+				
 							<div className="description">
 								<RichText render={item.data['description']} />
 							</div>
@@ -173,6 +162,7 @@ const Projects = ({projects, tags, themes}) => {
 							})}
 						</div>
 					</div>
+					</LazyLoad>
 				)
 			})}
 		</section>
