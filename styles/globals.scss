@@ -191,6 +191,12 @@ footer{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    .column{
+      margin-right: 24px;
+      p{
+        white-space: nowrap;
+      }
+    }
     &:last-child{
       justify-content: flex-end;
       .column{

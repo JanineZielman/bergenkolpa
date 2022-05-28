@@ -1,4 +1,5 @@
 import { createClient } from '../../prismicConfiguration'
+import React, {useEffect, useState} from 'react';
 import SliceZone from "next-slicezone";
 import Head from 'next/head'
 import { RichText } from 'prismic-reactjs'
@@ -13,15 +14,32 @@ import Projects from "../../components/projects"
 const Theme = (props) => {
   const {doc, menu, projects, homepage, footer, global, tags, themes} = props
 
+  const [title, setTitle] = useState(null);
+  const [description, setDescription] = useState(null);
+  const [image, setImage] = useState(null);
+
+  useEffect(() => {
+    if(window.location.hash) {
+      if(window.location.hash != '#projects') {
+        let id = window.location.hash.replace('#','');
+        let project = projects.filter(project => project.uid == id);
+        console.log(project[0].data['cover-image'].url)
+        setTitle(project[0].data.title)
+        setDescription(project[0].data.description)
+        setImage(project[0].data['cover-image'].url)
+      }
+    } 
+  });
+
   return(
     <>
       <Head>
-        <title>{global.title}</title>
-        <meta name="description" content={RichText.asText(global.description)} />
+        <title>{title ? title : global.title}</title>
+        <meta name="description" content={RichText.asText(description ? description : global.description)} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={global.title} />
-        <meta property="og:description" content={RichText.asText(global.description)} />
-        <meta property="og:image" content={global.image.url} />
+        <meta property="og:title" content={title ? title : global.title} />
+        <meta property="og:description" content={RichText.asText(description ? description : global.description)} />
+        <meta property="og:image" content={image ? image : global.image.url} />
       </Head>
       <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
         <SliceZone slices={homepage} resolver={resolver} />

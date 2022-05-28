@@ -32,6 +32,7 @@ const Slider = ({ slice }) => {
                   src={item.image.url}
                   width={'1920'}
                   height={'1080'}
+                  priority={true}
                   className={`${item['horizontal-crop']} ${item['vertical-crop']}`}/>
               </div>
             </a>
