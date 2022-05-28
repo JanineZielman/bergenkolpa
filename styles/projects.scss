@@ -2,13 +2,18 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+	width: 100%;
+	.project-wrapper{
+		margin: 0px 1vw 1vw 1vw;
+	}
 	.project-item{
-		margin: 0px 12px 24px 12px;
+		// margin: 0px 12px 24px 12px;
+		margin: 0;
 		padding-top: 10px;
 		width: auto;
 		height: auto;
 		overflow: hidden;
-		transition: width 1s linear;
+		transition: width 0.4s linear;
 		position: relative;
 		&.cover-text {
 			width: 30vw;
@@ -20,110 +25,6 @@
 		}
 		.description, .caption, .extra-info, .close{
 			display: none;
-		}
-		&.selected{
-			width: 100%;
-			position: relative;
-		  max-width: 500px;
-			.title{
-				display: inline-block;
-				width: 100%;
-			}
-			.close {
-				display: block;
-				position: absolute;
-				width: 25px;
-				height: 30px;
-				cursor: pointer;
-				top: 14px;
-				right: 3vw;
-			}
-			.flex{
-				display: flex;
-				cursor: default;
-				position: relative;
-				div{
-					width: 65%;
-				}
-				.cover {
-					width: 100%;
-					height: auto;
-					position: relative;
-					.img-effect {
-						width: 100%;
-						height: 100%;
-						position: relative;
-						img {
-							width: 100%!important;
-							height: 100%!important;
-							max-height: 100%!important;
-							object-fit: contain;
-							object-position: top left;
-						}
-					}
-				}
-
-				.description {
-					width: 31%;
-					margin-left: 4%;
-					display: block;
-					font-size: 18px;
-				}
-			}
-			.caption{
-				margin: 36px 0;
-				display: flex;
-				align-items: flex-start;
-				p{
-					width: 65%;
-					font-size: 48px;
-					margin: 0;
-					line-height: 1.1;
-				}
-				div{
-					width: 30%;
-					margin-right: 5%;
-					border-top: 2px solid black;
-					font-size: 18px;
-					padding-top: 5px;
-				}
-			}
-			.extra-info{
-				display: block;
-				margin: 24px 0 48px 0;
-				.slick-slider{
-					height: 500px;
-					.slick-next:before, .slick-prev:before{
-						color: black;
-					}
-					.slick-slide {
-						height: 500px;
-						margin-right: 48px;
-						position: relative;
-						.slide-item{
-							height: 500px;
-							position: relative;
-						}
-						img{
-							height: 100%;
-							max-height:500px;
-							width: auto;
-							object-fit: cover;
-						}
-					}
-				}
-				.info{
-					margin-top: 24px;
-					margin-left: 10%;
-					display: flex;
-					justify-content: flex-end;
-					width: 90%;
-					div{
-						width: 30%;
-						margin-left: 24px;
-					}
-				}
-			}
 		}
 		h2{
 			margin: 0;
@@ -160,15 +61,144 @@
 		.cover{
 			padding-top: 10px;
 			position: relative;
+			span{
+				width: 100%!important;
+				height: 100%!important;
+			}
 			img{
-				width: auto;
+				width: 100%;
 				min-width: 100%;
+				height: 100%;
 				max-height: 25vw;
+				object-fit: cover;
 			}
 			h2{
 				font-size: 48px;
 				font-weight: 400;
 				line-height: 1.1;
+			}
+		}
+		&.selected {
+			width: 100%;
+			position: relative;
+			max-width: 500px;
+
+			.title {
+				display: inline-block;
+				width: 100%;
+			}
+
+			.close {
+				display: block;
+				position: absolute;
+				width: 25px;
+				height: 30px;
+				cursor: pointer;
+				top: 14px;
+				right: 3vw;
+			}
+
+			.flex {
+				display: flex;
+				cursor: default;
+				position: relative;
+
+				div {
+					width: 65%;
+				}
+
+				.cover {
+					width: 100%;
+					height: auto;
+					position: relative;
+
+					.img-effect {
+						width: 100%;
+						height: 100%;
+						position: relative;
+
+						img {
+							width: 100% !important;
+							height: 100% !important;
+							max-height: 100% !important;
+							object-fit: contain;
+							object-position: top left;
+						}
+					}
+				}
+
+				.description {
+					width: 31%;
+					margin-left: 4%;
+					display: block;
+					font-size: 18px;
+				}
+			}
+
+			.caption {
+				margin: 36px 0;
+				display: flex;
+				align-items: flex-start;
+
+				p {
+					width: 65%;
+					font-size: 48px;
+					margin: 0;
+					line-height: 1.1;
+				}
+
+				div {
+					width: 30%;
+					margin-right: 5%;
+					border-top: 2px solid black;
+					font-size: 18px;
+					padding-top: 5px;
+				}
+			}
+
+			.extra-info {
+				display: block;
+				margin: 24px 0 48px 0;
+
+				.slick-slider {
+					height: 500px;
+
+					.slick-next:before,
+					.slick-prev:before {
+						color: black;
+					}
+
+					.slick-slide {
+						height: 500px;
+						margin-right: 48px;
+						position: relative;
+
+						.slide-item {
+							height: 500px;
+							position: relative;
+						}
+
+						img {
+							height: 100%;
+							max-height: 500px;
+							width: auto;
+							object-fit: cover;
+						}
+					}
+				}
+
+				.info {
+					margin-top: 24px;
+					margin-left: 10%;
+					display: flex;
+					justify-content: flex-end;
+					width: 90%;
+
+					div {
+						width: 30%;
+						margin-left: 24px;
+					}
+				}
 			}
 		}
 	}
@@ -188,95 +218,23 @@
 				height: 100%;
 				padding-right: 3px;
 				background-color: transparent;
-				box-shadow: 110vw 0px yellow;
 				content: "";
 				z-index: -1;
 				opacity: 0.2;
+				box-shadow: 110vw 0px #f5ebc1;
+		}
+		&.sand:after {
+			box-shadow: 110vw 0px #f5ebc1;
+		}
+		&.blue:after{
+			box-shadow: 110vw 0px #bce4e5;
+		}
+		&.purple:after {
+			box-shadow: 110vw 0px #c0a8b3;
+		}
+		&.yellow:after {
+			box-shadow: 110vw 0px #fff100;
 		}
 	}
 	
-// 	.sociale-cohesie.selected {
-// 		width: 106vw;
-// 		max-width: 106vw;
-// 		padding-left: 3vw;
-// 		padding-right: 3vw;
-// 		margin-right: -3vw;
-// 		margin-left: -3vw;
-
-// 		&:after {
-// 			position: absolute;
-// 			top: 0;
-// 			left: -130%;
-// 			width: 120%;
-// 			height: 100%;
-// 			box-shadow: 120vw 0px #c0a8b3;
-// 			content: "";
-// 			z-index: -1;
-// 			opacity: 0.2;
-// 		}
-// 	}
-
-// 	.circulair.selected {
-// 		width: 106vw;
-// 		max-width: 106vw;
-// 		padding-left: 3vw;
-// 		padding-right: 3vw;
-// 		margin-right: -3vw;
-// 		margin-left: -3vw;
-// 		&:after {
-// 			position: absolute;
-// 			top: 0;
-// 			left: -130%;
-// 			width: 120%;
-// 			height: 100%;
-// 			padding-right: 3px;
-// 			background-color: transparent;
-// 			box-shadow: 110vw 0px #bce4e5;
-// 			content: "";
-// 			z-index: -1;
-// 			opacity: 0.2;
-// 		}
-// 	}
-// 	.houtbouw.selected {
-// 		width: 106vw;
-// 		max-width: 106vw;
-// 		padding-left: 3vw;
-// 		padding-right: 3vw;
-// 		margin-right: -3vw;
-// 		margin-left: -3vw;
-// 		&:after {
-// 			position: absolute;
-// 			top: 0;
-// 			left: -130%;
-// 			width: 120%;
-// 			height: 100%;
-// 			padding-right: 3px;
-// 			background-color: transparent;
-// 			box-shadow: 110vw 0px #f5ebc1;
-// 			content: "";
-// 			z-index: -1;
-// 			opacity: 0.2;
-// 		}
-// 	}
-// 	.voedsel.selected {
-// 		width: 106vw;
-// 		max-width: 106vw;
-// 		padding-left:  3vw;
-// 		padding-right: 3vw;
-// 		margin-right: -3vw;
-// 		margin-left: -3vw;
-// 		&:after {
-// 			position: absolute;
-// 			top: 0;
-// 			left: -130%;
-// 			width: 120%;
-// 			height: 100%;
-// 			box-shadow: 120vw 0px #fff100;
-// 			content: "";
-// 			z-index: -1;
-// 			opacity: 0.2;
-// 		}
-// 	}
-
-
 }

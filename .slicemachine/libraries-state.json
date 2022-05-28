@@ -548,7 +548,10 @@
                 "image": {
                   "config": {
                     "label": "image",
-                    "constraint": {},
+                    "constraint": {
+                      "width": 1920,
+                      "height": 1080
+                    },
                     "thumbnails": []
                   },
                   "type": "Image"
@@ -607,103 +610,22 @@
             "slice_type": "slider",
             "items": [
               {
-                "title": "redefine world-class e-tailers",
-                "color": "black",
-                "position": "top-left",
-                "image": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
-                },
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "Id aliqua est fugiat laborum id aute dolor mollit ut. Deserunt eu incididunt ex reprehenderit duis ullamco culpa.",
-                    "spans": []
-                  }
-                ],
-                "link": {
-                  "link_type": "Web",
-                  "url": "https://slicemachine.dev"
-                },
-                "horizontal-crop": "center",
-                "vertical-crop": "top"
-              },
-              {
-                "title": "strategize customized eyeballs",
+                "title": "repurpose plug-and-play e-tailers",
                 "color": "white",
                 "position": "top-left",
                 "image": {
                   "dimensions": {
-                    "width": 900,
-                    "height": 500
+                    "width": 1920,
+                    "height": 1080
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=1920&h=1080&fit=crop"
                 },
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Duis est pariatur quis sint do do duis. Est quis cillum proident ea.",
-                    "spans": []
-                  }
-                ],
-                "link": {
-                  "link_type": "Web",
-                  "url": "http://twitter.com"
-                },
-                "horizontal-crop": "right",
-                "vertical-crop": "bottom"
-              },
-              {
-                "title": "syndicate dynamic blockchains",
-                "color": "white",
-                "position": "top-left",
-                "image": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
-                },
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "Exercitation tempor aute deserunt proident esse consequat labore ex magna.",
-                    "spans": []
-                  }
-                ],
-                "link": {
-                  "link_type": "Web",
-                  "url": "https://slicemachine.dev"
-                },
-                "horizontal-crop": "center",
-                "vertical-crop": "top"
-              },
-              {
-                "title": "innovate turn-key schemas",
-                "color": "white",
-                "position": "top-left",
-                "image": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
-                },
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "Laboris reprehenderit fugiat cillum occaecat ea irure cupidatat do proident. Cillum quis ipsum irure in cillum elit. Occaecat nostrud adipisicing tempor ut qui sunt laboris nisi enim id ad incididunt enim aliqua.",
+                    "text": "Cillum consequat commodo deserunt tempor. Deserunt ullamco nisi proident ullamco magna ullamco amet irure exercitation elit nulla do ullamco cupidatat do. Reprehenderit reprehenderit tempor sunt eiusmod et minim veniam minim et minim.",
                     "spans": []
                   }
                 ],
@@ -712,25 +634,52 @@
                   "url": "https://prismic.io"
                 },
                 "horizontal-crop": "right",
-                "vertical-crop": "bottom"
+                "vertical-crop": "middle"
               },
               {
-                "title": "architect synergistic portals",
+                "title": "iterate clicks-and-mortar channels",
                 "color": "white",
-                "position": "bottom-right",
+                "position": "top-left",
                 "image": {
                   "dimensions": {
-                    "width": 900,
-                    "height": 500
+                    "width": 1920,
+                    "height": 1080
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=1920&h=1080&fit=crop"
                 },
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Culpa sint nulla labore tempor aute. Occaecat veniam minim reprehenderit consectetur labore velit minim laborum fugiat officia esse Lorem. Mollit magna irure laboris consequat pariatur voluptate amet.",
+                    "text": "Velit laboris ullamco labore dolor quis aute laboris veniam ea consequat aliquip in. Incididunt laboris exercitation tempor qui nulla irure sit. Elit minim eiusmod qui do nulla anim laborum aliquip.",
+                    "spans": []
+                  }
+                ],
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                },
+                "horizontal-crop": "right",
+                "vertical-crop": "top"
+              },
+              {
+                "title": "aggregate proactive platforms",
+                "color": "white",
+                "position": "top-left",
+                "image": {
+                  "dimensions": {
+                    "width": 1920,
+                    "height": 1080
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1920&h=1080&fit=crop"
+                },
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Deserunt quis sint adipisicing amet voluptate dolor culpa non exercitation id aute consectetur eiusmod ex occaecat. Aliquip magna minim ex non reprehenderit voluptate aliqua voluptate pariatur quis dolore reprehenderit cupidatat irure. Deserunt fugiat exercitation amet anim reprehenderit id quis dolor cupidatat ea est mollit ipsum aliqua.",
                     "spans": []
                   }
                 ],
@@ -738,7 +687,7 @@
                   "link_type": "Web",
                   "url": "https://slicemachine.dev"
                 },
-                "horizontal-crop": "right",
+                "horizontal-crop": "left",
                 "vertical-crop": "top"
               }
             ],

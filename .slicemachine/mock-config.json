@@ -39,6 +39,9 @@
       "categories": {},
       "aspect-ratio": {
         "content": "Landscape"
+      },
+      "background": {
+        "content": "sand"
       }
     },
     "menu": {},

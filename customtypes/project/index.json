@@ -26,6 +26,20 @@
           "placeholder": ""
         }
       },
+      "background": {
+        "type": "Select",
+        "config": {
+          "label": "Background",
+          "placeholder": "",
+          "options": [
+            "sand",
+            "blue",
+            "purple",
+            "yellow"
+          ],
+          "default_value": "sand"
+        }
+      },
       "categories": {
         "type": "Group",
         "config": {

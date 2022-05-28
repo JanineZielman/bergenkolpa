@@ -219,18 +219,9 @@
 
 @keyframes moving {
 	0% {
-		left: 100%;
+		margin-left: 100%;
 	}
 	100% {
-		left: 0px;
-	}
-}
-
-@keyframes moving2 {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
+		margin-left: -10px;
 	}
 }

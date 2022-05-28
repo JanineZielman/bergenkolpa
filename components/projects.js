@@ -34,7 +34,7 @@ const Projects = ({projects, tags, themes}) => {
 		router.push('#'+id);
 		setTimeout(() => {
 			router.push('#'+id);
-		}, 1000);
+		}, 500);
    };
 
 	const settings = {
@@ -45,7 +45,7 @@ const Projects = ({projects, tags, themes}) => {
     slidesToShow: 1,
     slidesToScroll: 1,
 		variableWidth: true,
-    lazyLoad: true,
+    lazyLoad: false,
     autoplay: true,
     autoplaySpeed: 4000,
   };
@@ -54,8 +54,8 @@ const Projects = ({projects, tags, themes}) => {
 		<section className="projects" id="projects">
 			{projects.map((item,i) => {
 				return(
-						<LazyLoad height={600} offset={600}>
-					<div key={`project${i}`} className={`project-item ${item.data.themes[0].theme} ${item.data['cover-image'].url ? '' : 'cover-text'}`} id={item.uid}>
+					<LazyLoad height={600} offset={600} className="project-wrapper">
+						<div key={`project${i}`} className={`project-item ${item.data.background ? item.data.background : '' } ${item.data['cover-image'].url ? '' : 'cover-text'}`} id={item.uid}>
 					
 							<div className="title" onClick={AddClass}>{item.data.title}</div>
 							<img className='close' onClick={RemoveClass} src="/cross.svg"/>
@@ -86,7 +86,7 @@ const Projects = ({projects, tags, themes}) => {
 							<div className={`flex`} onClick={AddClass} >
 									<div className="cover">
 										{item.data['cover-image'].url && 
-											<div className={`img-effect ${item.data['aspect-ratio'] ? item.data['aspect-ratio'] : 'Landscape'}`}>
+											<div className={`img-effect`}>
 												{item.data['aspect-ratio'] != 'Portrait' && item.data['aspect-ratio'] != 'Square' &&
 													<Image 
 														src={item.data['cover-image'].url} 

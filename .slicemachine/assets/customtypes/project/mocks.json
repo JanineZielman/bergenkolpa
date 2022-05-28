@@ -1,10 +1,11 @@
 {
-  "id": "8678e994-4a39-4dc4-b4e5-91593494ebe2",
-  "uid": "velit-qui-amet",
+  "id": "b8423e81-5397-40da-8a58-36d95437d9e3",
+  "uid": "ipsam-laudantium-aliquid",
   "type": "project",
   "data": {
-    "title": "leverage enterprise action-items",
-    "date": "2014-06-19",
+    "title": "orchestrate revolutionary technologies",
+    "date": "2014-03-10",
+    "background": "sand",
     "aspect-ratio": "Landscape",
     "cover-image": {
       "dimensions": {
@@ -13,7 +14,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1920&h=1080&fit=crop",
+      "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=1920&h=1080&fit=crop",
       "portrait": {
         "dimensions": {
           "width": 1080,
@@ -21,7 +22,7 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1080&h=1920&fit=crop"
+        "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=1080&h=1920&fit=crop"
       },
       "square": {
         "dimensions": {
@@ -30,27 +31,27 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1080&h=1080&fit=crop"
+        "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=1080&h=1080&fit=crop"
       }
     },
     "cover-text": [
       {
         "type": "heading2",
-        "text": "Leverage impactful infrastructures",
+        "text": "Extend cutting-edge web services",
         "spans": []
       }
     ],
     "description": [
       {
         "type": "paragraph",
-        "text": "Est consequat proident tempor nostrud pariatur elit velit. Exercitation ipsum magna non enim ullamco sunt. Incididunt ullamco incididunt dolore nisi laboris cupidatat nisi voluptate sit.",
+        "text": "Do ipsum ullamco ullamco.",
         "spans": []
       }
     ],
     "caption": [
       {
         "type": "paragraph",
-        "text": "Incididunt id enim ullamco ipsum aliqua deserunt ipsum nulla labore adipisicing labore velit. Ea eiusmod minim qui Lorem eu id nostrud amet mollit aliquip laborum.",
+        "text": "Ipsum sint cillum ad quis ut consectetur veniam exercitation veniam consequat in reprehenderit cupidatat nulla. Do adipisicing irure qui exercitation ut amet in sint consequat.",
         "spans": []
       }
     ],
@@ -59,10 +60,7 @@
         "category": "onderzoek"
       },
       {
-        "category": "stedenbouw"
-      },
-      {
-        "category": "wonen"
+        "category": "architectuur"
       },
       {
         "category": "architectuur"
@@ -70,13 +68,16 @@
     ],
     "themes": [
       {
+        "theme": "wonen"
+      },
+      {
+        "theme": "voedsel"
+      },
+      {
         "theme": "circulair"
       },
       {
-        "theme": "sociale-cohesie"
-      },
-      {
-        "theme": "sociale-cohesie"
+        "theme": "wonen"
       }
     ]
   }
