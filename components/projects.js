@@ -53,7 +53,7 @@ const Projects = ({projects, tags, themes}) => {
 		<section className="projects" id="projects">
 			{projects.map((item,i) => {
 				return(
-					<LazyLoad height={600} offset={600}>
+					<LazyLoad height={600} offset={0}>
 						<div key={`project${i}`} className={`project-item ${item.data.themes[0].theme} ${item.data['cover-image'].url ? '' : 'cover-text'}`} id={item.uid}>
 							<div className="title" onClick={AddClass}>{item.data.title}</div>
 							<img className='close' onClick={RemoveClass} src="/cross.svg"/>
@@ -90,24 +90,24 @@ const Projects = ({projects, tags, themes}) => {
 													<Image 
 														src={item.data['cover-image'].url} 
 														alt={item.data['cover-image'].alt}
-														width={item.data['cover-image'].dimensions.width}
-														height={item.data['cover-image'].dimensions.height}
+														width={'1920'}
+														height={'1080'}
 													/>
 												}
 												{item.data['aspect-ratio'] == 'Portrait' &&
 													<Image 
 														src={item.data['cover-image'].portrait.url} 
 														alt={item.data['cover-image'].alt}
-														width={item.data['cover-image'].portrait.dimensions.width}
-														height={item.data['cover-image'].portrait.dimensions.height}
+														width={'1080'}
+														height={'1920'}
 													/>
 												}
 												{item.data['aspect-ratio'] == 'Square' &&
 													<Image 
 														src={item.data['cover-image'].square.url} 
 														alt={item.data['cover-image'].alt}
-														width={item.data['cover-image'].square.dimensions.width}
-														height={item.data['cover-image'].square.dimensions.height}
+														width={'1080'}
+														height={'1080'}
 													/>
 												}
 											</div>
