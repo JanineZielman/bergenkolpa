@@ -30,8 +30,8 @@ const Slider = ({ slice }) => {
               <div className='image slide-img'>
                 <Image 
                   src={item.image.url}
-                  layout="fill"
-                  objectFit='cover'
+                  width={'1920'}
+                  height={'1080'}
                   className={`${item['horizontal-crop']} ${item['vertical-crop']}`}/>
               </div>
             </a>

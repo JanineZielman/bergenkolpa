@@ -195,7 +195,7 @@
 					img{
 						width: 100%;
 						height: auto;
-						object-fit: contain;
+						object-fit: cover;
 					}
 				}
 				.description {
@@ -258,7 +258,9 @@
 						}
 				
 						img {
-							height: 100%;
+							max-height: 300px;
+							min-height: 300px;
+							height: 300px;
 							width: auto;
 						}
 					}
