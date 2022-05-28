@@ -139,7 +139,10 @@
                   "type": "Image",
                   "config": {
                     "label": "Image",
-                    "constraint": {},
+                    "constraint": {
+                      "width": 1080,
+                      "height": 1080
+                    },
                     "thumbnails": []
                   }
                 }
@@ -155,72 +158,48 @@
             "slice_type": "image_text",
             "items": [
               {
-                "text": "generate intuitive synergies",
+                "text": "innovate leading-edge vortals",
                 "image": {
                   "dimensions": {
-                    "width": 900,
-                    "height": 500
+                    "width": 1080,
+                    "height": 1080
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=1080&h=1080&fit=crop"
                 }
               },
               {
-                "text": "synthesize impactful users",
+                "text": "exploit one-to-one niches",
                 "image": {
                   "dimensions": {
-                    "width": 900,
-                    "height": 500
+                    "width": 1080,
+                    "height": 1080
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=1080&h=1080&fit=crop"
                 }
               },
               {
-                "text": "facilitate cutting-edge niches",
+                "text": "incubate dot-com experiences",
                 "image": {
                   "dimensions": {
-                    "width": 900,
-                    "height": 500
+                    "width": 1080,
+                    "height": 1080
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
-                }
-              },
-              {
-                "text": "empower frictionless bandwidth",
-                "image": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
-                }
-              },
-              {
-                "text": "disintermediate best-of-breed channels",
-                "image": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1080&h=1080&fit=crop"
                 }
               }
             ],
             "primary": {
-              "title": "incentivize global vortals",
+              "title": "extend back-end technologies",
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Deserunt dolor aliqua pariatur magna minim Lorem laborum. Incididunt officia est esse.",
+                  "text": "Tempor duis reprehenderit magna cillum non.",
                   "spans": []
                 }
               ]
