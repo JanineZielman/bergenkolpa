@@ -1,13 +1,17 @@
 import Link from "next/link"
-import Image from "next/image"
 import LanguageSwitcher from "./language"
 import React, {useState} from 'react';
 import { RichText } from 'prismic-reactjs'
 import Collapsible from 'react-collapsible';
+import { useRouter } from 'next/router';
 
 import Menu from './menu';
 
 const Layout = ({children, altLangs, menu, lang, footer, global}) => {
+	const router = useRouter();
+
+	console.log(router)
+
   return(
 		<section className="main-container">
 			<div className="menu">
@@ -36,7 +40,9 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 									</div>
 								:
 									<Link href={'/'+item.primary.link.uid+'#projects'}>
-										<a>{item.primary.label}</a>
+										<a className={router.asPath == '/'+item.primary.link.uid+'#projects' || router.asPath == '/'+item.primary.link.uid ? "active" : ""}>
+											<span>{item.primary.label}</span>
+										</a>
 									</Link>
 								}
 							
