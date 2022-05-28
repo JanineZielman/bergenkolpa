@@ -54,114 +54,120 @@ const Projects = ({projects, tags, themes}) => {
 			{projects.map((item,i) => {
 				return(
 					<LazyLoad height={600} offset={600}>
-					<div key={`project${i}`} className={`project-item ${item.data.themes[0].theme} ${item.data['cover-image'].url ? '' : 'cover-text'}`} id={item.uid}>
-						<div className="title" onClick={AddClass}>{item.data.title}</div>
-						<img className='close' onClick={RemoveClass} src="/cross.svg"/>
-						<div className="tags">
-							{item.data.categories?.map((item,i) => (
-								<a key={`category${i}`} href={item.category + '#projects'}>
-									{tags.map((tag, i) => (
-										<>
-											{tag.uid == item.category &&
-												tag.slugs[0].replace('-', ' ')
-											}
-										</>
-									))}
-								</a>
-							))}
-							{item.data.themes?.map((item,i) => (
-								<a key={`theme${i}`} href={'theme/' + item.theme + '#projects'}>
-									{themes.map((theme, i) => (
-										<>
-											{theme.uid == item.theme &&
-												theme.slugs[0].replace('-', ' ')
-											}
-										</>
-									))}
-								</a>
-							))}
-						</div>
-						<div className={`flex`} onClick={AddClass} >
-							
-								<div className="cover">
-									{item.data['cover-image'].url && 
-										<div className={`img-effect ${item.data['aspect-ratio'] ? item.data['aspect-ratio'] : 'Landscape'}`}>
-											{item.data['aspect-ratio'] != 'Portrait' && item.data['aspect-ratio'] != 'Square' &&
-												<img 
-													src={item.data['cover-image'].url} 
-													alt={item.data['cover-image'].alt}
-												/>
-											}
-											{item.data['aspect-ratio'] == 'Portrait' &&
-												<img 
-													src={item.data['cover-image'].portrait.url} 
-													alt={item.data['cover-image'].alt}
-												/>
-											}
-											{item.data['aspect-ratio'] == 'Square' &&
-												<img 
-													src={item.data['cover-image'].square.url} 
-													alt={item.data['cover-image'].alt}
-												/>
-											}
-										</div>
-										
-									}
-									{item.data['cover-text'][0] &&
-										<h2 className="img-effect"><RichText render={item.data['cover-text']} /></h2>
-									}
+						<div key={`project${i}`} className={`project-item ${item.data.themes[0].theme} ${item.data['cover-image'].url ? '' : 'cover-text'}`} id={item.uid}>
+							<div className="title" onClick={AddClass}>{item.data.title}</div>
+							<img className='close' onClick={RemoveClass} src="/cross.svg"/>
+							<div className="tags">
+								{item.data.categories?.map((item,i) => (
+									<a key={`category${i}`} href={item.category + '#projects'}>
+										{tags.map((tag, i) => (
+											<>
+												{tag.uid == item.category &&
+													tag.slugs[0].replace('-', ' ')
+												}
+											</>
+										))}
+									</a>
+								))}
+								{item.data.themes?.map((item,i) => (
+									<a key={`theme${i}`} href={'theme/' + item.theme + '#projects'}>
+										{themes.map((theme, i) => (
+											<>
+												{theme.uid == item.theme &&
+													theme.slugs[0].replace('-', ' ')
+												}
+											</>
+										))}
+									</a>
+								))}
+							</div>
+							<div className={`flex`} onClick={AddClass} >
+								
+									<div className="cover">
+										{item.data['cover-image'].url && 
+											<div className={`img-effect ${item.data['aspect-ratio'] ? item.data['aspect-ratio'] : 'Landscape'}`}>
+												{item.data['aspect-ratio'] != 'Portrait' && item.data['aspect-ratio'] != 'Square' &&
+													<Image 
+														src={item.data['cover-image'].url} 
+														alt={item.data['cover-image'].alt}
+														width={item.data['cover-image'].dimensions.width}
+														height={item.data['cover-image'].dimensions.height}
+													/>
+												}
+												{item.data['aspect-ratio'] == 'Portrait' &&
+													<Image 
+														src={item.data['cover-image'].portrait.url} 
+														alt={item.data['cover-image'].alt}
+														width={item.data['cover-image'].portrait.dimensions.width}
+														height={item.data['cover-image'].portrait.dimensions.height}
+													/>
+												}
+												{item.data['aspect-ratio'] == 'Square' &&
+													<Image 
+														src={item.data['cover-image'].square.url} 
+														alt={item.data['cover-image'].alt}
+														width={item.data['cover-image'].square.dimensions.width}
+														height={item.data['cover-image'].square.dimensions.height}
+													/>
+												}
+											</div>
+											
+										}
+										{item.data['cover-text'][0] &&
+											<h2 className="img-effect"><RichText render={item.data['cover-text']} /></h2>
+										}
+									</div>
+					
+								<div className="description">
+									<RichText render={item.data['description']} />
 								</div>
-				
-							<div className="description">
-								<RichText render={item.data['description']} />
+							</div>
+							{item.data.caption[0] && 
+								<div className="caption">
+									<div>Caption</div>
+									<RichText render={item.data['caption']} />
+								</div>
+							}
+							<div className="extra-info">
+								{item.data.slices.map((slice,i) => {
+									console.log(slice)
+									return(
+										<>
+										{slice.slice_type == 'images' && 
+											<div key={`image-slider${i}`} className="images" id={'images'+i}>
+												<Slick {...settings}>
+														{slice.items.map((item,i) => {
+															return(
+																<div key={`slide-item${i}`} className='slide-item'>
+																	{item.image.url && 
+																		<Image 
+																			src={item.image.url}
+																			width={item.image.dimensions.width}
+																			height={item.image.dimensions.height} 
+																		/>
+																	}
+																</div>
+															)
+														})}
+												</Slick>
+											</div>
+										}
+										{slice.slice_type == 'info' && 
+											<div className="info" id={'info'+i}>
+												{slice.items.map((item,i) => {
+													return(
+														<div key={`info${i}`}>
+															<RichText render={item.text} />
+														</div>
+													)
+												})}
+											</div>
+										}
+										</>
+									)
+								})}
 							</div>
 						</div>
-						{item.data.caption[0] && 
-							<div className="caption">
-								<div>Caption</div>
-								<RichText render={item.data['caption']} />
-							</div>
-						}
-						<div className="extra-info">
-							{item.data.slices.map((slice,i) => {
-								console.log(slice)
-								return(
-									<>
-									{slice.slice_type == 'images' && 
-										<div key={`image-slider${i}`} className="images" id={'images'+i}>
-											<Slick {...settings}>
-													{slice.items.map((item,i) => {
-														return(
-															<div key={`slide-item${i}`} className='slide-item'>
-																{item.image.url && 
-																	<Image 
-																		src={item.image.url}
-																		width={item.image.dimensions.width}
-																		height={item.image.dimensions.height} 
-																	/>
-																}
-															</div>
-														)
-													})}
-											</Slick>
-										</div>
-									}
-									{slice.slice_type == 'info' && 
-										<div className="info" id={'info'+i}>
-											{slice.items.map((item,i) => {
-												return(
-													<div key={`info${i}`}>
-														<RichText render={item.text} />
-													</div>
-												)
-											})}
-										</div>
-									}
-									</>
-								)
-							})}
-						</div>
-					</div>
 					</LazyLoad>
 				)
 			})}
