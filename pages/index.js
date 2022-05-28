@@ -1,6 +1,8 @@
 import { createClient } from '../prismicConfiguration'
 import SliceZone from "next-slicezone";
 import * as Slices from "../slices";
+import { RichText } from 'prismic-reactjs'
+import Head from 'next/head'
 const resolver = ({ sliceName }) => Slices[sliceName];
 
 import Layout from "../components/layout"
@@ -8,11 +10,22 @@ import Projects from "../components/projects"
 
 const Page = (props) => {
   const {doc, menu, projects, slices, footer, global, tags, themes} = props
+  console.log(global)
   return(
+    <>
+    <Head>
+      <title>{global.title}</title>
+      <meta name="description" content={RichText.asText(global.description)} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={global.title} />
+      <meta property="og:description" content={RichText.asText(global.description)} />
+      <meta property="og:image" content={global.image.url} />
+    </Head>
     <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
       <SliceZone slices={slices} resolver={resolver} />
       <Projects projects={projects} tags={tags} themes={themes}/>
     </Layout>
+    </>
   )
   
 }
