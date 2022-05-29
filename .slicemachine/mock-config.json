@@ -244,8 +244,8 @@
         }
       }
     },
-    "Images": [
-      {
+    "Images": {
+      "0": {
         "variation": "default-slice",
         "name": "Default slice",
         "slice_type": "images",
@@ -285,8 +285,15 @@
           }
         ],
         "primary": {}
+      },
+      "default-slice": {
+        "items": {
+          "aspect-ratio": {
+            "content": "Landscape"
+          }
+        }
       }
-    ],
+    },
     "Info": [
       {
         "variation": "default-slice",

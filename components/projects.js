@@ -149,11 +149,32 @@ const Projects = ({projects, tags, themes}) => {
 															return(
 																<div key={`slide-item${i}`} className='slide-item'>
 																	{item.image.url && 
-																		<Image 
-																			src={item.image.url}
-																			width={item.image.dimensions.width}
-																			height={item.image.dimensions.height} 
-																		/>
+																		<>
+																			{item['aspect-ratio'] != 'Portrait' && item['aspect-ratio'] != 'Square' &&
+																				<Image 
+																					src={item.image.url}
+																					alt={item.image.alt}
+																					width={'1920'}
+																					height={'1080'} 
+																				/>
+																			}
+																			{item['aspect-ratio'] == 'Portrait' &&
+																				<Image 
+																					src={item.image.portrait.url} 
+																					alt={item.image.alt}
+																					width={'1080'}
+																					height={'1920'}
+																				/>
+																			}
+																			{item['aspect-ratio'] == 'Square' &&
+																				<Image 
+																					src={item.image.square.url} 
+																					alt={item.image.alt}
+																					width={'1080'}
+																					height={'1080'}
+																				/>
+																			}
+																		</>
 																	}
 																</div>
 															)
