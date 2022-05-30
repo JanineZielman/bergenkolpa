@@ -65,7 +65,7 @@ const Projects = ({projects, tags, themes}) => {
 			{projects.map((item,i) => {
 				return(
 					<LazyLoad height={600} offset={600} className="project-wrapper">
-						<div key={`project${i}`} className={`project-item ${item.data.background ? item.data.background : '' } ${item.data['cover-image'].url ? '' : 'cover-text'}`} id={item.uid}>
+						<div key={`project${i}`} className={`project-item ${item.data.background ? item.data.background : '' } ${item.data['cover-image']?.url ? '' : 'cover-text'}`} id={item.uid}>
 					
 							<div className="title" onClick={AddClass}>{item.data.title}</div>
 							<img className='close' onClick={RemoveClass} src="/cross.svg"/>
@@ -160,7 +160,7 @@ const Projects = ({projects, tags, themes}) => {
 																			}
 																			{item['aspect-ratio'] == 'Portrait' &&
 																				<Image 
-																					src={item.image.portrait.url} 
+																					src={item.image.portrait ? item.image.portrait.url : item.image.url} 
 																					alt={item.image.alt}
 																					width={'1080'}
 																					height={'1920'}
@@ -168,7 +168,7 @@ const Projects = ({projects, tags, themes}) => {
 																			}
 																			{item['aspect-ratio'] == 'Square' &&
 																				<Image 
-																					src={item.image.square.url} 
+																					src={item.image.square ? item.image.square.url : item.image.url} 
 																					alt={item.image.alt}
 																					width={'1080'}
 																					height={'1080'}
