@@ -66,7 +66,6 @@ const Projects = ({projects, tags, themes}) => {
 				return(
 					<LazyLoad height={600} offset={600} className="project-wrapper">
 						<div key={`project${i}`} className={`project-item ${item.data.background ? item.data.background : '' } ${item.data['cover-image']?.url ? '' : 'cover-text'} ${item.data['aspect-ratio']}`} id={item.uid}>
-					
 							<div className="title" onClick={AddClass}>{item.data.title ? item.data.title : <span>&nbsp;</span> }</div>
 							<img className='close' onClick={RemoveClass} src="/cross.svg"/>
 							<div className="tags">
@@ -160,7 +159,7 @@ const Projects = ({projects, tags, themes}) => {
 							</div>
 							{item.data.caption[0] && 
 								<div className="caption">
-									<div>Caption</div>
+									<div></div>
 									<RichText render={item.data['caption']} />
 								</div>
 							}
@@ -233,15 +232,62 @@ const Projects = ({projects, tags, themes}) => {
 											</div>
 										}
 										{slice.slice_type == 'image' && 
-											<div className="image" id={'image'+i}>
+											<>
 												{slice.items.map((item,i) => {
 													return(
-														<div key={`image-item${i}`}>
-															hello
+														<div key={`image-item${i}`} className={`image ${item['aspect-ratio']}`}>
+															{item['aspect-ratio'] == null &&	
+																<Image 
+																		src={item.image.url} 
+																		alt={item.image.alt}
+																		width={'1520'}
+																		height={'1080'}
+																/>
+															}
+															{item['aspect-ratio'] == 'Main' &&	
+																<Image 
+																		src={item.image.url} 
+																		alt={item.image.alt}
+																		width={'1520'}
+																		height={'1080'}
+																/>
+															}
+															{item['aspect-ratio'] == 'Landscape' &&	
+																<Image 
+																		src={item.image.landscape.url} 
+																		alt={item.image.alt}
+																		width={'1920'}
+																		height={'1080'}
+																/>
+															}
+															{item['aspect-ratio'] == 'Square' &&	
+																<Image 
+																		src={item.image.square.url} 
+																		alt={item.image.alt}
+																		width={'1080'}
+																		height={'1080'}
+																/>
+															}
+															{item['aspect-ratio'] == 'Portrait' &&	
+																<Image 
+																		src={item.image.portrait.url} 
+																		alt={item.image.alt}
+																		width={'1080'}
+																		height={'1080'}
+																/>
+															}
+															{item['aspect-ratio'] == 'Narrow' &&	
+																<Image 
+																		src={item.image.narrow.url} 
+																		alt={item.image.alt}
+																		width={'1080'}
+																		height={'1080'}
+																/>
+															}
 														</div>
 													)
 												})}
-											</div>
+											</>
 										}
 										{slice.slice_type == 'info' && 
 											<div className="info" id={'info'+i}>

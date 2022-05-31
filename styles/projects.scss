@@ -124,6 +124,7 @@
 			.flex {
 				height: 100%;
 				display: flex;
+				// flex-wrap: wrap;
 				cursor: default;
 				position: relative;
 
@@ -132,9 +133,12 @@
 				}
 
 				.cover {
-					width: 100%;
-					height: auto;
+					// width: auto;
+					min-width: 50vw;
+					height: 100%;
+					max-height: 75vh;
 					position: relative;
+					overflow: hidden;
 
 					.img-effect {
 						width: 100%;
@@ -152,8 +156,9 @@
 				}
 
 				.description {
-					width: 31%;
-					margin-left: 4%;
+					width: 30%;
+					max-width: 500px;
+					margin-left: 2vw;
 					display: block;
 					font-size: 18px;
 				}
@@ -181,11 +186,13 @@
 			}
 
 			.extra-info {
-				display: block;
+				display: flex;
+				flex-wrap: wrap;
 				margin: 24px 0 48px 0;
 
 				.slick-slider {
 					height: 500px;
+					margin-bottom: 48px;
 
 					.slick-next:before,
 					.slick-prev:before {
@@ -211,17 +218,60 @@
 					}
 				}
 
-				.info {
-					margin-top: 24px;
-					margin-left: 10%;
-					display: flex;
-					justify-content: flex-end;
-					width: 90%;
-
-					div {
-						width: 30%;
-						margin-left: 24px;
+				.image{
+					width: 45%;
+					width: 37.167vw;
+					height: 30vw;
+					margin: 0 1vw 1vw 1vw;
+					span{
+						width: 100%;
+						height: 100%;
+						min-height: 100%;
+						img{
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
 					}
+					&.Landscape {
+						width: 45vw;
+					}
+					&.Square {
+						width: 29.33vw;
+					}
+					&.Portrait{
+						width: 21.5vw;
+					}
+					&.Narrow {
+						width: 13.667vw;
+					}
+				}
+
+				.info {
+					width: 21.5vw;
+					min-width: 350px;
+					font-size: 18px;
+					margin: 0 1vw 1vw 1vw;
+					div{
+						padding: 0 10px;
+						p{
+							margin-top: 0;
+						}
+					}
+					&:last-child{
+						// margin-top: 48px;
+						// margin-left: 10%;
+						// justify-content: flex-end;
+						// width: 90%;
+						width: 500px;
+						font-size: 16px;
+						// div {
+						// 	width: 30%;
+						// 	margin-left: 24px;
+						// }
+					}
+					display: flex;
+					
 				}
 			}
 		}
