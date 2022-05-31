@@ -65,7 +65,7 @@ const Projects = ({projects, tags, themes}) => {
 			{projects.map((item,i) => {
 				return(
 					<LazyLoad height={600} offset={600} className="project-wrapper">
-						<div key={`project${i}`} className={`project-item ${item.data.background ? item.data.background : '' } ${item.data['cover-image']?.url ? '' : 'cover-text'}`} id={item.uid}>
+						<div key={`project${i}`} className={`project-item ${item.data.background ? item.data.background : '' } ${item.data['cover-image']?.url ? '' : 'cover-text'} ${item.data['aspect-ratio']}`} id={item.uid}>
 					
 							<div className="title" onClick={AddClass}>{item.data.title ? item.data.title : <span>&nbsp;</span> }</div>
 							<img className='close' onClick={RemoveClass} src="/cross.svg"/>
@@ -148,7 +148,9 @@ const Projects = ({projects, tags, themes}) => {
 											</div>
 										}
 										{item.data['cover-text'][0] &&
-											<h2 className="img-effect"><RichText render={item.data['cover-text']} /></h2>
+											<h2 className={`img-effect`}>
+												<RichText render={item.data['cover-text']} />
+											</h2>
 										}
 									</div>
 	
