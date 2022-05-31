@@ -27,8 +27,16 @@ const Recent = (props) => {
 										{Moment(item.data.date).format('D MMM y')}
 									</div>
 									<div className='wrapper'>
-										<img src={item.data.image.url}/>
-										<RichText render={item.data.text} />
+										{item.data.image.url ?
+											<>
+												<img src={item.data.image.url}/>
+												<RichText render={item.data.text} />
+											</>
+										:
+											<div className='big'>
+												<RichText render={item.data.text} />
+											</div>
+										}
 									</div>
 								</div>
 							)
