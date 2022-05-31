@@ -7,7 +7,6 @@ import Image from 'next/image'
 
 
 const Projects = ({projects, tags, themes}) => {
-	console.log(projects)
 	const router = useRouter();
 
 	const [selectedItems, setSelectedItems] = useState([]);

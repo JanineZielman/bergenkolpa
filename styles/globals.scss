@@ -84,26 +84,41 @@ a {
       padding: 17px 0px;
       font-size: 18px;
       font-weight: 400;
-      position: relative;
+      // position: relative;
       text-align: left;
       width: 100%;
       white-space: nowrap;
       a{
         padding: 0px;
         margin-right: 2vw;
+        cursor: pointer;
         &.active{
           span{
             border-bottom: 1.5px solid black;
+          }
+          .dropdown{
+            span{
+              border-bottom: 0;
+            }
           }
         }
       }
       .dropdown {
         position: absolute;
+        left: 0;
+        background-color: white;
+        visibility: hidden;
         margin-top: 6px;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
         a {
           margin-right: 1vw;
           font-size: 16px;
         }
+      }
+      &.show-dropdown .dropdown {
+        opacity: 1;
+        visibility: visible;
       }
       .Collapsible{
         width: 100%;

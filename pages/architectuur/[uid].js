@@ -1,13 +1,13 @@
-import { createClient } from '../prismicConfiguration'
+import { createClient } from '../../prismicConfiguration'
 import React, {useEffect, useState} from 'react';
 import SliceZone from "next-slicezone";
 import Head from 'next/head'
 import { RichText } from 'prismic-reactjs'
 
-import * as Slices from "../slices";
+import * as Slices from "../../slices";
 const resolver = ({ sliceName }) => Slices[sliceName];
-import Layout from "../components/layout"
-import Projects from "../components/projects"
+import Layout from "../../components/layout"
+import Projects from "../../components/projects"
 
 
 
@@ -54,7 +54,7 @@ export async function getStaticProps({ params, locale, previewData }) {
 
   const global = await client.getSingle("global");
   const homepage = await client.getByUID("homepage", "home", { lang: locale });
-  const page = await client.getByUID("tag", params.uid, { lang: locale });
+  const page = await client.getByUID("tag", 'architectuur', { lang: locale });
   const menu = await client.getSingle("menu", { lang: locale });
   const footer = await client.getSingle("footer");
   const tags = await client.getAllByType("tag", { lang: locale });
@@ -69,6 +69,10 @@ export async function getStaticProps({ params, locale, previewData }) {
     predicates: [
       prismic.predicate.at(
         'my.project.categories.category',
+        'architectuur'
+      ),
+			prismic.predicate.at(
+        'my.project.themes.theme',
         params.uid
       ),
     ],
@@ -91,7 +95,7 @@ export async function getStaticProps({ params, locale, previewData }) {
 export async function getStaticPaths({previewData}) {
   const client = createClient({ previewData })
 
-  const documents = await client.getAllByType("tag", { lang: "*" });
+  const documents = await client.getAllByType("theme", { lang: "*" });
 
   return {
     paths: documents.map((doc) => {

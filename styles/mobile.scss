@@ -69,7 +69,110 @@
 		z-index: 99999;
 		height: calc(100vh - 75px);
 		margin-top: 75px;
-	}		
+	}	
+	.projects .project-item {
+		&.selected {
+			.flex {
+				div {
+					width: 100%;
+				}
+
+				.description {
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+
+			.extra-info {
+				.slick-slider {
+					height: 300px;
+
+					.slick-slide {
+						height: 300px;
+						margin-right: 24px;
+						position: relative;
+
+						.slide-item {
+							height: 300px;
+							position: relative;
+						}
+
+						img {
+							max-height: 300px;
+							min-height: 300px;
+							height: 300px;
+							width: auto;
+						}
+					}
+				}
+
+				.image {
+					width: 100% !important;
+					height: auto !important;
+					margin-bottom: 48px;
+
+					span img {
+						width: 100%;
+					}
+				}
+
+				.info {
+					margin-left: 0;
+					flex-direction: column;
+					width: 100%;
+
+					div {
+						width: 100%;
+						margin: 0;
+					}
+				}
+
+				.video {
+					margin: 0 1vw 36px 1vw;
+
+					iframe {
+						width: 92vw;
+						height: 50vw;
+					}
+				}
+			}
+
+			.close {
+				margin-bottom: -12.5px;
+			}
+
+			.description {
+				width: 100%;
+				margin-left: 0;
+			}
+
+			.cover {
+				width: 100%;
+			}
+
+			.caption {
+				flex-direction: column;
+				width: 100%;
+
+				div {
+					width: 100%;
+				}
+
+				p {
+					margin-top: 18px;
+					width: 100%;
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	.flex {
+		flex-direction: column;
+	}
+	.projects .project-item.selected .flex .cover{
+		max-height: auto;
+		width: 94vw;
+	}
 }
 
 @media only screen and (max-width: 900px) {

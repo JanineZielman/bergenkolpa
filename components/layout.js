@@ -11,15 +11,20 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 	const router = useRouter();
 
 	function dropdownToggle(e){
-		console.log(e.target.parentElement.className)
-		// router.push('/'+item.primary.link.uid+'#projects')
+		let tag = e.target.parentElement.className.replaceAll(' ', '').replace('menu-item', '').replace('active', '');
+		router.push('/'+lang+'/'+tag+'#projects')
+
+		if (document.getElementsByClassName('show-dropdown').length > 1){
+			document.getElementsByClassName('show-dropdown')[0]?.classList.remove("show-dropdown");
+		}
+		e.target.parentElement.parentElement.classList.toggle('show-dropdown');
 	}
 
   return(
 		<section className="main-container">
 			<div className="menu">
 				<div className="logo">
-					<Link href="/">
+					<Link href="/" locale={lang}>
 						<a>
 							<img src="/logo.svg"/>
 						</a>
@@ -34,22 +39,22 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 										<a onClick={dropdownToggle} className={`${router.asPath == '/'+item.primary.link.uid+'#projects' || router.asPath == '/'+item.primary.link.uid ? "active" : ""} ${item.primary.link.uid}`}>
 											<span>{item.primary.label}</span>
 										</a>
-								
-										<div className="dropdown">
+										<div className="dropdown" id="dropdown">
 											{item.items.map((sub, i) => {
 												return(
-													<a key={`menulink_${i}`} href={'/theme/'+sub.subLink.uid+'#projects'} className={router.asPath == '/theme/'+sub.subLink.uid+'#projects' || router.asPath == '/theme/'+sub.subLink.uid ? "active" : ""}>
+													<a key={`menulink_${i}`} href={'/' + lang + '/' + item.primary.link.uid + '/' + sub.subLink.uid+'#projects'} className={router.asPath == '/theme/'+sub.subLink.uid+'#projects' || router.asPath == '/theme/'+sub.subLink.uid ? "active" : ""}>
 														<span>{sub.subLabel}</span>
 													</a>
 												)
 											})}
 										</div>
-
 									</>
-								:
-									<a href={'/'+item.primary.link.uid+'#projects'} className={router.asPath == '/'+item.primary.link.uid+'#projects' || router.asPath == '/'+item.primary.link.uid ? "active" : ""}>
-										<span>{item.primary.label}</span>
-									</a>
+								:										
+									<Link href={'/'+item.primary.link.uid+'#projects'} locale={lang}>
+										<a className={router.asPath == '/'+item.primary.link.uid+'#projects' || router.asPath == '/'+item.primary.link.uid ? "active" : ""}>
+											<span>{item.primary.label}</span>
+										</a>
+									</Link>
 								}
 							
 							</div>

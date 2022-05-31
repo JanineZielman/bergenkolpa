@@ -35,14 +35,14 @@ export function linkResolver(doc) {
   switch (doc.type) {
     case 'home':
       return '/'
-    case 'page':
-      return `/${doc.uid}`
+    // case 'page':
+    //   return `/${doc.uid}`
     case 'bureau':
       return `/bureau`
     case 'tag':
-      return `/${doc.uid}#${doc.uid}`
+      return `/${doc.uid}#projects`
     case 'theme':
-      return `/theme/${doc.uid}#${doc.uid}`
+      return `/theme/${doc.uid}#projects`
     case 'project':
       return `/#${doc.uid}`
     default:

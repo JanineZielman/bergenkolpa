@@ -18,6 +18,17 @@
           "label": "Name",
           "placeholder": ""
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "sub_tag": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     }
   }

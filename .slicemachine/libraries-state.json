@@ -1203,6 +1203,65 @@
             "height": 71
           }
         }
+      },
+      "sub_tag": {
+        "library": "slices",
+        "id": "sub_tag",
+        "name": "SubTag",
+        "description": "SubTag",
+        "model": {
+          "id": "sub_tag",
+          "type": "SharedSlice",
+          "name": "SubTag",
+          "description": "SubTag",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SubTag",
+              "primary": {},
+              "items": {
+                "subtag": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Subtag",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "sub_tag",
+            "items": [
+              {
+                "subtag": "unleash next-generation web services"
+              },
+              {
+                "subtag": "seize scalable technologies"
+              },
+              {
+                "subtag": "unleash real-time metrics"
+              },
+              {
+                "subtag": "deliver proactive content"
+              }
+            ],
+            "primary": {}
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
       }
     }
   }
