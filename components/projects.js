@@ -67,7 +67,7 @@ const Projects = ({projects, tags, themes}) => {
 					<LazyLoad height={600} offset={600} className="project-wrapper">
 						<div key={`project${i}`} className={`project-item ${item.data.background ? item.data.background : '' } ${item.data['cover-image']?.url ? '' : 'cover-text'}`} id={item.uid}>
 					
-							<div className="title" onClick={AddClass}>{item.data.title}</div>
+							<div className="title" onClick={AddClass}>{item.data.title ? item.data.title : <span>&nbsp;</span> }</div>
 							<img className='close' onClick={RemoveClass} src="/cross.svg"/>
 							<div className="tags">
 								{item.data.categories?.map((item,i) => (
@@ -97,11 +97,35 @@ const Projects = ({projects, tags, themes}) => {
 									<div className="cover">
 										{item.data['cover-image'].url && 
 											<div className={`img-effect`}>
-												{item.data['aspect-ratio'] != 'Portrait' && item.data['aspect-ratio'] != 'Square' &&
+												{item.data['aspect-ratio'] == null && 
 													<Image 
 														src={item.data['cover-image'].url} 
 														alt={item.data['cover-image'].alt}
+														width={'1520'}
+														height={'1080'}
+													/>
+												}
+												{item.data['aspect-ratio'] == 'Main' && 
+													<Image 
+														src={item.data['cover-image'].url} 
+														alt={item.data['cover-image'].alt}
+														width={'1520'}
+														height={'1080'}
+													/>
+												}
+												{item.data['aspect-ratio'] == 'Landscape' &&
+													<Image 
+														src={item.data['cover-image'].landscape ? item.data['cover-image'].landscape.url : item.data['cover-image'].url} 
+														alt={item.data['cover-image'].alt}
 														width={'1920'}
+														height={'1080'}
+													/>
+												}
+												{item.data['aspect-ratio'] == 'Square' &&
+													<Image 
+														src={item.data['cover-image'].square.url} 
+														alt={item.data['cover-image'].alt}
+														width={'1080'}
 														height={'1080'}
 													/>
 												}
@@ -113,12 +137,12 @@ const Projects = ({projects, tags, themes}) => {
 														height={'1920'}
 													/>
 												}
-												{item.data['aspect-ratio'] == 'Square' &&
+												{item.data['aspect-ratio'] == 'Narrow' &&
 													<Image 
-														src={item.data['cover-image'].square.url} 
+														src={item.data['cover-image'].narrow.url} 
 														alt={item.data['cover-image'].alt}
 														width={'1080'}
-														height={'1080'}
+														height={'1920'}
 													/>
 												}
 											</div>
@@ -150,7 +174,23 @@ const Projects = ({projects, tags, themes}) => {
 																<div key={`slide-item${i}`} className='slide-item'>
 																	{item.image.url && 
 																		<>
-																			{item['aspect-ratio'] != 'Portrait' && item['aspect-ratio'] != 'Square' &&
+																			{item['aspect-ratio'] == null &&
+																				<Image 
+																					src={item.image.url}
+																					alt={item.image.alt}
+																					width={'1520'}
+																					height={'1080'} 
+																				/>
+																			}
+																			{item['aspect-ratio'] == 'Main' &&
+																				<Image 
+																					src={item.image.url}
+																					alt={item.image.alt}
+																					width={'1520'}
+																					height={'1080'} 
+																				/>
+																			}
+																			{item['aspect-ratio'] == 'Landscape' &&
 																				<Image 
 																					src={item.image.url}
 																					alt={item.image.alt}
@@ -158,19 +198,27 @@ const Projects = ({projects, tags, themes}) => {
 																					height={'1080'} 
 																				/>
 																			}
-																			{item['aspect-ratio'] == 'Portrait' &&
-																				<Image 
-																					src={item.image.portrait ? item.image.portrait.url : item.image.url} 
-																					alt={item.image.alt}
-																					width={'1080'}
-																					height={'1920'}
-																				/>
-																			}
 																			{item['aspect-ratio'] == 'Square' &&
 																				<Image 
 																					src={item.image.square ? item.image.square.url : item.image.url} 
 																					alt={item.image.alt}
 																					width={'1080'}
+																					height={'1080'}
+																				/>
+																			}
+																			{item['aspect-ratio'] == 'Portrait' &&
+																				<Image 
+																					src={item.image.portrait ? item.image.portrait.url : item.image.url} 
+																					alt={item.image.alt}
+																					width={'763'}
+																					height={'1080'}
+																				/>
+																			}
+																			{item['aspect-ratio'] == 'Narrow' &&
+																				<Image 
+																					src={item.image.portrait ? item.image.portrait.url : item.image.url} 
+																					alt={item.image.alt}
+																					width={'610'}
 																					height={'1080'}
 																				/>
 																			}
@@ -182,11 +230,22 @@ const Projects = ({projects, tags, themes}) => {
 												</Slick>
 											</div>
 										}
+										{slice.slice_type == 'image' && 
+											<div className="image" id={'image'+i}>
+												{slice.items.map((item,i) => {
+													return(
+														<div key={`image-item${i}`}>
+															hello
+														</div>
+													)
+												})}
+											</div>
+										}
 										{slice.slice_type == 'info' && 
 											<div className="info" id={'info'+i}>
 												{slice.items.map((item,i) => {
 													return(
-														<div key={`info${i}`}>
+														<div key={`info-item${i}`}>
 															<RichText render={item.text} />
 														</div>
 													)

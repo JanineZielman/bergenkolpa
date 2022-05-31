@@ -93,28 +93,41 @@
           "label": "Aspect Ratio",
           "placeholder": "",
           "options": [
+            "Main",
             "Landscape",
+            "Square",
             "Portrait",
-            "Square"
-          ]
+            "Narrow"
+          ],
+          "default_value": "Main"
         }
       },
       "cover-image": {
         "config": {
           "label": "cover-image",
           "constraint": {
-            "width": 1920,
+            "width": 1520,
             "height": 1080
           },
           "thumbnails": [
             {
-              "name": "portrait",
-              "width": 1080,
-              "height": 1920
+              "name": "landscape",
+              "width": 1920,
+              "height": 1080
             },
             {
               "name": "square",
               "width": 1080,
+              "height": 1080
+            },
+            {
+              "name": "portrait",
+              "width": 763,
+              "height": 1080
+            },
+            {
+              "name": "narrow",
+              "width": 610,
               "height": 1080
             }
           ]
@@ -157,6 +170,9 @@
               "type": "SharedSlice"
             },
             "info": {
+              "type": "SharedSlice"
+            },
+            "image": {
               "type": "SharedSlice"
             }
           }

@@ -1,15 +1,15 @@
 {
-  "id": "images",
+  "id": "image",
   "type": "SharedSlice",
-  "name": "Images",
-  "description": "Images",
+  "name": "Image",
+  "description": "Image",
   "variations": [
     {
-      "id": "default-slice",
-      "name": "Default slice",
+      "id": "default",
+      "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Images",
+      "description": "Image",
       "primary": {},
       "items": {
         "aspect-ratio": {
@@ -28,8 +28,9 @@
           }
         },
         "image": {
+          "type": "Image",
           "config": {
-            "label": "image",
+            "label": "Image",
             "constraint": {
               "width": 1520,
               "height": 1080
@@ -56,8 +57,7 @@
                 "height": 1080
               }
             ]
-          },
-          "type": "Image"
+          }
         }
       },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"

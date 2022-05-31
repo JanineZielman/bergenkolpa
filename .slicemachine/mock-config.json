@@ -38,7 +38,7 @@
       "themes": {},
       "categories": {},
       "aspect-ratio": {
-        "content": "Landscape"
+        "content": "Main"
       },
       "background": {
         "content": "sand"
@@ -289,7 +289,7 @@
       "default-slice": {
         "items": {
           "aspect-ratio": {
-            "content": "Landscape"
+            "content": "Main"
           }
         }
       }
@@ -341,6 +341,16 @@
       "default": {
         "primary": {},
         "items": {}
+      }
+    },
+    "Image": {
+      "default": {
+        "primary": {},
+        "items": {
+          "aspect-ratio": {
+            "content": "Main"
+          }
+        }
       }
     }
   }
