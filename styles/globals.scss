@@ -76,7 +76,7 @@ a {
   .menu-items{
     position: fixed;
     top: 25px;
-    left: 240px;
+    left: calc(250px + 2vw);
     display: flex;
     justify-content: center;
     .menu-item {
@@ -88,19 +88,22 @@ a {
       width: 100%;
       white-space: nowrap;
       a{
-        padding: 0px 2vw;
+        padding: 0px;
+        margin-right: 2vw;
         &.active{
           span{
             border-bottom: 1.5px solid black;
           }
         }
       }
-      // .dropdown {
-      //   a {
-      //     display: block;
-      //     padding: 10px 0px;
-      //   }
-      // }
+      .dropdown {
+        position: absolute;
+        margin-top: 6px;
+        a {
+          margin-right: 1vw;
+          font-size: 16px;
+        }
+      }
       .Collapsible{
         width: 100%;
         padding: 0px 36px;
@@ -216,6 +219,10 @@ footer{
     right: 0;
     .social-link{
       margin: 0 5px;
+      img{
+        height: 15px;
+        width: auto;
+      }
     }
   }
 }

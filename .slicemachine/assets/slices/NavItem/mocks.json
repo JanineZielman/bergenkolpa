@@ -3,12 +3,34 @@
     "variation": "default-slice",
     "name": "Default slice",
     "slice_type": "nav_item",
-    "items": [],
+    "items": [
+      {
+        "subLabel": "drive world-class web services",
+        "subLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "subLabel": "extend e-business solutions",
+        "subLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "subLabel": "productize strategic markets",
+        "subLink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      }
+    ],
     "primary": {
-      "label": "expedite visionary niches",
+      "label": "incubate dynamic markets",
       "link": {
         "link_type": "Web",
-        "url": "http://twitter.com"
+        "url": "https://slicemachine.dev"
       }
     }
   }

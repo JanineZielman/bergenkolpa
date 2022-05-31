@@ -524,7 +524,23 @@
                   "type": "Link"
                 }
               },
-              "items": {},
+              "items": {
+                "subLabel": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Sub Label",
+                    "placeholder": ""
+                  }
+                },
+                "subLink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Sub Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -534,12 +550,34 @@
             "variation": "default-slice",
             "name": "Default slice",
             "slice_type": "nav_item",
-            "items": [],
+            "items": [
+              {
+                "subLabel": "drive world-class web services",
+                "subLink": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              },
+              {
+                "subLabel": "extend e-business solutions",
+                "subLink": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              },
+              {
+                "subLabel": "productize strategic markets",
+                "subLink": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
             "primary": {
-              "label": "expedite visionary niches",
+              "label": "incubate dynamic markets",
               "link": {
                 "link_type": "Web",
-                "url": "http://twitter.com"
+                "url": "https://slicemachine.dev"
               }
             }
           }
@@ -548,13 +586,7 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {
-          "default-slice": {
-            "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/NavItem/default-slice/preview.png",
-            "width": 800,
-            "height": 71
-          }
-        }
+        "screenshotPaths": {}
       },
       "slider": {
         "library": "slices",

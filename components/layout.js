@@ -10,6 +10,11 @@ import Menu from './menu';
 const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 	const router = useRouter();
 
+	function dropdownToggle(e){
+		console.log(e.target.parentElement.className)
+		// router.push('/'+item.primary.link.uid+'#projects')
+	}
+
   return(
 		<section className="main-container">
 			<div className="menu">
@@ -25,23 +30,26 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 						return(
 							<div key={`menuitem${i}`} className="menu-item">
 								{item.items.length > 1 ?
-									<div className="dropdown">
-										<Collapsible trigger={item.primary.label}>
-											{item.items.map((sub, i) => {
-												return(
-													<Link key={`menulink_${i}`} href={'/'+sub.subLink.slug+'#projects'}>
-														<a>{sub.subLabel}</a>
-													</Link>
-												)
-											})}
-										</Collapsible>
-									</div>
-								:
-									<Link href={'/'+item.primary.link.uid+'#projects'}>
-										<a className={router.asPath == '/'+item.primary.link.uid+'#projects' || router.asPath == '/'+item.primary.link.uid ? "active" : ""}>
+									<>
+										<a onClick={dropdownToggle} className={`${router.asPath == '/'+item.primary.link.uid+'#projects' || router.asPath == '/'+item.primary.link.uid ? "active" : ""} ${item.primary.link.uid}`}>
 											<span>{item.primary.label}</span>
 										</a>
-									</Link>
+								
+										<div className="dropdown">
+											{item.items.map((sub, i) => {
+												return(
+													<a key={`menulink_${i}`} href={'/theme/'+sub.subLink.uid+'#projects'} className={router.asPath == '/theme/'+sub.subLink.uid+'#projects' || router.asPath == '/theme/'+sub.subLink.uid ? "active" : ""}>
+														<span>{sub.subLabel}</span>
+													</a>
+												)
+											})}
+										</div>
+
+									</>
+								:
+									<a href={'/'+item.primary.link.uid+'#projects'} className={router.asPath == '/'+item.primary.link.uid+'#projects' || router.asPath == '/'+item.primary.link.uid ? "active" : ""}>
+										<span>{item.primary.label}</span>
+									</a>
 								}
 							
 							</div>
@@ -71,12 +79,12 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 				<div className="socials">
 					{global.slices[0].items.map((item, i) => {
 						return(
-							<a key={`social${i}`} className="social-link" href={item.link}>
+							<a key={`social${i}`} className="social-link" target="_blank" href={item.link.url}>
 								{item.social == 'facebook' &&
 									<img src="/fb.svg"/>
 								}
-								{item.social == 'twitter' &&
-									<img src="/twitter.svg"/>
+								{item.social == 'linkedin' &&
+									<img src="/li.svg"/>
 								}
 								{item.social == 'instagram' &&
 									<img src="/insta.svg"/>
