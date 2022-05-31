@@ -1,6 +1,6 @@
 import Link from "next/link"
 import LanguageSwitcher from "./language"
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { RichText } from 'prismic-reactjs'
 import Collapsible from 'react-collapsible';
 import { useRouter } from 'next/router';
@@ -10,14 +10,22 @@ import Menu from './menu';
 const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 	const router = useRouter();
 
-	function dropdownToggle(e){
-		let tag = e.target.parentElement.className.replaceAll(' ', '').replace('menu-item', '').replace('active', '');
-		router.push('/'+lang+'/'+tag+'#projects')
+	const [selectedItems, setSelectedItems] = useState([]);
+	const [selectedId, setSelectedId] = useState();
 
-		if (document.getElementsByClassName('show-dropdown').length > 1){
-			document.getElementsByClassName('show-dropdown')[0]?.classList.remove("show-dropdown");
-		}
-		e.target.parentElement.parentElement.classList.toggle('show-dropdown');
+	useEffect(() => {
+    setSelectedItems(document.getElementsByClassName("show-dropdown"));
+  }, []);
+
+	function dropdownToggle(e){
+		document.getElementById(selectedId)?.classList.remove("show-dropdown");
+
+		let tag = e.target.parentElement.className.replaceAll(' ', '').replace('menu-item', '').replace('active', '');
+		
+		const id = e.target.parentElement.parentElement.id;
+		e.target.parentElement.parentElement.classList.add('show-dropdown');
+		setSelectedId(id)
+		router.push('/'+lang+'/'+tag+'#projects');
 	}
 
   return(
@@ -33,7 +41,7 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 				<div className="menu-items" id="menu-items">
 					{menu.slices.map((item, i) => {
 						return(
-							<div key={`menuitem${i}`} className="menu-item">
+							<div key={`menuitem${i}`} className={`menu-item ${router.asPath.includes(item.primary.link.uid) ? "active" : ""}`} id={`menuitem${i}`}>
 								{item.items.length > 1 ?
 									<>
 										<a onClick={dropdownToggle} className={`${router.asPath == '/'+item.primary.link.uid+'#projects' || router.asPath == '/'+item.primary.link.uid ? "active" : ""} ${item.primary.link.uid}`}>
@@ -42,7 +50,7 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 										<div className="dropdown" id="dropdown">
 											{item.items.map((sub, i) => {
 												return(
-													<a key={`menulink_${i}`} href={'/' + lang + '/' + item.primary.link.uid + '/' + sub.subLink.uid+'#projects'} className={router.asPath == '/theme/'+sub.subLink.uid+'#projects' || router.asPath == '/theme/'+sub.subLink.uid ? "active" : ""}>
+													<a key={`menulink_${i}`} href={'/' + lang + '/' + item.primary.link.uid + '/' + sub.subLink.uid+'#projects'} className={router.asPath.includes(sub.subLink.uid) ? "active" : ""}>
 														<span>{sub.subLabel}</span>
 													</a>
 												)

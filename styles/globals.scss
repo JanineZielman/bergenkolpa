@@ -103,6 +103,10 @@ a {
           }
         }
       }
+      &.active .dropdown{
+        opacity: 1;
+        visibility: visible;
+      }
       .dropdown {
         position: absolute;
         left: 0;
