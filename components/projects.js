@@ -167,6 +167,9 @@ const Projects = ({projects, tags, themes}) => {
 								{item.data.slices.map((slice,i) => {
 									return(
 										<>
+										{slice.slice_type == 'embed' &&
+											<div className='video' dangerouslySetInnerHTML={{ __html: slice.primary.embed.html }} />
+										}
 										{slice.slice_type == 'images' && 
 											<div key={`image-slider${i}`} className="images" id={'images'+i}>
 												<Slick {...settings}>

@@ -191,6 +191,7 @@
 				margin: 24px 0 48px 0;
 
 				.slick-slider {
+					width: 94vw;
 					height: 500px;
 					margin-bottom: 48px;
 
@@ -308,6 +309,14 @@
 		}
 		&.yellow:after {
 			box-shadow: 110vw 0px #fff100;
+		}
+	}
+
+	.video{
+		margin: 0 1vw 1vw 1vw;
+		iframe{
+			width: 37.167vw;
+			height: 20vw;
 		}
 	}
 	
