@@ -5,8 +5,10 @@ import React, {useState} from 'react';
 import { RichText } from 'prismic-reactjs'
 import Collapsible from 'react-collapsible';
 import Modal from 'react-modal';
+import { useRouter } from 'next/router';
 
-const Menu = ({children, altLangs, menu, lang, footer}) => {
+const Menu = ({altLangs, menu, lang}) => {
+	const router = useRouter();
 	const [modalIsOpen, setIsOpen] = useState(false);
 
 	const customStyles = {
@@ -43,25 +45,30 @@ const Menu = ({children, altLangs, menu, lang, footer}) => {
 					style={customStyles}
 				>
 					<div className="modal-content" onClick={openModal}>
-						<div className="menu-items">
+						<div className="menu-items" id="menu-items">
 							{menu.slices.map((item, i) => {
 								return(
-									<div key={`menuitem${i}`} className="menu-item">
+									<div key={`menuitem${i}`} className={`menu-item ${router.asPath.includes(item.primary.link.uid) ? "active" : ""}`} id={`menuitem${i}`}>
 										{item.items.length > 1 ?
-											<div className="dropdown">
-												<Collapsible trigger={item.primary.label}>
+											<>
+												<a href={'/' + lang + '/' + item.primary.link.uid + '#projects'} className={`${router.asPath == '/'+item.primary.link.uid+'#projects' || router.asPath == '/'+item.primary.link.uid ? "active" : ""} ${item.primary.link.uid}`}>
+													<span>{item.primary.label}</span>
+												</a>
+												<div className="dropdown" id="dropdown">
 													{item.items.map((sub, i) => {
 														return(
-															<Link key={`menulink${i}`} href={'/'+sub.subLink.slug+'#projects'}>
-																<a>{sub.subLabel}</a>
-															</Link>
+															<a key={`menulink_${i}`} href={'/' + lang + '/' + item.primary.link.uid + '/' + sub.subLink.uid+'#projects'} className={router.asPath.includes(sub.subLink.uid) ? "active" : ""}>
+																<span>{sub.subLabel}</span>
+															</a>
 														)
 													})}
-												</Collapsible>
-											</div>
-										:
-											<Link href={'/'+item.primary.link.uid+'#projects'}>
-												<a>{item.primary.label}</a>
+												</div>
+											</>
+										:										
+											<Link href={'/'+item.primary.link.uid+'#projects'} locale={lang}>
+												<a className={router.asPath == '/'+item.primary.link.uid+'#projects' || router.asPath == '/'+item.primary.link.uid ? "active" : ""}>
+													<span>{item.primary.label}</span>
+												</a>
 											</Link>
 										}
 									
