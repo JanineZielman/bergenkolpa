@@ -1,4 +1,4 @@
-import { createClient } from '../../prismicConfiguration'
+import { createClient, linkResolver } from '../../prismicConfiguration'
 import { RichText } from 'prismic-reactjs'
 import Layout from "../../components/layout"
 import Head from 'next/head'
@@ -33,7 +33,7 @@ const Bureau = (props) => {
             return(
               <div key={`bureau-items${i}`} className="section">
                 <h2>{slice.primary.title}</h2>
-                <RichText render={slice.primary.text} />
+                <RichText render={slice.primary.text} linkResolver={linkResolver}/>
                 <div className='flex'>
                   {slice.items.map((item,i) => {
                     return(
