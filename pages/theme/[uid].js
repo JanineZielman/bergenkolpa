@@ -42,7 +42,7 @@ const Theme = (props) => {
       </Head>
       <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
         <SliceZone slices={homepage} resolver={resolver} />
-        <Projects projects={projects} tags={tags} themes={themes}/>
+        <Projects projects={projects} tags={tags} themes={themes} lang={doc.lang}/>
       </Layout>
     </>
   )
