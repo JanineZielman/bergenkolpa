@@ -378,7 +378,7 @@
                     "label": "Text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 }
               },
@@ -400,6 +400,15 @@
                     },
                     "thumbnails": []
                   }
+                },
+                "info": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Info",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
                 }
               },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
@@ -413,7 +422,7 @@
             "slice_type": "image_text",
             "items": [
               {
-                "text": "innovate leading-edge vortals",
+                "text": "drive holistic deliverables",
                 "image": {
                   "dimensions": {
                     "width": 1080,
@@ -421,11 +430,56 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=1080&h=1080&fit=crop"
-                }
+                  "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1080&h=1080&fit=crop"
+                },
+                "info": [
+                  {
+                    "type": "paragraph",
+                    "text": "Excepteur non anim magna aliquip aute sit occaecat cupidatat velit fugiat. Aute officia nulla voluptate cupidatat eu eiusmod exercitation laboris qui in magna consequat aute.",
+                    "spans": []
+                  }
+                ]
               },
               {
-                "text": "exploit one-to-one niches",
+                "text": "brand vertical partnerships",
+                "image": {
+                  "dimensions": {
+                    "width": 1080,
+                    "height": 1080
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1080&h=1080&fit=crop"
+                },
+                "info": [
+                  {
+                    "type": "paragraph",
+                    "text": "Aliqua do excepteur proident mollit sit magna. Adipisicing aliqua ipsum esse tempor ullamco elit nostrud dolor ipsum ipsum nostrud minim officia minim amet. Ad do ipsum magna velit anim Lorem officia dolor sit occaecat magna ea.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "text": "deliver plug-and-play ROI",
+                "image": {
+                  "dimensions": {
+                    "width": 1080,
+                    "height": 1080
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=1080&h=1080&fit=crop"
+                },
+                "info": [
+                  {
+                    "type": "paragraph",
+                    "text": "Dolor magna elit elit nostrud ullamco ut duis Lorem fugiat commodo. Est consequat eu excepteur consequat minim fugiat laborum incididunt velit mollit.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "text": "brand sexy content",
                 "image": {
                   "dimensions": {
                     "width": 1080,
@@ -434,27 +488,22 @@
                   "alt": "Placeholder image",
                   "copyright": null,
                   "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=1080&h=1080&fit=crop"
-                }
-              },
-              {
-                "text": "incubate dot-com experiences",
-                "image": {
-                  "dimensions": {
-                    "width": 1080,
-                    "height": 1080
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1080&h=1080&fit=crop"
-                }
+                },
+                "info": [
+                  {
+                    "type": "paragraph",
+                    "text": "Nostrud minim ut tempor aute ipsum magna ad irure.",
+                    "spans": []
+                  }
+                ]
               }
             ],
             "primary": {
-              "title": "extend back-end technologies",
+              "title": "envisioneer holistic content",
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Tempor duis reprehenderit magna cillum non.",
+                  "text": "Laboris ea exercitation proident eu voluptate nostrud ipsum.",
                   "spans": []
                 }
               ]
@@ -465,13 +514,7 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {
-          "default": {
-            "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/ImageText/default/preview.png",
-            "width": 800,
-            "height": 21
-          }
-        }
+        "screenshotPaths": {}
       },
       "images": {
         "library": "slices",

@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 
 export const LanguageSwitcher = ({ altLangs = [] , lang}) => {
 	const router = useRouter();
-	console.log(router)
   return (
     <div className="language-switcher">
 			<div className="current-language lang" id={lang}>
