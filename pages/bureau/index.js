@@ -20,7 +20,7 @@ const Bureau = (props) => {
 			router.push('#'+id);
 			setTimeout(() => {
 				router.push('#'+id);
-				document.getElementById(id).classList.add('selected');
+				document.getElementById(id)?.classList.add('selected');
 			}, 1000);
 			setSelectedId(id)
 		} 
