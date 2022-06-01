@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react';
 import { RichText } from 'prismic-reactjs'
 import Collapsible from 'react-collapsible';
 import { useRouter } from 'next/router';
+import { linkResolver } from '../prismicConfiguration'
 
 import Menu from './menu';
 
@@ -81,7 +82,7 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 								{item.items.map((content, i) => {
 									return(
 										<div key={`column${i}`} className="column">
-											<RichText render={content.text} />
+											<RichText render={content.text} linkResolver={linkResolver}/>
 										</div>
 									)
 								})}

@@ -1,4 +1,4 @@
-import { createClient } from '../../prismicConfiguration'
+import { createClient, linkResolver } from '../../prismicConfiguration'
 import React, {useEffect, useState} from 'react';
 import SliceZone from "next-slicezone";
 import Head from 'next/head'

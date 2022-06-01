@@ -20,13 +20,13 @@ const Bureau = (props) => {
           <div className="intro">
             <h2>Introduction</h2>
             <div className="content">
-              <RichText render={content.intro} />
+              <RichText render={content.intro} linkResolver={linkResolver}/>
             </div>
           </div>
           <div className="contact">
             <h2>Contact</h2>
             <div className="content">
-              <RichText render={content.contact} />
+              <RichText render={content.contact} linkResolver={linkResolver}/>
             </div>
           </div>
           {content.slices.map((slice,i) => {

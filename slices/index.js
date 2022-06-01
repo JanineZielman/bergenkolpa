@@ -9,7 +9,6 @@ import Info from './Info';
 import NavItem from './NavItem';
 import Slider from './Slider';
 import Socials from './Socials';
-import SubTag from './SubTag';
 
 export {
 	Embed,
@@ -21,7 +20,6 @@ export {
 	NavItem,
 	Slider,
 	Socials,
-	SubTag,
 };
 
 export const components = {
@@ -34,5 +32,4 @@ export const components = {
 	nav_item: NavItem,
 	slider: Slider,
 	socials: Socials,
-	sub_tag: SubTag,
 };

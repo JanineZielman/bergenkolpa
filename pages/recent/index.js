@@ -1,4 +1,4 @@
-import { createClient } from '../../prismicConfiguration'
+import { createClient, linkResolver } from '../../prismicConfiguration'
 import { RichText } from 'prismic-reactjs'
 import Moment from 'moment';
 import Layout from "../../components/layout"
@@ -30,11 +30,11 @@ const Recent = (props) => {
 										{item.data.image.url ?
 											<>
 												<img src={item.data.image.url}/>
-												<RichText render={item.data.text} />
+												<RichText render={item.data.text} linkResolver={linkResolver} />
 											</>
 										:
 											<div className='big'>
-												<RichText render={item.data.text} />
+												<RichText render={item.data.text} linkResolver={linkResolver} />
 											</div>
 										}
 									</div>

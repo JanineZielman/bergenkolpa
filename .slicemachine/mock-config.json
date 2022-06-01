@@ -357,11 +357,6 @@
       "default": {
         "primary": {}
       }
-    },
-    "SubTag": {
-      "default": {
-        "primary": {}
-      }
     }
   }
 }

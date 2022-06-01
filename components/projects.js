@@ -4,6 +4,7 @@ import { RichText } from 'prismic-reactjs'
 import LazyLoad from 'react-lazyload';
 import Slick from "react-slick";
 import Image from 'next/image'
+import { linkResolver } from '../prismicConfiguration'
 
 
 const Projects = ({projects, tags, themes, lang}) => {
@@ -147,19 +148,19 @@ const Projects = ({projects, tags, themes, lang}) => {
 										}
 										{item.data['cover-text'][0] &&
 											<h2 className={`img-effect`}>
-												<RichText render={item.data['cover-text']} />
+												<RichText render={item.data['cover-text']} linkResolver={linkResolver} />
 											</h2>
 										}
 									</div>
 	
 								<div className="description">
-									<RichText render={item.data['description']} />
+									<RichText render={item.data['description']} linkResolver={linkResolver}/>
 								</div>
 							</div>
 							{item.data.caption[0] && 
 								<div className="caption">
 									<div></div>
-									<RichText render={item.data['caption']} />
+									<RichText render={item.data['caption']} linkResolver={linkResolver} />
 								</div>
 							}
 							<div className="extra-info">
@@ -296,7 +297,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 												{slice.items.map((item,i) => {
 													return(
 														<div key={`info-item${i}`}>
-															<RichText render={item.text} />
+															<RichText render={item.text} linkResolver={linkResolver}/>
 														</div>
 													)
 												})}
