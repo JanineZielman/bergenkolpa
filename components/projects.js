@@ -122,7 +122,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 												}
 												{item.data['aspect-ratio'] == 'Square' &&
 													<Image 
-														src={item.data['cover-image'].square.url} 
+														src={item.data['cover-image'].square ? item.data['cover-image'].square.url : item.data['cover-image'].url } 
 														alt={item.data['cover-image'].alt}
 														width={'1080'}
 														height={'1080'}
@@ -130,7 +130,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 												}
 												{item.data['aspect-ratio'] == 'Portrait' &&
 													<Image 
-														src={item.data['cover-image'].portrait.url} 
+														src={item.data['cover-image'].portrait ? item.data['cover-image'].portrait.url : item.data['cover-image'].url} 
 														alt={item.data['cover-image'].alt}
 														width={'1080'}
 														height={'1920'}
@@ -138,7 +138,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 												}
 												{item.data['aspect-ratio'] == 'Narrow' &&
 													<Image 
-														src={item.data['cover-image'].narrow.url} 
+														src={item.data['cover-image'].narrow ? item.data['cover-image'].narrow.url : item.data['cover-image'].url} 
 														alt={item.data['cover-image'].alt}
 														width={'1080'}
 														height={'1920'}
@@ -196,7 +196,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 																			}
 																			{item['aspect-ratio'] == 'Landscape' &&
 																				<Image 
-																					src={item.image.url}
+																					src={item.image.landscape ? item.image.landscape.url : item.image.url}
 																					alt={item.image.alt}
 																					width={'1920'}
 																					height={'1080'} 
@@ -220,7 +220,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 																			}
 																			{item['aspect-ratio'] == 'Narrow' &&
 																				<Image 
-																					src={item.image.portrait ? item.image.portrait.url : item.image.url} 
+																					src={item.image.narrow ? item.image.narrow.url : item.image.url} 
 																					alt={item.image.alt}
 																					width={'610'}
 																					height={'1080'}
@@ -257,7 +257,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 															}
 															{item['aspect-ratio'] == 'Landscape' &&	
 																<Image 
-																		src={item.image.landscape.url} 
+																		src={item.image.landscape ? item.image.landscape.url : item.image.url} 
 																		alt={item.image.alt}
 																		width={'1920'}
 																		height={'1080'}
@@ -265,7 +265,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 															}
 															{item['aspect-ratio'] == 'Square' &&	
 																<Image 
-																		src={item.image.square.url} 
+																		src={item.image.square ? item.image.square.url : item.image.square} 
 																		alt={item.image.alt}
 																		width={'1080'}
 																		height={'1080'}
@@ -273,17 +273,17 @@ const Projects = ({projects, tags, themes, lang}) => {
 															}
 															{item['aspect-ratio'] == 'Portrait' &&	
 																<Image 
-																		src={item.image.portrait.url} 
+																		src={item.image.portrait ? item.image.portrait.url : item.image.url} 
 																		alt={item.image.alt}
-																		width={'1080'}
+																		width={'763'}
 																		height={'1080'}
 																/>
 															}
 															{item['aspect-ratio'] == 'Narrow' &&	
 																<Image 
-																		src={item.image.narrow.url} 
+																		src={item.image.narrow ? item.image.narrow.url : item.image.url} 
 																		alt={item.image.alt}
-																		width={'1080'}
+																		width={'610'}
 																		height={'1080'}
 																/>
 															}
