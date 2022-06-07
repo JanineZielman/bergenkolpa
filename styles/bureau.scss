@@ -1,7 +1,11 @@
 .bureau{
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 24px;
+	h6 {
+			font-size: 24px;
+			font-weight: normal;
+			margin: 14px 0 0 0;
+		}
 	h2{
 		margin: 0;
 		font-size: 36px;

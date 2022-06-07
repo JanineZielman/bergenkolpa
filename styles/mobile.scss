@@ -436,7 +436,6 @@
 	}
 
 	.bureau{
-		margin-top: 80px;
 		flex-direction: column;
 		.intro, .contact{
 			width:100%;
@@ -444,6 +443,14 @@
 			p {
 				font-size: 20px;
 			}
+		}
+		.intro{
+			margin-top: 80px;
+		}
+		h6 {
+			width: 100%;
+			font-size: 20px;
+			line-height: 1.2;
 		}
 		.contact{
 			margin-top: 24px;
