@@ -92,8 +92,10 @@ const Bureau = (props) => {
                   {slice.items.map((item,j) => {
                     console.log(item.info[0])
                     return(
-                      <div className='flex-item' id={item.text.replace(' ', '_')}>
-                        <h3 onClick={item.info[0] && AddClass2} className={item.info[0] && 'clickable'}>{item.text}</h3>
+                      <div className='flex-item' id={item.text?.replace(' ', '_')}>
+                        {item.text &&
+                          <h3 onClick={item.info[0] && AddClass2} className={item.info[0] && 'clickable'}>{item.text}</h3>
+                        }
                         <img className='close' onClick={RemoveClass} src="/cross.svg"/>
                         <div className='content-wrapper'>
                           <img onClick={item.info[0] && AddClass} src={item.image.url} className={item.info[0] && 'clickable'}/>
