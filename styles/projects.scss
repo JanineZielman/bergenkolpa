@@ -260,16 +260,11 @@
 						}
 					}
 					&:last-child{
-						// margin-top: 48px;
-						// margin-left: 10%;
-						// justify-content: flex-end;
-						// width: 90%;
-						width: 500px;
+						p{
+							width: 500px;
+						}
+						
 						font-size: 16px;
-						// div {
-						// 	width: 30%;
-						// 	margin-left: 24px;
-						// }
 					}
 					display: flex;
 					
