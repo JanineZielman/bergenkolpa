@@ -91,7 +91,7 @@
                     "label": "text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   },
                   "type": "StructuredText"
                 }
@@ -110,7 +110,7 @@
                 "text": [
                   {
                     "type": "paragraph",
-                    "text": "Eiusmod est exercitation aliquip sunt mollit est. Ut ipsum cupidatat adipisicing incididunt commodo proident eiusmod sit fugiat. Non ad nostrud mollit ea aute.",
+                    "text": "Velit dolor id aliqua Lorem ullamco proident.",
                     "spans": []
                   }
                 ]
@@ -119,7 +119,7 @@
                 "text": [
                   {
                     "type": "paragraph",
-                    "text": "Aute voluptate exercitation mollit dolor adipisicing elit occaecat adipisicing. Magna consequat est consectetur laboris dolore ullamco sint. Cupidatat duis cupidatat est qui excepteur aliquip ex culpa exercitation velit laborum.",
+                    "text": "In ea Lorem exercitation cillum. Eu tempor ea ullamco consectetur esse cillum sit non ut consectetur id culpa elit proident. Irure aliqua duis reprehenderit aute nostrud nulla reprehenderit duis culpa adipisicing.",
                     "spans": []
                   }
                 ]
@@ -128,7 +128,7 @@
                 "text": [
                   {
                     "type": "paragraph",
-                    "text": "Dolore laboris in ex quis ad esse quis cupidatat sint sint ullamco laboris cillum sit laborum.",
+                    "text": "Dolore anim nostrud sit qui officia qui minim aliquip cupidatat aute ut ullamco. Consectetur duis est mollit irure commodo pariatur officia in voluptate est tempor aliqua non elit. Dolore non in deserunt reprehenderit ad minim consectetur irure consequat esse officia elit.",
                     "spans": []
                   }
                 ]
@@ -137,7 +137,7 @@
                 "text": [
                   {
                     "type": "paragraph",
-                    "text": "Qui duis culpa exercitation dolor sint tempor esse magna sit.",
+                    "text": "Laboris ipsum qui labore tempor pariatur deserunt culpa consectetur in veniam amet consectetur cillum laboris excepteur.",
                     "spans": []
                   }
                 ]
@@ -154,7 +154,7 @@
           "default-slice": {
             "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/Footer/default-slice/preview.png",
             "width": 800,
-            "height": 70
+            "height": 71
           }
         }
       },
@@ -772,7 +772,7 @@
                     "label": "text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   },
                   "type": "StructuredText"
                 }
@@ -791,7 +791,7 @@
                 "text": [
                   {
                     "type": "paragraph",
-                    "text": "Ipsum in officia reprehenderit deserunt nulla fugiat aute qui nulla. Ad ipsum aute ea reprehenderit dolor duis veniam amet anim id laboris cupidatat ut. Labore irure commodo nostrud tempor non reprehenderit pariatur ea deserunt laborum ipsum.",
+                    "text": "In laborum dolor pariatur consequat quis. Proident enim ex labore laboris consequat excepteur magna excepteur est ullamco nisi ullamco. Et enim eu occaecat mollit mollit tempor consectetur laboris nulla minim.",
                     "spans": []
                   }
                 ]
@@ -800,7 +800,7 @@
                 "text": [
                   {
                     "type": "paragraph",
-                    "text": "Exercitation elit tempor qui nulla ut tempor commodo amet ea ad sunt duis mollit mollit esse.",
+                    "text": "Occaecat exercitation nostrud elit. Cillum aute cupidatat adipisicing minim.",
                     "spans": []
                   }
                 ]
@@ -809,25 +809,7 @@
                 "text": [
                   {
                     "type": "paragraph",
-                    "text": "Eu amet laboris nulla aliquip proident Lorem aliqua magna mollit. Consectetur et officia ipsum esse ex ut. Ullamco sunt ex commodo velit excepteur quis id aliqua sint nulla et id non.",
-                    "spans": []
-                  }
-                ]
-              },
-              {
-                "text": [
-                  {
-                    "type": "paragraph",
-                    "text": "Ullamco occaecat in magna amet elit qui ipsum anim. Ut officia ad adipisicing occaecat quis aliquip nulla. Mollit veniam sunt eu qui eu consectetur.",
-                    "spans": []
-                  }
-                ]
-              },
-              {
-                "text": [
-                  {
-                    "type": "paragraph",
-                    "text": "Aliqua aliquip incididunt tempor fugiat ad anim anim eu sunt in.",
+                    "text": "Ad sit elit laboris cupidatat velit velit in minim.",
                     "spans": []
                   }
                 ]
@@ -844,7 +826,7 @@
           "default-slice": {
             "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/Info/default-slice/preview.png",
             "width": 800,
-            "height": 70
+            "height": 71
           }
         }
       },
@@ -1015,7 +997,7 @@
                     "label": "description",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   },
                   "type": "StructuredText"
                 },
@@ -1073,7 +1055,7 @@
             "slice_type": "slider",
             "items": [
               {
-                "title": "aggregate clicks-and-mortar communities",
+                "title": "transition rich networks",
                 "color": "white",
                 "position": "top-left",
                 "image": {
@@ -1083,12 +1065,40 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=1920&h=1080&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=1920&h=1080&fit=crop"
                 },
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Ex dolore aute laborum eu ut velit.",
+                    "text": "Dolor esse sint dolor mollit cillum ea proident reprehenderit anim tempor anim sit. Aliquip occaecat Lorem et reprehenderit amet. Tempor ipsum sit consequat consectetur commodo.",
+                    "spans": []
+                  }
+                ],
+                "link": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                },
+                "theme": false,
+                "horizontal-crop": "center",
+                "vertical-crop": "middle"
+              },
+              {
+                "title": "incubate cross-media vortals",
+                "color": "white",
+                "position": "top-left",
+                "image": {
+                  "dimensions": {
+                    "width": 1920,
+                    "height": 1080
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?w=1920&h=1080&fit=crop"
+                },
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Lorem fugiat deserunt magna aliqua officia reprehenderit sint.",
                     "spans": []
                   }
                 ],
@@ -1097,92 +1107,8 @@
                   "url": "http://twitter.com"
                 },
                 "theme": true,
-                "horizontal-crop": "left",
+                "horizontal-crop": "center",
                 "vertical-crop": "top"
-              },
-              {
-                "title": "reinvent cross-platform functionalities",
-                "color": "white",
-                "position": "top-left",
-                "image": {
-                  "dimensions": {
-                    "width": 1920,
-                    "height": 1080
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=1920&h=1080&fit=crop"
-                },
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "Sint cillum nisi est aliqua non consequat eu.",
-                    "spans": []
-                  }
-                ],
-                "link": {
-                  "link_type": "Web",
-                  "url": "https://prismic.io"
-                },
-                "theme": true,
-                "horizontal-crop": "right",
-                "vertical-crop": "middle"
-              },
-              {
-                "title": "target vertical paradigms",
-                "color": "white",
-                "position": "top-left",
-                "image": {
-                  "dimensions": {
-                    "width": 1920,
-                    "height": 1080
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=1920&h=1080&fit=crop"
-                },
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "Commodo culpa eu nulla sunt consequat. Laborum aliquip aliqua amet laborum qui eiusmod labore qui deserunt. Sint velit ad consectetur ea esse cillum esse consectetur et pariatur cupidatat.",
-                    "spans": []
-                  }
-                ],
-                "link": {
-                  "link_type": "Web",
-                  "url": "https://prismic.io"
-                },
-                "theme": true,
-                "horizontal-crop": "center",
-                "vertical-crop": "middle"
-              },
-              {
-                "title": "incubate compelling mindshare",
-                "color": "white",
-                "position": "top-left",
-                "image": {
-                  "dimensions": {
-                    "width": 1920,
-                    "height": 1080
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=1920&h=1080&fit=crop"
-                },
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "Aliquip aliqua sit veniam aliquip. Velit proident officia duis aliqua minim laborum.",
-                    "spans": []
-                  }
-                ],
-                "link": {
-                  "link_type": "Web",
-                  "url": "http://google.com"
-                },
-                "theme": false,
-                "horizontal-crop": "center",
-                "vertical-crop": "middle"
               }
             ],
             "primary": {}

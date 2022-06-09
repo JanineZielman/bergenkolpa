@@ -169,6 +169,12 @@
           },
           "theme": {
             "content": true
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       }
@@ -297,8 +303,8 @@
         }
       }
     },
-    "Info": [
-      {
+    "Info": {
+      "0": {
         "variation": "default-slice",
         "name": "Default slice",
         "slice_type": "info",
@@ -332,8 +338,18 @@
           }
         ],
         "primary": {}
+      },
+      "default-slice": {
+        "items": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
-    ],
+    },
     "Socials": {
       "default": {
         "primary": {},
