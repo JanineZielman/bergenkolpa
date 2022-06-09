@@ -450,15 +450,18 @@
 			width:100%;
 			margin: 0;
 			p {
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
 		.intro{
 			margin-top: 80px;
+			h1{
+				font-size: 28px!important;
+			}
 		}
-		h6 {
+		p {
 			width: 100%;
-			font-size: 20px;
+			font-size: 18px;
 			line-height: 1.2;
 		}
 		.contact{
@@ -468,10 +471,10 @@
 			margin-top: 24px;
 			p{
 				width: 100%;
-				font-size: 20px;
+				font-size: 18px;
 				line-height: 1.2;
 			}
-			h6{
+			h3{
 				width: 100%;
 				font-size: 20px;
 				line-height: 1.2;

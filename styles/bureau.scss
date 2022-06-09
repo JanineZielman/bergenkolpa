@@ -16,9 +16,17 @@
 	}
 	.intro{
 		width: 60%;
-		p{
+		p {
+			font-size: 24px;
+			margin: 14px 0 0 0;
+			font-weight: normal;
+			line-height: 1.2;
+		}
+		h1{
 			font-size: 36px;
 			margin: 14px 0 0 0;
+			font-weight: normal;
+			line-height: 1.1;
 		}
 	}
 	.contact{
@@ -35,15 +43,36 @@
 			width: 100%;
 			border-bottom: 2px solid black;
 		}
-		h6 {
-			font-size: 24px;
+		h3 {
+			font-size: 28px;
 			font-weight: normal;
 			width: 60%;
 			margin: 14px 0 0 0;
+			line-height: 1.1;
+		}
+		.flex{
+			h2 {
+				font-size: 36px;
+				font-weight: normal;
+				width: 60%;
+				margin: 14px 0 0 0;
+			}
+			h2 {
+				font-size: 32px;
+				font-weight: normal;
+				width: 60%;
+				margin: 14px 0 0 0;
+			}
+			h3 {
+				font-size: 28px;
+				font-weight: normal;
+				width: 60%;
+				margin: 14px 0 0 0;
+			}
 		}
 		p{
-			font-size: 36px;
-			line-height: 1;
+			font-size: 24px;
+			line-height: 1.2;
 			width: 60%;
 			margin: 14px 0 0 0;
 			a{

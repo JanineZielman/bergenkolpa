@@ -57,7 +57,7 @@ const Menu = ({altLangs, menu, lang}) => {
 												<div className="dropdown" id="dropdown">
 													{item.items.map((sub, i) => {
 														return(
-															<a key={`menulink_${i}`} href={ sub.subLink.uid && '/' + lang + '/' + item.primary.link.uid + '/' + sub.subLink.uid+'#projects'} className={router.asPath.includes(sub.subLink.uid) ? "active" : ""}>
+															<a key={`menulink_${i}`} href={sub.subLink.uid ? '/' + lang + '/' + item.primary.link.uid + '/' + sub.subLink.uid  +'#projects' : '#' + sub.subLabel} className={router.asPath.includes(sub.subLink.uid) ? "active" : ""}>
 																<span>{sub.subLabel}</span>
 															</a>
 														)

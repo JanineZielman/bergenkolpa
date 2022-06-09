@@ -385,7 +385,7 @@
                     "label": "Text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "multi": "paragraph,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl,heading2,heading3,heading1"
                   }
                 }
               },
@@ -414,7 +414,7 @@
                     "label": "Info",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 }
               },
@@ -429,7 +429,7 @@
             "slice_type": "image_text",
             "items": [
               {
-                "text": "seize cross-platform metrics",
+                "text": "optimize end-to-end content",
                 "image": {
                   "dimensions": {
                     "width": 1080,
@@ -437,18 +437,18 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=1080&h=1080&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=1080&h=1080&fit=crop"
                 },
                 "info": [
                   {
                     "type": "paragraph",
-                    "text": "Deserunt reprehenderit culpa velit Lorem Lorem pariatur.",
+                    "text": "Aliquip reprehenderit ut occaecat officia enim minim pariatur sunt veniam eu nostrud deserunt enim. Eiusmod ea aliquip occaecat amet occaecat nisi proident consectetur velit qui. Ullamco ut qui cupidatat reprehenderit et.",
                     "spans": []
                   }
                 ]
               },
               {
-                "text": "grow 24/365 functionalities",
+                "text": "transform impactful systems",
                 "image": {
                   "dimensions": {
                     "width": 1080,
@@ -456,24 +456,43 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=1080&h=1080&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=1080&h=1080&fit=crop"
                 },
                 "info": [
                   {
                     "type": "paragraph",
-                    "text": "Pariatur sint eiusmod pariatur. Proident eiusmod consequat incididunt id labore elit sint eu.",
+                    "text": "Sint qui magna eiusmod.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "text": "expedite web-enabled eyeballs",
+                "image": {
+                  "dimensions": {
+                    "width": 1080,
+                    "height": 1080
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=1080&h=1080&fit=crop"
+                },
+                "info": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ad esse incididunt sit ut adipisicing id quis ullamco occaecat. Qui labore excepteur officia est eu qui dolor qui nisi officia consectetur sunt cupidatat non. Ea irure fugiat velit excepteur nulla.",
                     "spans": []
                   }
                 ]
               }
             ],
             "primary": {
-              "uid": "deploy e-business communities",
-              "title": "engage killer e-services",
+              "uid": "engineer seamless convergence",
+              "title": "generate real-time e-business",
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Labore mollit eu qui occaecat aliquip elit ex voluptate magna commodo nulla quis magna laborum sint. Incididunt occaecat aliquip elit occaecat.",
+                  "text": "Irure irure velit nulla culpa elit elit quis commodo exercitation adipisicing enim culpa. Ex elit sit irure officia aute incididunt pariatur tempor. Esse sunt veniam officia dolore.",
                   "spans": []
                 }
               ]
