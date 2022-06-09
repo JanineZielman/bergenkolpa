@@ -71,13 +71,13 @@ const Bureau = (props) => {
       </Head>
       <Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
         <div className="bureau">
-          <div className="intro">
+          <div className="intro" id={doc.lang == 'en-gb' ? 'Intro' : doc.lang == 'nl-nl' ? 'Introductie' : ''}>
             <h2>Introduction</h2>
             <div className="content">
               <RichText render={content.intro} linkResolver={linkResolver}/>
             </div>
           </div>
-          <div className="contact">
+          <div className="contact" id={doc.lang == 'en-gb' ? 'Contact' : doc.lang == 'nl-nl' ? 'Adres & Contact' : ''}>
             <h2>Contact</h2>
             <div className="content">
               <RichText render={content.contact} linkResolver={linkResolver}/>
@@ -85,7 +85,7 @@ const Bureau = (props) => {
           </div>
           {content.slices.map((slice,i) => {
             return(
-              <div key={`bureau-items${i}`} className="section">
+              <div key={`bureau-items${i}`} className="section" id={slice.primary.uid}>
                 <h2>{slice.primary.title}</h2>
                 <RichText render={slice.primary.text} linkResolver={linkResolver}/>
                 <div className='flex'>

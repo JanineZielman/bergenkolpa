@@ -74,6 +74,15 @@
           },
           "type": "Link"
         },
+        "theme": {
+          "type": "Boolean",
+          "config": {
+            "label": "Theme",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
         "horizontal-crop": {
           "type": "Select",
           "config": {

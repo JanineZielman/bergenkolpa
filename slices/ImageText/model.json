@@ -11,6 +11,13 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "ImageText",
       "primary": {
+        "uid": {
+          "type": "Text",
+          "config": {
+            "label": "Uid",
+            "placeholder": ""
+          }
+        },
         "title": {
           "type": "Text",
           "config": {

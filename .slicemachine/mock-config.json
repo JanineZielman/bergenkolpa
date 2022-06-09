@@ -166,6 +166,9 @@
         "items": {
           "horizontal-crop": {
             "content": "middle"
+          },
+          "theme": {
+            "content": true
           }
         }
       }

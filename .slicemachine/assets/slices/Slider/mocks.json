@@ -5,7 +5,7 @@
     "slice_type": "slider",
     "items": [
       {
-        "title": "repurpose plug-and-play e-tailers",
+        "title": "aggregate clicks-and-mortar communities",
         "color": "white",
         "position": "top-left",
         "image": {
@@ -15,39 +15,12 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=1920&h=1080&fit=crop"
+          "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=1920&h=1080&fit=crop"
         },
         "description": [
           {
             "type": "paragraph",
-            "text": "Cillum consequat commodo deserunt tempor. Deserunt ullamco nisi proident ullamco magna ullamco amet irure exercitation elit nulla do ullamco cupidatat do. Reprehenderit reprehenderit tempor sunt eiusmod et minim veniam minim et minim.",
-            "spans": []
-          }
-        ],
-        "link": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
-        },
-        "horizontal-crop": "right",
-        "vertical-crop": "middle"
-      },
-      {
-        "title": "iterate clicks-and-mortar channels",
-        "color": "white",
-        "position": "top-left",
-        "image": {
-          "dimensions": {
-            "width": 1920,
-            "height": 1080
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=1920&h=1080&fit=crop"
-        },
-        "description": [
-          {
-            "type": "paragraph",
-            "text": "Velit laboris ullamco labore dolor quis aute laboris veniam ea consequat aliquip in. Incididunt laboris exercitation tempor qui nulla irure sit. Elit minim eiusmod qui do nulla anim laborum aliquip.",
+            "text": "Ex dolore aute laborum eu ut velit.",
             "spans": []
           }
         ],
@@ -55,11 +28,12 @@
           "link_type": "Web",
           "url": "http://twitter.com"
         },
-        "horizontal-crop": "right",
+        "theme": true,
+        "horizontal-crop": "left",
         "vertical-crop": "top"
       },
       {
-        "title": "aggregate proactive platforms",
+        "title": "reinvent cross-platform functionalities",
         "color": "white",
         "position": "top-left",
         "image": {
@@ -69,21 +43,78 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1920&h=1080&fit=crop"
+          "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=1920&h=1080&fit=crop"
         },
         "description": [
           {
             "type": "paragraph",
-            "text": "Deserunt quis sint adipisicing amet voluptate dolor culpa non exercitation id aute consectetur eiusmod ex occaecat. Aliquip magna minim ex non reprehenderit voluptate aliqua voluptate pariatur quis dolore reprehenderit cupidatat irure. Deserunt fugiat exercitation amet anim reprehenderit id quis dolor cupidatat ea est mollit ipsum aliqua.",
+            "text": "Sint cillum nisi est aliqua non consequat eu.",
             "spans": []
           }
         ],
         "link": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "https://prismic.io"
         },
-        "horizontal-crop": "left",
-        "vertical-crop": "top"
+        "theme": true,
+        "horizontal-crop": "right",
+        "vertical-crop": "middle"
+      },
+      {
+        "title": "target vertical paradigms",
+        "color": "white",
+        "position": "top-left",
+        "image": {
+          "dimensions": {
+            "width": 1920,
+            "height": 1080
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=1920&h=1080&fit=crop"
+        },
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Commodo culpa eu nulla sunt consequat. Laborum aliquip aliqua amet laborum qui eiusmod labore qui deserunt. Sint velit ad consectetur ea esse cillum esse consectetur et pariatur cupidatat.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "theme": true,
+        "horizontal-crop": "center",
+        "vertical-crop": "middle"
+      },
+      {
+        "title": "incubate compelling mindshare",
+        "color": "white",
+        "position": "top-left",
+        "image": {
+          "dimensions": {
+            "width": 1920,
+            "height": 1080
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=1920&h=1080&fit=crop"
+        },
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Aliquip aliqua sit veniam aliquip. Velit proident officia duis aliqua minim laborum.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "theme": false,
+        "horizontal-crop": "center",
+        "vertical-crop": "middle"
       }
     ],
     "primary": {}

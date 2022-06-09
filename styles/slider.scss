@@ -12,7 +12,7 @@
 			height: 100%;
 			overflow: hidden;
 			transition: all 0s;
-			transition-delay: 2s;
+			transition-delay: 3s;
 			box-sizing: border-box;
 			width: 100%!important;
 			clip-path: inset(0 0 0 100%);
@@ -65,13 +65,13 @@
 			.title{
 				position: absolute;
 				text-align: center;
-				font-weight: 100;
+				font-weight: 400;
 				font-size: 70px;
 				line-height: 1.2;
 				z-index: 3;
 				margin: 24px 24px 175px 24px;
 				opacity: 0;
-				transition: all 2s;
+				transition: all 3s;
 				// top: 40%;
 				// left: 1%;
 				// transform: translate(-50%, -50%) rotate(-90deg);
@@ -194,18 +194,18 @@
 .slick-slider.main-slider .slick-slide.slick-active{
 	z-index: 8 !important;
 	.slide-item{
-		clip-path: inset(0 -10px 0 -10px );
-		transition: all 2s;
+		clip-path: inset(0 -2vw 0 -2vw );
+		transition: all 3s;
 		&:after {
 				position: absolute;
-				width: 10px;
+				width: 2vw;
 				height: 100%;
 				background-color: white;
 				top: 0;
 				left: 0px;
 				content: " ";
-				animation: moving 2s 1;
-				margin-left: -10px;
+				animation: moving 3s 1;
+				margin-left: -2vw;
 				z-index: 888;
 			}
 		.title{
@@ -222,6 +222,6 @@
 		margin-left: 100%;
 	}
 	100% {
-		margin-left: -10px;
+		margin-left: -2vw;
 	}
 }

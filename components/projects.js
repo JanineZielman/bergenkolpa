@@ -60,6 +60,8 @@ const Projects = ({projects, tags, themes, lang}) => {
     autoplaySpeed: 4000,
   };
 
+	console.log(projects)
+
   return(
 		<section className="projects" id="projects">
 			{projects.map((item,i) => {
@@ -74,7 +76,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 										{tags.map((tag, i) => (
 											<>
 												{tag.uid == item.category &&
-													tag.slugs[0].replace('-', ' ')
+													decodeURIComponent(tag.slugs[0].replace('-', ' '))
 												}
 											</>
 										))}
@@ -85,7 +87,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 										{themes.map((theme, i) => (
 											<>
 												{theme.uid == item.theme &&
-													theme.slugs[0].replace('-', ' ')
+													decodeURIComponent(theme.slugs[0].replace('-', ' '))
 												}
 											</>
 										))}

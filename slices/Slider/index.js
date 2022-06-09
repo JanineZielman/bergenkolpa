@@ -9,21 +9,22 @@ const Slider = ({ slice }) => {
     dots: true,
     arrows: true,
     infinite: true,
-    speed: 2000,
+    speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
     lazyLoad: false,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 6000,
   };
   return(
    <Slick {...settings} className="main-slider">
       {slice.items.map((item, i) => {
-        let theme_url = `/theme/${slugify(item.title, {replacement: '-', lower: true,})}#projects`
+        console.log(item)
+        let theme_url = `/${item.link.lang}/theme/${item.link.uid}#projects`
         return(
           <div key={`slider-item${i}`} className='slide-item'>
-            <a className="title-image" href={item.link.uid ? item.link.uid : theme_url}>
+            <a className="title-image" href={item.theme == true ? theme_url : '/'+ item.link.uid}>
               <div className={`title ${item.position} ${item.color}`}>
                 {item.title}
               </div>
