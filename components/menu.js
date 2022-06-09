@@ -1,9 +1,6 @@
 import Link from "next/link"
-import Image from "next/image"
 import LanguageSwitcher from "./language"
 import React, {useState} from 'react';
-import { RichText } from 'prismic-reactjs'
-import Collapsible from 'react-collapsible';
 import Modal from 'react-modal';
 import { useRouter } from 'next/router';
 

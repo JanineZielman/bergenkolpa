@@ -1118,7 +1118,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/Slider/default-slice/preview.png",
+            "width": 800,
+            "height": 480
+          }
+        }
       },
       "socials": {
         "library": "slices",

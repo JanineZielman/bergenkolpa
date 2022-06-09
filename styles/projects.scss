@@ -2,7 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	width: 100%;
+	width: 96vw;
 	.project-wrapper{
 		margin: 0px 2vw 1vw 0vw;
 	}
@@ -15,24 +15,29 @@
 		overflow: hidden;
 		transition: width 0.4s linear;
 		position: relative;
+		&.Main {
+			.flex .cover {
+				width: 40.5vw;
+			}
+		}
 		&.Landscape{
 			.flex .cover{
-				width: 47vw;
+				width: 46vw;
 			}
 		}
 		&.Square {
 			.flex .cover{	
-				width: 31.33vw;
+				width: 29vw;
 			}
 		}
 		&.Portrait {
 			.flex .cover{
-				width: 23.5vw;
+				width: 20vw;
 			}
 		}
 		&.Narrow {
 			.flex .cover{
-				width: 15.667vw;
+				width: 14vw;
 			}
 		}
 		.flex{
@@ -78,8 +83,8 @@
 		.cover{
 			padding-top: 10px;
 			position: relative;
-			width: 37.167vw;
-			height: 26.4vw;
+			// width: 37.167vw;
+			height: 29vw;
 			span{
 				width: 100%!important;
 				height: 100%!important;
@@ -115,8 +120,10 @@
 			.close {
 				display: block;
 				position: absolute;
-				width: 25px;
-				height: 30px;
+				width: 1.5vw;
+				max-width: 25px;
+				height: 2vw;
+				max-height: 30px;
 				cursor: pointer;
 				top: 14px;
 				right: 3vw;
@@ -224,10 +231,9 @@
 				}
 
 				.image{
-					width: 45%;
-					width: 39.167vw;
+					width: 37.167vw;
 					height: 30vw;
-					margin: 0 2vw 1vw 0vw;
+					margin: 0 1vw 1vw 1vw;
 					span{
 						width: 100%;
 						height: 100%;
@@ -242,13 +248,13 @@
 						width: 47vw;
 					}
 					&.Square {
-						width: 31.33vw;
+						width: 29.33vw;
 					}
 					&.Portrait{
-						width: 23.5vw;
+						width: 21.5vw;
 					}
 					&.Narrow {
-						width: 15.667vw;
+						width: 13.667vw;
 					}
 				}
 
@@ -256,7 +262,7 @@
 					width: 21.5vw;
 					min-width: 350px;
 					font-size: 18px;
-					margin: 0 2vw 1vw 0vw;
+					margin: 0 1vw 1vw 1vw;
 					div{
 						padding: 0 10px;
 						p{
@@ -312,7 +318,7 @@
 	}
 
 	.video{
-		margin: 0 2vw 1vw 0vw;
+		margin: 0 1vw 1vw 1vw;
 		iframe{
 			width: 37.167vw;
 			height: 20vw;
