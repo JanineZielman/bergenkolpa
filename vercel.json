@@ -1,12 +1,8 @@
 {
-  "redirects": [
-    { "source": "https://www.vanbergenkolpa.nl/nl", "destination": "https://www.vanbergenkolpa.nl/nl-nl", "permanent": true },
-		{ "source": "https://www.vanbergenkolpa.nl/nl/:path*", "destination": "https://www.vanbergenkolpa.nl/nl-nl", "permanent": true },
-		{ "source": "https://www.vanbergenkolpa.nl/en", "destination": "https://www.vanbergenkolpa.nl/en-gb", "permanent": true },
-		{ "source": "https://www.vanbergenkolpa.nl/en/:path*", "destination": "https://www.vanbergenkolpa.nl/en-gb", "permanent": true },
-		{ "source": "https://www.vanbergenkolpa.nl/zh", "destination": "https://www.vanbergenkolpa.nl/zh-cn", "permanent": true },
-		{ "source": "https://www.vanbergenkolpa.nl/zh/:path*", "destination": "https://www.vanbergenkolpa.nl/zh-cn", "permanent": true },
-		{ "source": "https://www.vanbergenkolpa.nl/cn", "destination": "https://www.vanbergenkolpa.nl/zh-cn", "permanent": true },
-		{ "source": "https://www.vanbergenkolpa.nl/cn/:path*", "destination": "https://www.vanbergenkolpa.nl/zh-cn", "permanent": true }
+  "rewrites": [
+    { "source": "/nl", "destination": "/nl-nl"},
+		{ "source": "/en", "destination": "/en-gb"},
+		{ "source": "/zh", "destination": "/zh-cn"},
+		{ "source": "/cn", "destination": "/zh-cn"},
   ]
 }
