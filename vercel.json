@@ -1,12 +1,6 @@
 {
   "redirects": [
-    { "source": "/nl", "destination": "https://www.vanbergenkolpa.nl/nl-nl", "permanent": true },
-		{ "source": "/nl/:path*", "destination": "https://www.vanbergenkolpa.nl/nl-nl", "permanent": true },
-		{ "source": "/en", "destination": "https://www.vanbergenkolpa.nl", "permanent": true },
-		{ "source": "/en/:path*", "destination": "https://www.vanbergenkolpa.nl", "permanent": true },
-		{ "source": "/zh", "destination": "https://www.vanbergenkolpa.nl/zh-cn", "permanent": true },
-		{ "source": "/zh/:path*", "destination": "https://www.vanbergenkolpa.nl/zh-cn", "permanent": true },
-		{ "source": "/cn", "destination": "https://www.vanbergenkolpa.nl/zh-cn", "permanent": true },
-		{ "source": "/cn/:path*", "destination": "https://www.vanbergenkolpa.nl/zh-cn", "permanent": true }
+    { "source": "/nl", "destination": "https://portal.vanbergenkolpa.nl/nl", "permanent": true }
   ]
 }
+

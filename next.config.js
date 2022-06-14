@@ -26,3 +26,15 @@ module.exports = async () => {
     },
   };
 };
+
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/nl',
+        destination: '/nl-nl',
+        permanent: true,
+      },
+    ]
+  },
+}
