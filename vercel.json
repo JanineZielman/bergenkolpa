@@ -1,8 +1,8 @@
 {
   "rewrites": [
     { "source": "/nl", "destination": "/nl-nl"},
-		{ "source": "/en", "destination": "/en-gb"},
+		{ "source": "/en", "destination": "/"},
 		{ "source": "/zh", "destination": "/zh-cn"},
-		{ "source": "/cn", "destination": "/zh-cn"},
+		{ "source": "/cn", "destination": "/zh-cn"}
   ]
 }
