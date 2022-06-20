@@ -20,7 +20,6 @@ const Slider = ({ slice }) => {
   return(
    <Slick {...settings} className="main-slider">
       {slice.items.map((item, i) => {
-        console.log(item)
         let theme_url = `/${item.link.lang}/theme/${item.link.uid}#projects`
         return(
           <div key={`slider-item${i}`} className='slide-item'>

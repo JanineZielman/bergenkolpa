@@ -60,8 +60,6 @@ const Projects = ({projects, tags, themes, lang}) => {
     autoplaySpeed: 4000,
   };
 
-	console.log(projects)
-
   return(
 		<section className="projects" id="projects">
 			{projects.map((item,i) => {

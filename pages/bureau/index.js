@@ -90,7 +90,6 @@ const Bureau = (props) => {
                 <RichText render={slice.primary.text} linkResolver={linkResolver}/>
                 <div className='flex'>
                   {slice.items.map((item,j) => {
-                    console.log(item.info[0])
                     return(
                       <div className='flex-item' id={item.text?.replace(' ', '_')}>
                         {item.text &&
