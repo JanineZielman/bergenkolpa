@@ -76,7 +76,7 @@ export function middleware(req) {
     return NextResponse.redirect(new URL(`/#duin-almere-boomrijk`, req.nextUrl));
   }
   if (pathname.indexOf('552_dakserre_agrotopia.html') > -1) {
-    return NextResponse.redirect(new URL(`#dakserre-agrotopia2`, req.nextUrl));
+    return NextResponse.redirect(new URL(`/#dakserre-agrotopia2`, req.nextUrl));
   }
   if (pathname.indexOf('552_rooftop_greenhouse_agrotopia.html') > -1) {
     return NextResponse.redirect(new URL(`/#dakserre-agrotopia2`, req.nextUrl));
