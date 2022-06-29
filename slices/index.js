@@ -7,6 +7,7 @@ import ImageText from './ImageText';
 import Images from './Images';
 import Info from './Info';
 import NavItem from './NavItem';
+import Projects from './Projects';
 import Slider from './Slider';
 import Socials from './Socials';
 
@@ -18,6 +19,7 @@ export {
 	Images,
 	Info,
 	NavItem,
+	Projects,
 	Slider,
 	Socials,
 };
@@ -30,6 +32,7 @@ export const components = {
 	images: Images,
 	info: Info,
 	nav_item: NavItem,
+	projects: Projects,
 	slider: Slider,
 	socials: Socials,
 };

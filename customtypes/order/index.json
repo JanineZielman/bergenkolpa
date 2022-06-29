@@ -1,0 +1,83 @@
+{
+  "id": "order",
+  "label": "Order",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "projects": {
+        "type": "Group",
+        "config": {
+          "label": "Projects",
+          "fields": {
+            "project": {
+              "type": "Link",
+              "config": {
+                "label": "Project",
+                "select": "document",
+                "customtypes": [
+                  "project"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "architectuur": {
+        "type": "Group",
+        "config": {
+          "label": "Architectuur",
+          "fields": {
+            "project": {
+              "type": "Link",
+              "config": {
+                "label": "Project",
+                "select": "document",
+                "customtypes": [
+                  "project"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "stedenbouw": {
+        "type": "Group",
+        "config": {
+          "label": "Stedenbouw",
+          "fields": {
+            "project": {
+              "type": "Link",
+              "config": {
+                "label": "Project",
+                "select": "document"
+              }
+            }
+          }
+        }
+      },
+      "onderzoek": {
+        "type": "Group",
+        "config": {
+          "label": "Onderzoek",
+          "fields": {
+            "project": {
+              "type": "Link",
+              "config": {
+                "label": "Project",
+                "select": "document"
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
+  }
+}

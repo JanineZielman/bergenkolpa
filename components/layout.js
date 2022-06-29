@@ -26,7 +26,8 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 		const id = e.target.parentElement.parentElement.id;
 		e.target.parentElement.parentElement.classList.add('show-dropdown');
 		setSelectedId(id)
-		router.push('/'+lang+'/'+tag+'#projects');
+		// router.push('/'+lang+'/'+tag+'#projects');
+		window.location.href = '/'+lang+'/'+tag+'#projects';
 	}
 
   return(

@@ -10,23 +10,44 @@ import Layout from "../components/layout"
 import Projects from "../components/projects"
 
 const Page = (props) => {
-  const {doc, menu, projects, slices, footer, global, tags, themes} = props
+  const {doc, menu, projectsOrder, allProjects, slices, footer, global, tags, themes} = props
 
   const [title, setTitle] = useState(null);
   const [description, setDescription] = useState(null);
   const [image, setImage] = useState(null);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     if(window.location.hash) {
       if(window.location.hash != '#projects') {
         let id = window.location.hash.replace('#','');
         let project = projects.filter(project => project.uid == id);
-        setTitle(project[0].data.title)
-        setDescription(project[0].data.description)
-        setImage(project[0].data['cover-image'].url)
+        setTitle(project[0]?.data.title)
+        setDescription(project[0]?.data.description)
+        setImage(project[0]?.data['cover-image'].url)
       }
     } 
   });
+
+
+  useEffect(() => {
+    const unique = (value, index, self) => {
+      return self.indexOf(value) === index
+    }
+
+    let projectsList = [];
+    for (let i = 0; i < projectsOrder.length; i++) {
+      projectsList.push(projectsOrder[i].project.uid);
+    }
+
+    let sort = projectsList.map((i) => allProjects.find((o) => o.uid === i));
+
+    for (let j = 0; j < allProjects.length; j++) {
+      sort.push(allProjects[j]);
+    }
+
+    setProjects(sort.filter(unique))
+  }, []);
 
   return(
     <>
@@ -54,13 +75,18 @@ export async function getStaticProps({ locale, previewData }) {
   const page = await client.getByUID("homepage", "home", { lang: locale });
   const menu = await client.getSingle("menu", { lang: locale });
   const footer = await client.getSingle("footer");
-  const projects = await client.getAllByType('project', { 
+  const allProjects = await client.getAllByType('project', { 
     lang: locale,
     orderings: {
 			field: 'my.project.date',
 			direction: 'desc',
 		},
   });
+
+  const projectsOrder= await client.getSingle('order', { 
+    lang: locale
+  });
+
   const tags = await client.getAllByType("tag", { lang: locale });
   const themes = await client.getAllByType("theme", { lang: locale });
 
@@ -70,7 +96,8 @@ export async function getStaticProps({ locale, previewData }) {
       doc: page,
       footer: footer,
       slices: page.data.slices,
-      projects: projects,
+      allProjects: allProjects,
+      projectsOrder: projectsOrder.data.projects,
       global: global.data,
       tags: tags,
       themes: themes,

@@ -50,7 +50,11 @@
     "tag": {},
     "news-item": {},
     "recent": {},
-    "global": {}
+    "global": {},
+    "order": {
+      "projects": {},
+      "architectuur": {}
+    }
   },
   "slices": {
     "Slider": {
@@ -387,6 +391,11 @@
       }
     },
     "Embed": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Projects": {
       "default": {
         "primary": {}
       }
