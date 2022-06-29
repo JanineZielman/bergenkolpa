@@ -51,12 +51,7 @@
                 "label": "Category",
                 "placeholder": "",
                 "options": [
-                  "wonen",
-                  "publiek",
-                  "agricultuur",
-                  "gebiedsontwerp",
                   "onderzoek",
-                  "bouwrealisaties",
                   "architectuur",
                   "stedenbouw"
                 ]
