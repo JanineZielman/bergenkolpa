@@ -1,6 +1,82 @@
 {
   "slices": {
     "components": {
+      "content": {
+        "library": "slices",
+        "id": "content",
+        "name": "Content",
+        "description": "Content",
+        "model": {
+          "id": "content",
+          "type": "SharedSlice",
+          "name": "Content",
+          "description": "Content",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Content",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "content",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Incubate compelling infrastructures",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Sint in mollit occaecat nisi ex consequat dolore aliquip. Dolor fugiat incididunt id eiusmod proident sunt minim in enim reprehenderit adipisicing mollit officia est aute.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/Content/default/preview.png",
+            "width": 800,
+            "height": 112
+          }
+        }
+      },
       "embed": {
         "library": "slices",
         "id": "embed",
