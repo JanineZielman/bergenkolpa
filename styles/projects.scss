@@ -22,7 +22,7 @@
 		}
 		&.Landscape{
 			.flex .cover{
-				width: 46vw;
+				width: 50vw;
 			}
 		}
 		&.Square {
@@ -232,7 +232,7 @@
 
 				.image{
 					width: 37.167vw;
-					height: 30vw;
+					height: 29vw;
 					margin: 0 1vw 1vw 1vw;
 					span{
 						width: 100%;
@@ -245,16 +245,16 @@
 						}
 					}
 					&.Landscape {
-						width: 47vw;
+						width: 50vw;
 					}
 					&.Square {
-						width: 29.33vw;
+						width: 29vw;
 					}
 					&.Portrait{
-						width: 21.5vw;
+						width: 20vw;
 					}
 					&.Narrow {
-						width: 13.667vw;
+						width: 14vw;
 					}
 				}
 
