@@ -54,6 +54,13 @@ const Page = (props) => {
     <Head>
       <title>{title ? title : global.title}</title>
       <meta name="description" content={RichText.asText(description ? description : global.description)} />
+      <meta name="keywords" content={RichText.asText(global.keywords)} />
+      <meta name="copyright" content={global.copyright} />
+      <meta name="DC.CONTRIBUTORS" content={global.contributors}></meta>
+      <meta name="DC.SUBJECT" content={RichText.asText(global.keywords)}></meta>
+      <meta name="DC.DESCRIPTION" content={RichText.asText(description ? description : global.description)} />
+      <meta name="DC.RIGHTS" content={global.copyright} />
+      <meta name="DC.LANGUAGE" content={doc.lang.slice(0,2)} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title ? title : global.title} />
       <meta property="og:description" content={RichText.asText(description ? description : global.description)} />
@@ -71,7 +78,7 @@ const Page = (props) => {
 export async function getStaticProps({ locale, previewData }) {
   const client = createClient({ previewData })
 
-  const global = await client.getSingle("global");
+  const global = await client.getSingle("global", {lang: locale});
   const page = await client.getByUID("homepage", "home", { lang: locale });
   const menu = await client.getSingle("menu", { lang: locale });
   const footer = await client.getSingle("footer");

@@ -1,8 +1,24 @@
 {
-  "id": "9c56df67-1f6a-4d39-9433-e44d927ed668",
-  "uid": "magni-velit-quisquam",
+  "id": "5ef19ce7-09ae-499a-ae65-290b34ebc06d",
+  "uid": "porro-nobis-harum",
   "type": "global",
   "data": {
+    "copyright": "orchestrate magnetic portals",
+    "contributors": "monetize seamless bandwidth",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Ullamco deserunt laboris cupidatat elit elit proident consequat enim incididunt pariatur. Dolore irure proident voluptate eiusmod duis incididunt ex aliquip aute ea. Lorem amet esse Lorem incididunt aute tempor incididunt.",
+        "spans": []
+      }
+    ],
+    "keywords": [
+      {
+        "type": "paragraph",
+        "text": "Sunt velit aute aute. Sunt eiusmod proident irure ea irure commodo culpa ipsum laboris ut do consectetur dolor ex consectetur.",
+        "spans": []
+      }
+    ],
     "image": {
       "dimensions": {
         "width": 900,
@@ -10,15 +26,8 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop"
     },
-    "title": "innovate world-class portals",
-    "description": [
-      {
-        "type": "paragraph",
-        "text": "Nisi ut sint consectetur. Anim culpa ex dolor id labore aliquip pariatur velit ea ullamco aliqua labore.",
-        "spans": []
-      }
-    ]
+    "title": "synergize sexy applications"
   }
 }

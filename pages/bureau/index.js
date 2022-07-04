@@ -64,6 +64,13 @@ const Bureau = (props) => {
       <Head>
         <title>{global.title}</title>
         <meta name="description" content={RichText.asText(global.description)} />
+        <meta name="keywords" content={RichText.asText(global.keywords)} />
+        <meta name="copyright" content={global.copyright} />
+        <meta name="DC.CONTRIBUTORS" content={global.contributors}></meta>
+        <meta name="DC.SUBJECT" content={RichText.asText(global.keywords)}></meta>
+        <meta name="DC.DESCRIPTION" content={RichText.asText(global.description)} />
+        <meta name="DC.RIGHTS" content={global.copyright} />
+        <meta name="DC.LANGUAGE" content={doc.lang.slice(0,2)} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={global.title} />
         <meta property="og:description" content={RichText.asText(global.description)} />
