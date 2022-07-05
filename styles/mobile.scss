@@ -54,7 +54,7 @@
 			flex-direction: column;
 			justify-content: space-between;
 			font-size: 24px;
-
+			margin-top: 14px;
 			.menu-item {
 				padding: 14px 0;
 			}
@@ -70,9 +70,12 @@
 		}
 
 		.language-switcher {
+			position: absolute;
+			right: 0;
+			top: 10px;
+			width: 100%;
 			display: flex;
 			justify-content: center;
-
 			a {
 				margin: 14px;
 				text-transform: uppercase;
@@ -152,11 +155,11 @@
 				}
 			}
 
-			.close {
-				margin-bottom: -12.5px;
-				width: 25px;
-				height: 30px;
-			}
+			// .close {
+			// 	margin-bottom: -12.5px;
+			// 	width: 25px;
+			// 	height: 30px;
+			// }
 
 			.description {
 				width: 100%;
@@ -239,15 +242,17 @@
 			margin-bottom: -30px;
 			margin-left: -10px;
 			z-index: 0;
+			transform: scale(0.8);
 		}
 		.slick-arrow{
-			margin: 0;			
+			margin: 0;	
 			&.slick-next:before{
 				bottom: 0px;
 				right: 0;
 				position: absolute;
 				margin: auto 0 0 auto;
 				opacity: 1;
+				transform: scale(0.8) scaleX(-1);
 			}
 			&.slick-prev:before {
 				bottom: 0px;
@@ -255,6 +260,7 @@
 				position: absolute;
 				margin: auto 0 0 auto;
 				opacity: 1;
+				transform: scale(0.8);
 			}
 		}
 		.slick-slide{
@@ -278,8 +284,10 @@
 					border-width: 3px !important;
 					margin: 0px;
 					margin-top: 24px;
-					white-space: nowrap;
-					height: 50px;
+					// white-space: nowrap;
+					// height: 50px;
+					line-height: 1;
+					padding-bottom: 10px;
 					position: relative;
 					width: auto;
 					display: inline-block;
@@ -319,7 +327,8 @@
 					}
 				}
 				.description {
-					min-height: 150px;
+					// min-height: 150px;
+					height: 75px;
 				}
 			}
 		}
@@ -366,6 +375,9 @@
 					width: 100%;
 					margin-left: 0;
 				}
+			}
+			.title{
+				padding-right: 50px;
 			}
 			.extra-info {
 				.slick-slider{
@@ -419,6 +431,8 @@
 			}
 			.close{
 				margin-bottom: -12.5px;
+				width: 20px;
+				height: 25px;
 			}
 			.description {
 				width: 100%;
