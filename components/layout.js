@@ -80,6 +80,15 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 					{footer.data.slices.map((item, i) => {
 						return(
 							<div key={`footer${i}`} className="column-wrapper">
+								{i == 0 && 
+									<div className="column">
+										<Link href="/" locale={lang}>
+											<a>
+												<img src="/logo.svg"/>
+											</a>
+										</Link>
+									</div>
+								}
 								{item.items.map((content, i) => {
 									return(
 										<div key={`column${i}`} className="column">

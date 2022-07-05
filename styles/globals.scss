@@ -214,8 +214,13 @@ footer{
     justify-content: space-between;
     .column{
       margin-right: 24px;
+      display: flex;
+      align-items: center;
       p{
         white-space: nowrap;
+      }
+      img, a{
+        height: 50px;
       }
     }
     &:last-child{
