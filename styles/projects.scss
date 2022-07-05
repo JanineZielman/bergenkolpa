@@ -40,6 +40,19 @@
 				width: 14vw;
 			}
 		}
+		.big-image{
+			height: 90vh;
+			width: auto;
+			overflow: hidden;
+			img {
+					width: 100% !important;
+					max-width: 100% !important;
+					height: 100% !important;
+					max-height: 90vh;
+					object-fit: contain;
+					object-position: top left;
+				}
+		}
 		.flex{
 			cursor: pointer;
 			position: relative;

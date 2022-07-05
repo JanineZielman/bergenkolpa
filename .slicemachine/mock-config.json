@@ -386,6 +386,12 @@
         "items": {
           "aspect-ratio": {
             "content": "Main"
+          },
+          "quote": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       }

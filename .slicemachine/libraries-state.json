@@ -1,82 +1,6 @@
 {
   "slices": {
     "components": {
-      "content": {
-        "library": "slices",
-        "id": "content",
-        "name": "Content",
-        "description": "Content",
-        "model": {
-          "id": "content",
-          "type": "SharedSlice",
-          "name": "Content",
-          "description": "Content",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "Content",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
-                  }
-                },
-                "description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature"
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "name": "Default",
-            "slice_type": "content",
-            "items": [],
-            "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Incubate compelling infrastructures",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Sint in mollit occaecat nisi ex consequat dolore aliquip. Dolor fugiat incididunt id eiusmod proident sunt minim in enim reprehenderit adipisicing mollit officia est aute.",
-                  "spans": []
-                }
-              ]
-            }
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "/Users/janinezielman/Documents/Sites/Prismic/bergenkolpa/.slicemachine/assets/slices/Content/default/preview.png",
-            "width": 800,
-            "height": 112
-          }
-        }
-      },
       "embed": {
         "library": "slices",
         "id": "embed",
@@ -268,6 +192,15 @@
                     "default_value": "Main"
                   }
                 },
+                "big-image": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Big Image",
+                    "default_value": false,
+                    "placeholder_true": "true",
+                    "placeholder_false": "false"
+                  }
+                },
                 "image": {
                   "type": "Image",
                   "config": {
@@ -299,6 +232,24 @@
                       }
                     ]
                   }
+                },
+                "text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "quote": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Quote",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
                 }
               },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
@@ -312,7 +263,8 @@
             "slice_type": "image",
             "items": [
               {
-                "aspect-ratio": "Narrow",
+                "aspect-ratio": "Main",
+                "big-image": false,
                 "image": {
                   "dimensions": {
                     "width": 1520,
@@ -320,7 +272,7 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=1520&h=1080&fit=crop",
+                  "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=1520&h=1080&fit=crop",
                   "landscape": {
                     "dimensions": {
                       "width": 1920,
@@ -328,7 +280,7 @@
                     },
                     "alt": "Placeholder image",
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=1920&h=1080&fit=crop"
+                    "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=1920&h=1080&fit=crop"
                   },
                   "square": {
                     "dimensions": {
@@ -337,7 +289,7 @@
                     },
                     "alt": "Placeholder image",
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=1080&h=1080&fit=crop"
+                    "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=1080&h=1080&fit=crop"
                   },
                   "portrait": {
                     "dimensions": {
@@ -346,7 +298,7 @@
                     },
                     "alt": "Placeholder image",
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=763&h=1080&fit=crop"
+                    "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=763&h=1080&fit=crop"
                   },
                   "narrow": {
                     "dimensions": {
@@ -355,12 +307,90 @@
                     },
                     "alt": "Placeholder image",
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=610&h=1080&fit=crop"
+                    "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=610&h=1080&fit=crop"
                   }
-                }
+                },
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Eiusmod commodo aliquip mollit ut quis irure nulla veniam et. Laboris dolore amet esse duis adipisicing do irure eiusmod consequat incididunt voluptate sint veniam ea.",
+                    "spans": []
+                  }
+                ],
+                "quote": [
+                  {
+                    "type": "paragraph",
+                    "text": "Adipisicing commodo anim commodo eu amet ex anim ex nulla quis reprehenderit aliqua. Qui ex dolore eu magna deserunt ullamco nostrud officia minim.",
+                    "spans": []
+                  }
+                ]
               },
               {
                 "aspect-ratio": "Main",
+                "big-image": true,
+                "image": {
+                  "dimensions": {
+                    "width": 1520,
+                    "height": 1080
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1520&h=1080&fit=crop",
+                  "landscape": {
+                    "dimensions": {
+                      "width": 1920,
+                      "height": 1080
+                    },
+                    "alt": "Placeholder image",
+                    "copyright": null,
+                    "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1920&h=1080&fit=crop"
+                  },
+                  "square": {
+                    "dimensions": {
+                      "width": 1080,
+                      "height": 1080
+                    },
+                    "alt": "Placeholder image",
+                    "copyright": null,
+                    "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1080&h=1080&fit=crop"
+                  },
+                  "portrait": {
+                    "dimensions": {
+                      "width": 763,
+                      "height": 1080
+                    },
+                    "alt": "Placeholder image",
+                    "copyright": null,
+                    "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=763&h=1080&fit=crop"
+                  },
+                  "narrow": {
+                    "dimensions": {
+                      "width": 610,
+                      "height": 1080
+                    },
+                    "alt": "Placeholder image",
+                    "copyright": null,
+                    "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=610&h=1080&fit=crop"
+                  }
+                },
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Duis eiusmod sint minim Lorem ex id proident consectetur anim do reprehenderit.",
+                    "spans": []
+                  }
+                ],
+                "quote": [
+                  {
+                    "type": "paragraph",
+                    "text": "In anim reprehenderit dolore anim reprehenderit cupidatat magna veniam anim sunt nulla cupidatat qui. Occaecat in nulla eiusmod velit nulla eu officia voluptate fugiat nisi aute. In excepteur anim in cillum cupidatat nostrud fugiat ex excepteur ad consectetur.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "aspect-ratio": "Landscape",
+                "big-image": true,
                 "image": {
                   "dimensions": {
                     "width": 1520,
@@ -405,7 +435,21 @@
                     "copyright": null,
                     "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=610&h=1080&fit=crop"
                   }
-                }
+                },
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Duis elit qui aute nostrud et cupidatat proident ipsum nisi ea qui. Ad Lorem deserunt do magna commodo est qui elit duis magna ea.",
+                    "spans": []
+                  }
+                ],
+                "quote": [
+                  {
+                    "type": "paragraph",
+                    "text": "Occaecat cupidatat dolore ad ullamco cupidatat nisi est magna reprehenderit labore quis nisi.",
+                    "spans": []
+                  }
+                ]
               }
             ],
             "primary": {}

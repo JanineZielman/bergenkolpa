@@ -1,0 +1,46 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "footer2",
+    "items": [
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Et excepteur Lorem in labore excepteur cupidatat dolor dolor nulla.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Velit ad mollit voluptate pariatur consequat ad esse proident fugiat reprehenderit consequat. In amet nisi consequat magna dolore dolor.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Occaecat Lorem ex minim duis qui pariatur exercitation adipisicing. Aute reprehenderit cupidatat sunt cupidatat cupidatat ipsum reprehenderit nisi mollit exercitation dolor tempor esse labore ullamco.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Incididunt aliquip aliqua eiusmod proident quis cupidatat exercitation amet amet sunt quis esse Lorem do. Commodo nulla qui labore non labore consectetur reprehenderit in adipisicing.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {}
+  }
+]
