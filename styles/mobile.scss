@@ -79,6 +79,7 @@
 			display: flex;
 			justify-content: center;
 			background-color: white;
+			z-index: 999;
 			a {
 				margin: 14px;
 				text-transform: uppercase;
@@ -346,7 +347,7 @@
 	}
 
 	.projects .project-item{
-		width: auto!important;
+		width: 100%;
 		height: auto!important;
 		margin: 0 0 24px 0;
 		.tags{
