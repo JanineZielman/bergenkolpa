@@ -92,7 +92,12 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 								{item.items.map((content, i) => {
 									return(
 										<div key={`column${i}`} className="column">
-											<RichText render={content.text} linkResolver={linkResolver}/>
+											{content.link.slug ?
+												<a href={'/page/'+ content.link.slug}>
+													<RichText render={content.text} linkResolver={linkResolver}/>
+												</a>
+												:<RichText render={content.text} linkResolver={linkResolver}/>
+											}
 										</div>
 									)
 								})}

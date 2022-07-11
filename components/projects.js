@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
 import LazyLoad from 'react-lazyload';
-import Content from './content'
+import Content from './content';
+import { RichText } from 'prismic-reactjs';
+import { linkResolver } from '../prismicConfiguration';
 
 
 const Projects = ({projects, tags, themes, lang}) => {
@@ -33,7 +35,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 			router.push('#'+id);
 		}, 1000);
 		setSelectedId(id)
-   };
+  };
 
 	const RemoveClass = (e) => {
 		const id = selectedItems[0].id;
@@ -42,7 +44,23 @@ const Projects = ({projects, tags, themes, lang}) => {
 		setTimeout(() => {
 			router.push('#'+id);
 		}, 500);
-   };
+  };
+
+	const GoToClass = (e) => {
+		document.getElementById(selectedId)?.classList.remove("selected");
+		
+		const id = e.currentTarget.id
+		if (id) {
+			const element = document.getElementById(id)
+			element.classList.add('selected');
+			router.push('#'+id);
+			setTimeout(() => {
+				router.push('#'+id);
+			}, 1000);
+			setSelectedId(id)
+		}
+	}
+
 
   return(
 		<section className="projects" id="projects">
@@ -78,7 +96,24 @@ const Projects = ({projects, tags, themes, lang}) => {
 										</a>
 									))}
 								</div>
+								{item.data['link-to-project'].uid ? 
+									<div className={`flex`} onClick={GoToClass} id={item.data['link-to-project'].uid}>
+										<div className="cover">
+											{item.data['cover-image'].url && 
+												<div className={`img-effect`}>
+													<CoverImage item={item}/>
+												</div>
+											}
+											{item.data['cover-text'][0] &&
+												<h2 className={`img-effect`}>
+													<RichText render={item.data['cover-text']} linkResolver={linkResolver} />
+												</h2>
+											}
+										</div>
+									</div>
+								:
 								<Content item={item}/>
+								}
 							</div>
 						</LazyLoad>
 					 }

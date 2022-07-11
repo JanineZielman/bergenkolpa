@@ -40,6 +40,10 @@ a {
   box-sizing: border-box;
 }
 
+.default-page{
+  min-height: 80vh;
+}
+
 .main-container{
   margin:0;
   padding: 115px 3vw 0 3vw;
@@ -216,10 +220,10 @@ footer{
       margin-right: 24px;
       display: flex;
       align-items: center;
-      p{
+      a, p{
         white-space: nowrap;
       }
-      img, a{
+      img{
         height: 50px;
       }
     }

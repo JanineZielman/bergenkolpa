@@ -138,6 +138,16 @@
         },
         "type": "StructuredText"
       },
+      "link-to-project": {
+        "type": "Link",
+        "config": {
+          "label": "Link To Project",
+          "select": "document",
+          "customtypes": [
+            "project"
+          ]
+        }
+      },
       "description": {
         "config": {
           "label": "description",

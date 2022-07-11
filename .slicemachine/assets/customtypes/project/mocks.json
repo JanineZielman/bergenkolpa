@@ -1,10 +1,10 @@
 {
-  "id": "8f727077-1c4f-42cd-a238-bebaafc5fafa",
-  "uid": "maiores-quasi-ratione",
+  "id": "0007a58c-5182-4781-bf7c-329b35030afc",
+  "uid": "quisquam-aut-harum",
   "type": "project",
   "data": {
-    "title": "morph interactive content",
-    "date": "2013-08-05",
+    "title": "facilitate virtual experiences",
+    "date": "2021-09-26",
     "background": "sand",
     "aspect-ratio": "Main",
     "cover-image": {
@@ -14,7 +14,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1520&h=1080&fit=crop",
+      "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=1520&h=1080&fit=crop",
       "landscape": {
         "dimensions": {
           "width": 1920,
@@ -22,7 +22,7 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1920&h=1080&fit=crop"
+        "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=1920&h=1080&fit=crop"
       },
       "square": {
         "dimensions": {
@@ -31,7 +31,7 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1080&h=1080&fit=crop"
+        "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=1080&h=1080&fit=crop"
       },
       "portrait": {
         "dimensions": {
@@ -40,7 +40,7 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=763&h=1080&fit=crop"
+        "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=763&h=1080&fit=crop"
       },
       "narrow": {
         "dimensions": {
@@ -49,36 +49,46 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=610&h=1080&fit=crop"
+        "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=610&h=1080&fit=crop"
       }
     },
     "cover-text": [
       {
         "type": "heading2",
-        "text": "E-enable customized supply-chains",
+        "text": "Incentivize ubiquitous e-tailers",
         "spans": []
       }
     ],
+    "link-to-project": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
     "description": [
       {
         "type": "paragraph",
-        "text": "Tempor consequat veniam aliquip velit.",
+        "text": "Officia dolor enim culpa duis tempor dolore ex est duis qui.",
         "spans": []
       }
     ],
     "caption": [
       {
         "type": "paragraph",
-        "text": "Occaecat do cupidatat dolore et nostrud. Pariatur consectetur minim cillum eu incididunt amet aliqua anim pariatur sint culpa. In labore voluptate magna sunt Lorem deserunt non culpa eiusmod laboris veniam exercitation.",
+        "text": "Culpa aute aliqua eu mollit cillum. Quis eiusmod amet mollit veniam non adipisicing id culpa do in dolor ut ex. Ullamco do pariatur ipsum labore enim sint quis quis culpa mollit officia exercitation.",
         "spans": []
       }
     ],
     "categories": [
       {
-        "category": "onderzoek"
+        "category": "stedenbouw"
+      },
+      {
+        "category": "architectuur"
       },
       {
         "category": "stedenbouw"
+      },
+      {
+        "category": "architectuur"
       },
       {
         "category": "onderzoek"
@@ -86,16 +96,13 @@
     ],
     "themes": [
       {
-        "theme": "voedsel"
+        "theme": "circulair"
       },
       {
         "theme": "sociale-cohesie"
       },
       {
-        "theme": "wonen"
-      },
-      {
-        "theme": "wonen"
+        "theme": "voedsel"
       }
     ]
   }
