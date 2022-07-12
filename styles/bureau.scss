@@ -15,7 +15,9 @@
 		border-top: 2px solid black;
 	}
 	.intro{
-		width: 60%;
+		width: 55%;
+		margin-right: 5%;
+		padding-bottom: 24px;
 		p {
 			font-size: 24px;
 			margin: 14px 0 0 0;
@@ -29,24 +31,51 @@
 			line-height: 1.1;
 		}
 	}
-	.contact{
-		width: 35%;
-		margin-left: 5%;
-		p {
-			font-size: 24px;
-		}
-	}
 	.section{
 		width: 100%;
-		margin: 48px 0 0 0;
+		&.medium{
+			width: 45%;
+			max-width: 600px;
+			&:nth-child(even) {
+				margin-left: 5%;
+			}
+			.flex .flex-item{
+				width: 100%;
+				margin-right: 0;
+				margin-left: 0;
+			}
+		}
+		&.small {
+			width: 30%;
+			.flex .flex-item {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 0;
+				margin-left: 0;
+			}
+		}
+		&.large {
+			width: 100%;
+			margin-left: 0;
+			.text-wrap{	
+				display: flex;
+				p{
+					width: 30%;
+					margin-right: 2%;
+				}
+			}
+		}
 		h2{
 			width: 100%;
 			border-bottom: 2px solid black;
+			margin: 48px 0 0 0;
 		}
 		h3 {
 			font-size: 28px;
 			font-weight: normal;
-			width: 60%;
+			width: 100%;
 			margin: 14px 0 0 0;
 			line-height: 1.1;
 		}
@@ -66,14 +95,14 @@
 			h3 {
 				font-size: 28px;
 				font-weight: normal;
-				width: 60%;
+				width: 100%;
 				margin: 14px 0 0 0;
 			}
 		}
 		p{
 			font-size: 24px;
 			line-height: 1.2;
-			width: 60%;
+			width: 100%;
 			margin: 14px 0 0 0;
 			a{
 				text-decoration: underline;
@@ -84,7 +113,7 @@
 			flex-wrap: wrap;
 			justify-content: flex-start;
 			.flex-item {
-				width: calc(20% - 20px);
+				width: calc(30% - 20px);
 				height: 100%;
 				margin: 14px 20px 20px 0;
 				position: relative;

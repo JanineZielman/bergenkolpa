@@ -84,41 +84,40 @@ const Bureau = (props) => {
               <RichText render={content.intro} linkResolver={linkResolver}/>
             </div>
           </div>
-          <div className="contact" id={doc.lang == 'en-gb' ? 'Contact' : doc.lang == 'nl-nl' ? 'Adres & Contact' : ''}>
-            <h2>Contact</h2>
-            <div className="content">
-              <RichText render={content.contact} linkResolver={linkResolver}/>
-            </div>
-          </div>
           {content.slices.map((slice,i) => {
             return(
-              <div key={`bureau-items${i}`} className="section" id={slice.primary.uid}>
-                <h2>{slice.primary.title}</h2>
-                <RichText render={slice.primary.text} linkResolver={linkResolver}/>
+              <div key={`bureau-items${i}`} className={`section ${slice.primary.size}`} id={slice.primary.uid}>
+                {slice.primary.title && <h2>{slice.primary.title}</h2> }
+                {slice.primary.text && 
+                  <div className='text-wrap'>
+                    <RichText render={slice.primary.text} linkResolver={linkResolver}/>
+                  </div>
+                }
                 <div className='flex'>
-                  {slice.items.map((item,j) => {
-                    return(
-                      <div className='flex-item' id={item.text?.replace(' ', '_')}>
-                        {item.text &&
-                          <h3 onClick={item.info[0] && AddClass2} className={item.info[0] && 'clickable'}>{item.text}</h3>
-                        }
-                        <img className='close' onClick={RemoveClass} src="/cross.svg"/>
-                        <div className='content-wrapper'>
-                          <img onClick={item.info[0] && AddClass} src={item.image.url} className={item.info[0] && 'clickable'}/>
-                          {item.info[0] &&
-                            <div className='info-text'>
-                              <RichText render={item.info} linkResolver={linkResolver}/>
-                            </div>
+                  {slice.slice_type == 'image_text' &&
+                    slice.items.map((item,j) => {
+                      return(
+                        <div className='flex-item' id={item.text?.replace(' ', '_')}>
+                          {item.text &&
+                            <h3 onClick={item.info[0] && AddClass2} className={item.info[0] && 'clickable'}>{item.text}</h3>
                           }
+                          <img className='close' onClick={RemoveClass} src="/cross.svg"/>
+                          <div className='content-wrapper'>
+                            <img onClick={item.info[0] && AddClass} src={item.image.url} className={item.info[0] && 'clickable'}/>
+                            {item.info[0] &&
+                              <div className='info-text'>
+                                <RichText render={item.info} linkResolver={linkResolver}/>
+                              </div>
+                            }
+                          </div>
                         </div>
-                      </div>
-                    )
-                  })}
+                      )
+                    })
+                  }
                 </div>
               </div>
             )
           })}
-
         </div>
       </Layout>
     </>

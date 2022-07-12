@@ -5,7 +5,7 @@
     "slice_type": "image_text",
     "items": [
       {
-        "text": "optimize end-to-end content",
+        "text": "reintermediate vertical content",
         "image": {
           "dimensions": {
             "width": 1080,
@@ -13,18 +13,18 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=1080&h=1080&fit=crop"
+          "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=1080&h=1080&fit=crop"
         },
         "info": [
           {
             "type": "paragraph",
-            "text": "Aliquip reprehenderit ut occaecat officia enim minim pariatur sunt veniam eu nostrud deserunt enim. Eiusmod ea aliquip occaecat amet occaecat nisi proident consectetur velit qui. Ullamco ut qui cupidatat reprehenderit et.",
+            "text": "In eu sit mollit aute velit labore nostrud deserunt ut excepteur. Cupidatat consequat esse qui velit nulla reprehenderit Lorem anim ipsum excepteur cillum ad dolor dolore et. Cillum ex voluptate sunt.",
             "spans": []
           }
         ]
       },
       {
-        "text": "transform impactful systems",
+        "text": "monetize proactive web-readiness",
         "image": {
           "dimensions": {
             "width": 1080,
@@ -32,46 +32,28 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=1080&h=1080&fit=crop"
+          "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=1080&h=1080&fit=crop"
         },
         "info": [
           {
             "type": "paragraph",
-            "text": "Sint qui magna eiusmod.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "text": "expedite web-enabled eyeballs",
-        "image": {
-          "dimensions": {
-            "width": 1080,
-            "height": 1080
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=1080&h=1080&fit=crop"
-        },
-        "info": [
-          {
-            "type": "paragraph",
-            "text": "Ad esse incididunt sit ut adipisicing id quis ullamco occaecat. Qui labore excepteur officia est eu qui dolor qui nisi officia consectetur sunt cupidatat non. Ea irure fugiat velit excepteur nulla.",
+            "text": "In proident in reprehenderit mollit officia ad sunt. Sit tempor est velit voluptate sunt aute. Aute labore in aute officia duis.",
             "spans": []
           }
         ]
       }
     ],
     "primary": {
-      "uid": "engineer seamless convergence",
-      "title": "generate real-time e-business",
+      "uid": "enable revolutionary mindshare",
+      "title": "iterate innovative solutions",
       "text": [
         {
           "type": "paragraph",
-          "text": "Irure irure velit nulla culpa elit elit quis commodo exercitation adipisicing enim culpa. Ex elit sit irure officia aute incididunt pariatur tempor. Esse sunt veniam officia dolore.",
+          "text": "Excepteur ipsum sunt ut do esse Lorem Lorem occaecat eu cupidatat duis.",
           "spans": []
         }
-      ]
+      ],
+      "size": "large"
     }
   }
 ]

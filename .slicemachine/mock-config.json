@@ -8,12 +8,6 @@
           "patternType": "PARAGRAPH",
           "blocks": 1
         }
-      },
-      "contact": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
       }
     },
     "project": {
@@ -405,7 +399,6 @@
       "default": {
         "primary": {}
       }
-    },
-    "Content": {}
+    }
   }
 }

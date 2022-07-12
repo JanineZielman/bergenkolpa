@@ -33,6 +33,18 @@
             "allowTargetBlank": true,
             "multi": "paragraph,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl,heading2,heading3,heading1"
           }
+        },
+        "size": {
+          "type": "Select",
+          "config": {
+            "label": "Size",
+            "placeholder": "",
+            "options": [
+              "small",
+              "medium",
+              "large"
+            ]
+          }
         }
       },
       "items": {
