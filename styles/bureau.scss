@@ -135,9 +135,6 @@
 				.close{
 					display: none;
 				}
-				.clickable{
-					cursor: pointer;
-				}
 				&.selected{
 					width: 100%;
 					margin: 14px 0 20px 0;
@@ -186,6 +183,10 @@
 		margin-bottom: 24px;
 	}
 
+	.close {
+		display: none;
+	}
+
 	.content {
 		display: flex;
 		flex-wrap: wrap;
@@ -195,6 +196,62 @@
 			height: auto;
 			margin: 0 20px 20px 0;
 			position: relative;
+			.wrap{
+				display: none;
+			}
+			&.selected{
+				width: 100vw;
+				.wrap{
+					display: flex;
+					flex-wrap: wrap;
+					width: 100%;
+				}
+				.wrapper{
+					display: flex;
+					img{
+						width: 75%;
+						object-fit: contain;
+						height: auto;
+						margin-right: 14px;
+					}
+					p{
+						margin-top: 10px;
+					}
+				}
+				.close {
+					display: block;
+					position: absolute;
+					width: 20px;
+					height: 25px;
+					cursor: pointer;
+					top: 8px;
+					right: 0;
+				}
+				.image{
+					width: auto;
+					max-height: 70vh;
+					margin: 14px 14px 0 0;
+					img{
+						object-fit: contain;
+						max-height: 70vh;
+					}
+				}
+				.extra-content{
+					margin-top: 14px;
+					display: flex;
+					flex-wrap: wrap;
+					p{
+						width: 24vw;
+						margin-right: 2vw;
+					}
+				}
+				.caption p{
+					width: 65%;
+				}
+				.video{
+					margin-top: 24px;
+				}
+			}
 			.date{
 				width: 100%;
 				border-bottom: 2px solid black;
@@ -222,4 +279,8 @@
 			}
 		}
 	}
+}
+
+.clickable {
+	cursor: pointer;
 }

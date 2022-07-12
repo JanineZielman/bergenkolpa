@@ -1,13 +1,16 @@
 import { createClient, linkResolver } from '../../prismicConfiguration'
 import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
-import { RichText } from 'prismic-reactjs'
 import Moment from 'moment';
-import Layout from "../../components/layout"
 import Head from 'next/head'
-import ImageSize from '../../components/imageSize';
+import { RichText } from 'prismic-reactjs'
 
-const Recent = (props) => {
+import * as Slices from "../../slices";
+import Layout from "../../components/layout"
+
+
+
+const News = (props) => {
   const {doc, menu, footer, news, global} = props;
 
 	const router = useRouter();
@@ -38,7 +41,7 @@ const Recent = (props) => {
 			router.push('#'+id);
 		}, 1000);
 		setSelectedId(id)
-   };
+  };
 
   const AddClass2 = (e) => {
 		document.getElementById(selectedId)?.classList.remove("selected");
@@ -50,7 +53,7 @@ const Recent = (props) => {
 			router.push('#'+id);
 		}, 1000);
 		setSelectedId(id)
-   };
+  };
 
 	const RemoveClass = (e) => {
 		const id = selectedItems[0].id;
@@ -59,10 +62,10 @@ const Recent = (props) => {
 		setTimeout(() => {
 			router.push('#'+id);
 		}, 500);
-   };
+  };
 
   return(
-		<>
+    <>
       <Head>
         <title>{global.title + ' | Recent'}</title>
         <meta name="description" content={RichText.asText(news[0].data.text)} />
@@ -147,33 +150,55 @@ const Recent = (props) => {
 			</Layout>
 		</>
   )
-  
 }
 
-export async function getStaticProps({ locale, previewData }) {
+export async function getStaticProps({ params, locale, previewData }) {
   const client = createClient({ previewData })
+  const prismic = require("@prismicio/client");
 
-  const page = await client.getSingle("recent", { lang: locale });
+  const global = await client.getSingle("global");
+  const homepage = await client.getByUID("homepage", "home", { lang: locale });
   const menu = await client.getSingle("menu", { lang: locale });
   const footer = await client.getSingle("footer");
-	const news = await client.getAllByType('news-item', { 
-		lang: locale,
-		orderings: {
+	const page = await client.getByUID("news-tag", params.uid, { lang: locale });
+
+  const news = await client.getAllByType('news-item', {
+    lang: locale,
+    orderings: {
 			field: 'my.news-item.date',
 			direction: 'desc',
 		},
-	});
-	const global = await client.getSingle("global");
+    predicates: [
+      prismic.predicate.at(
+        'my.news-item.category',
+        params.uid
+      )
+    ],
+  })
 
   return {
     props: {
+      homepage: homepage.data.slices,
       menu: menu.data,
-      doc: page,
       footer: footer,
-			news: news,
-			global: global.data,
+      doc: page,
+      news: news,
+      global: global.data,
     },
   };
 }
 
-export default Recent;
+export async function getStaticPaths({previewData}) {
+  const client = createClient({ previewData })
+
+  const documents = await client.getAllByType("news-tag", { lang: "*" });
+
+  return {
+    paths: documents.map((doc) => {
+      return { params: { uid: doc.uid }, locale: doc.lang };
+    }),
+    fallback: false,
+  };
+}
+
+export default News;

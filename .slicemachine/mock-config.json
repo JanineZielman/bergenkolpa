@@ -48,7 +48,8 @@
     "order": {
       "projects": {},
       "architectuur": {}
-    }
+    },
+    "news-tag": {}
   },
   "slices": {
     "Slider": {
@@ -382,6 +383,12 @@
             "content": "Main"
           },
           "quote": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "text": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1

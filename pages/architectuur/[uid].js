@@ -17,6 +17,7 @@ const Page = (props) => {
   const [title, setTitle] = useState(null);
   const [description, setDescription] = useState(null);
   const [image, setImage] = useState(null);
+  
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {

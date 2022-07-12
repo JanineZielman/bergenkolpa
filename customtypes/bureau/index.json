@@ -28,12 +28,6 @@
           "choices": {
             "image_text": {
               "type": "SharedSlice"
-            },
-            "image": {
-              "type": "SharedSlice"
-            },
-            "info": {
-              "type": "SharedSlice"
             }
           }
         }

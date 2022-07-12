@@ -4,6 +4,7 @@ import LazyLoad from 'react-lazyload';
 import Content from './content';
 import { RichText } from 'prismic-reactjs';
 import { linkResolver } from '../prismicConfiguration';
+import CoverImage from './coverImage';
 
 
 const Projects = ({projects, tags, themes, lang}) => {
