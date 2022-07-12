@@ -16,6 +16,10 @@ export function middleware(req) {
     return NextResponse.redirect(new URL(`/zh-cn`, req.nextUrl));
   }
 
+   if (pathname.indexOf("disclaimer.html") > -1) {
+    return NextResponse.redirect(new URL(`/page/disclaimer`, req.nextUrl));
+  }
+
   // recent
 
   if (pathname.indexOf("53_recent.html") > -1) {
