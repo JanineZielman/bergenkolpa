@@ -15,7 +15,7 @@
 		border-top: 2px solid black;
 	}
 	.intro{
-		width: 55%;
+		width: 45%;
 		margin-right: 5%;
 		padding-bottom: 24px;
 		p {
@@ -35,7 +35,7 @@
 		width: 100%;
 		&.medium{
 			width: 45%;
-			max-width: 600px;
+			// max-width: 600px;
 			&:nth-child(even) {
 				margin-left: 5%;
 			}
