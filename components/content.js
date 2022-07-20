@@ -91,15 +91,19 @@ const Content = ({item}) => {
 								{slice.items.map((item,i) => {
 									return(
 										<>
-											{item.image?.url && 
+											{item.image && 
 												<>
 												{item['big-image'] == true ?	
 													<div className='big-image'>
-														<ImageSize item={item}/>
+														{item.image?.url && 
+															<ImageSize item={item}/>
+														}
 													</div>
 												:
 													<div key={`image-item${i}`} className={`image ${item['aspect-ratio']}`}>
-														<ImageSize item={item}/>
+														{item.image?.url && 
+															<ImageSize item={item}/>
+														}
 													</div>
 												}
 												</>
@@ -114,6 +118,9 @@ const Content = ({item}) => {
 													<div></div>
 													<RichText render={item.quote} linkResolver={linkResolver} />
 												</div>
+											}
+											{item.embed && 
+												<div className='video' dangerouslySetInnerHTML={{ __html: item.embed.html }} />
 											}
 										</>
 									)
