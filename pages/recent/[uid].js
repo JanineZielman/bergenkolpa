@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Moment from 'moment';
 import Head from 'next/head'
 import { RichText } from 'prismic-reactjs'
+import ImageSize from '../../components/imageSize';
 
 import * as Slices from "../../slices";
 import Layout from "../../components/layout"
@@ -123,10 +124,10 @@ const News = (props) => {
 																					<ImageSize item={item}/>
 																				</div>
 																			}
-																			{item.text && item.text[0].text &&
+																			{item.text && item.text[0]?.text &&
 																				<RichText render={item.text} linkResolver={linkResolver} />
 																			}
-																			{item.quote && item.quote[0].text &&
+																			{item.quote && item.quote[0]?.text &&
 																				<div className="caption">
 																					<div></div>
 																					<RichText render={item.quote} linkResolver={linkResolver} />
