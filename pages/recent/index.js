@@ -120,10 +120,10 @@ const Recent = (props) => {
 																					<ImageSize item={item}/>
 																				</div>
 																			}
-																			{item.text && item.text[0].text &&
+																			{item.text && item.text[0]?.text &&
 																				<RichText render={item.text} linkResolver={linkResolver} />
 																			}
-																			{item.quote && item.quote[0].text &&
+																			{item.quote && item.quote[0]?.text &&
 																				<div className="caption">
 																					<div></div>
 																					<RichText render={item.quote} linkResolver={linkResolver} />
