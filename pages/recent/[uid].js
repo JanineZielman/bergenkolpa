@@ -97,7 +97,7 @@ const News = (props) => {
 					<div className="content">
 						{news.map((item,i) => {
 							return(
-								<div key={`news${i}`} className='news-item' id={item.data.date?.replace(' ', '_')}>
+								<div key={`news${i}`} className='news-item' id={item.uid?.replace(' ', '_')}>
 									<div className='date'>
 										{Moment(item.data.date).format('D MMM y')}
 									</div>

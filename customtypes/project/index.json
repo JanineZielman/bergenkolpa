@@ -144,7 +144,10 @@
           "label": "Link To Project",
           "select": "document",
           "customtypes": [
-            "project"
+            "project",
+            "bureau",
+            "news-item",
+            "theme"
           ]
         }
       },
