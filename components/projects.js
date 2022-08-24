@@ -71,7 +71,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 					{item &&
 						<LazyLoad height={600} offset={600} className="project-wrapper">
 							<div key={`project${i}`} className={`project-item ${item.data.background ? item.data.background : '' } ${item.data['cover-image']?.url ? '' : 'cover-text'} ${item.data['aspect-ratio']}`} id={item.uid}>
-								<div className="title" onClick={AddClass}>{item.data.title ? item.data.title : <span>&nbsp;</span> }</div>
+								<div className="title" onClick={item.data['link-to-project'].uid ? null : AddClass}>{item.data.title ? item.data.title : <span>&nbsp;</span> }</div>
 								<img className='close' onClick={RemoveClass} src="/cross.svg"/>
 								<div className="tags">
 									{item.data.categories?.map((item,i) => (
@@ -98,7 +98,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 									))}
 								</div>
 								{item.data['link-to-project'].uid ? 
-									<div className={`flex`} onClick={GoToClass} id={item.data['link-to-project'].uid}>
+									<a className={`flex`} id={item.data['link-to-project'].uid} onClick={GoToClass} >
 										<div className="cover">
 											{item.data['cover-image'].url && 
 												<div className={`img-effect`}>
@@ -111,7 +111,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 												</h2>
 											}
 										</div>
-									</div>
+									</a>
 								:
 								<Content item={item}/>
 								}

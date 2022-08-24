@@ -38,8 +38,6 @@ const Content = ({item}) => {
     autoplaySpeed: 4000,
   };
 
-	console.log(item.data.caption)
-
   return(
 		<>				
 			<div className={`flex`} onClick={AddClass} >
