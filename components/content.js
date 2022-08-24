@@ -38,6 +38,8 @@ const Content = ({item}) => {
     autoplaySpeed: 4000,
   };
 
+	console.log(item.data.caption)
+
   return(
 		<>				
 			<div className={`flex`} onClick={AddClass} >
@@ -61,7 +63,7 @@ const Content = ({item}) => {
 			{item.data.caption[0] && 
 				<div className="caption">
 					<div></div>
-					<RichText render={item.data['caption']} linkResolver={linkResolver} />
+					<RichText render={item.data.caption} linkResolver={linkResolver} />
 				</div>
 			}
 			<div className="extra-info">
