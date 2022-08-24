@@ -54,13 +54,16 @@ const Projects = ({projects, tags, themes, lang}) => {
 		const type = e.currentTarget.className.split(" ")[1]
 		if (id) {
 			if (type == 'theme'){
-				router.push('/theme/'+id+'#projects');
+				router.push('/' + lang + '/theme/'+id+'#projects');
+			}
+			if (type == 'tag'){
+				router.push('/' + lang + '/'+id+'#projects');
 			}
 			if (type == 'news-item') {
-				router.push('/recent/#'+id);
+				router.push('/' + lang + '/recent/#'+id);
 			}
 			if (type == 'bureau'){
-				router.push('/bureau');
+				router.push('/' + lang + '/bureau');
 			}
 			if (type == 'project') {
 				const element = document.getElementById(id)
@@ -73,6 +76,8 @@ const Projects = ({projects, tags, themes, lang}) => {
 			}
 		}
 	}
+
+	console.log(lang)
 
   return(
 		<section className="projects" id="projects">

@@ -147,7 +147,8 @@
             "project",
             "bureau",
             "news-item",
-            "theme"
+            "theme",
+            "tag"
           ]
         }
       },
