@@ -35,10 +35,11 @@
 		width: 100%;
 		&.medium{
 			width: 45%;
+			margin-right: 5%;
 			// max-width: 600px;
-			&:nth-child(even) {
-				margin-left: 5%;
-			}
+			// &:nth-child(even) {
+			// 	margin-left: 5%;
+			// }
 			.flex .flex-item{
 				width: 100%;
 				margin-right: 0;

@@ -2,6 +2,7 @@ import { createClient, linkResolver } from '../../prismicConfiguration'
 import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
 import Moment from 'moment';
+import 'moment/locale/nl'
 import Head from 'next/head'
 import { RichText } from 'prismic-reactjs'
 import ImageSize from '../../components/imageSize';
@@ -12,7 +13,15 @@ import Layout from "../../components/layout"
 
 
 const News = (props) => {
-  const {doc, menu, footer, news, global} = props;
+  const {doc, menu, footer, news, global, locale} = props;
+
+	useEffect(() => {
+		if (locale.slice(0,2) == 'zh') {
+			 Moment.locale('en')
+		} else {
+			Moment.locale(locale.slice(0,2))
+		}
+  }, []);
 
 	const router = useRouter();
 
@@ -114,7 +123,6 @@ const News = (props) => {
 															<div className='video' dangerouslySetInnerHTML={{ __html: slice.primary.embed.html }} />
 														}
 														{slice.items.map((item, i) => {
-															console.log(item)
 															return(
 																<>
 																	{item['aspect-ratio'] &&
@@ -185,6 +193,7 @@ export async function getStaticProps({ params, locale, previewData }) {
       doc: page,
       news: news,
       global: global.data,
+			locale: locale,
     },
   };
 }

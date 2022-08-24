@@ -3,15 +3,25 @@ import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
 import { RichText } from 'prismic-reactjs'
 import Moment from 'moment';
+import 'moment/locale/nl'
 import Layout from "../../components/layout"
 import Head from 'next/head'
 import ImageSize from '../../components/imageSize';
 
 const Recent = (props) => {
-  const {doc, menu, footer, news, global} = props;
+  const {doc, menu, footer, news, global, locale} = props;
+	
+
+	useEffect(() => {
+		if (locale.slice(0,2) == 'zh') {
+			 Moment.locale('en')
+		} else {
+			Moment.locale(locale.slice(0,2))
+		}
+  }, []);
+
 
 	const router = useRouter();
-
 	const [selectedItems, setSelectedItems] = useState([]);
 	const [selectedId, setSelectedId] = useState();
 
@@ -86,6 +96,7 @@ const Recent = (props) => {
 							return(
 								<div key={`news${i}`} className='news-item' id={item.data.date?.replace(' ', '_')}>
 									<div className='date'>
+										
 										{Moment(item.data.date).format('D MMM y')}
 									</div>
 									<div onClick={item.data.slices[0] && AddClass2} className={`wrapper ${item.data.slices[0] && 'clickable'}`}>
@@ -110,7 +121,6 @@ const Recent = (props) => {
 															<div className='video' dangerouslySetInnerHTML={{ __html: slice.primary.embed.html }} />
 														}
 														{slice.items.map((item, i) => {
-															console.log(item)
 															return(
 																<>
 																	{item['aspect-ratio'] &&
@@ -172,6 +182,7 @@ export async function getStaticProps({ locale, previewData }) {
       footer: footer,
 			news: news,
 			global: global.data,
+			locale: locale,
     },
   };
 }
