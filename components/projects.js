@@ -50,7 +50,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 	const GoToClass = (e) => {
 		document.getElementById(selectedId)?.classList.remove("selected");
 		
-		const id = e.currentTarget.id
+		const id = e.currentTarget.id.replace('-link', '')
 		const type = e.currentTarget.className.split(" ")[1]
 		if (id) {
 			if (type == 'theme'){
@@ -76,8 +76,6 @@ const Projects = ({projects, tags, themes, lang}) => {
 			}
 		}
 	}
-
-	console.log(lang)
 
   return(
 		<section className="projects" id="projects">
@@ -114,7 +112,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 									))}
 								</div>
 								{item.data['link-to-project'].uid ? 
-									<a className={`flex ${item.data['link-to-project'].type}`} id={item.data['link-to-project'].uid} onClick={GoToClass} >
+									<a className={`flex ${item.data['link-to-project'].type}`} id={`${item.data['link-to-project'].uid}-link`} onClick={GoToClass} >
 										<div className="cover">
 											{item.data['cover-image'].url && 
 												<div className={`img-effect`}>
