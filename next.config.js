@@ -20,6 +20,7 @@ module.exports = async () => {
       // a non-locale prefixed path e.g. `/hello`
       defaultLocale: locales[0],
     },
+    swcMinify: false,
     images: {
       loader: "imgix",
       path: "",
