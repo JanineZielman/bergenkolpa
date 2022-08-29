@@ -25,5 +25,36 @@ module.exports = async () => {
       loader: "imgix",
       path: "",
     },
+    redirects() {
+      return [
+        {
+          source: '/nl',
+          destination: '/nl-nl',
+          permanent: true,
+        },
+        {
+          source: '/en',
+          destination: '/en-gb',
+          permanent: true,
+        },
+        {
+          source: '/398_20844214963161620171.html',
+          destination: '/zh-cn',
+          permanent: true,
+        },
+        {
+          source: '/disclaimer.html',
+          destination: '/page/disclaimer',
+          permanent: true,
+        },
+        // recent
+        {
+          source: '/53_recent.html',
+          destination: '/recent',
+          permanent: true,
+        },
+    ]
+  },
   };
+  
 };
