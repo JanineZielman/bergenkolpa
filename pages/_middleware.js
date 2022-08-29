@@ -60,7 +60,7 @@ export function middleware(req) {
     }
   }
 
-  // projects
+  // projects 
 
   // bouwrealisatie
 
