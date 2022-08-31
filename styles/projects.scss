@@ -81,7 +81,6 @@
 			a{
 				margin-top: 5px;
 				margin-left: 5px;
-				font-weight: bold;
 				&::after{
 					content: ' /'
 				}
@@ -244,7 +243,7 @@
 						}
 					}
 					&.Main{
-						width: 40.5vw;
+						width: 40vw;
 					}
 					&.Landscape {
 						width: 50vw;
@@ -327,28 +326,31 @@
 
 	iframe {
 		width: 37.167vw;
-		height: 20vw;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 
 .caption {
 	margin: 36px 0;
 	display: flex;
+	flex-direction: column;
 	align-items: flex-start;
 	width: 100%;
 
 	p {
-		width: 65%;
+		border-top: 2px solid black;
+		max-width: 65%;
 		font-size: 48px;
 		margin: 0;
 		line-height: 1.1;
 	}
 
 	div {
-		width: 30%;
-		margin-right: 5%;
-		border-top: 2px solid black;
-		font-size: 18px;
-		padding-top: 5px;
+		// width: 65%;
+		// margin-right: 5%;
+		// border-top: 2px solid black;
+		// font-size: 18px;
+		// padding-top: 5px;
 	}
 }

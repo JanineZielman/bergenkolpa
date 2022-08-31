@@ -292,7 +292,7 @@
 
 		p {
 			margin-top: 18px;
-			width: 100%;
+			max-width: 100%;
 			font-size: 30px;
 		}
 	}
@@ -319,7 +319,7 @@
 						}
 					}
 					.caption p {
-						width: 100%;
+						max-width: 100%;
 					}
 					.extra-content{
 						p{
@@ -615,8 +615,17 @@
 
 		p {
 			margin-top: 18px;
-			width: 100%;
+			max-width: 100%;
 			font-size: 30px;
+		}
+	}
+
+	.projects .project-item.selected {
+		.caption{
+			margin: 14px 0;
+		}
+		.extra-info div{
+			margin-top: -14px;
 		}
 	}
 	

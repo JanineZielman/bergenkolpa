@@ -38,6 +38,13 @@ const Content = ({item}) => {
     autoplaySpeed: 4000,
   };
 
+	useEffect(() => {
+    let newCap = item.data.caption[0]?.text.replace('"', '“').replace('"', '”');
+		item.data.caption[0]?.text = newCap
+  });
+
+	
+
   return(
 		<>				
 			<div className={`flex`} onClick={AddClass} >
