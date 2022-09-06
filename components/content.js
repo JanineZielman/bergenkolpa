@@ -98,7 +98,7 @@ const Content = ({item}) => {
 								{slice.items.map((item,i) => {
 									return(
 										<>
-											{item.image && 
+											{item.image.url && 
 												<>
 												{item['big-image'] == true ?	
 													<div className='big-image'>
@@ -126,7 +126,7 @@ const Content = ({item}) => {
 													<RichText render={item.quote} linkResolver={linkResolver} />
 												</div>
 											}
-											{item.embed && 
+											{item.embed.html && 
 												<div className='video' dangerouslySetInnerHTML={{ __html: item.embed.html }} />
 											}
 										</>
