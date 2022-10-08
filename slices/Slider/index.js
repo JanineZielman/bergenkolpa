@@ -28,7 +28,7 @@ const Slider = ({ slice }) => {
           let theme_url = `/${item.link.lang}/theme/${item.link.uid}#projects`
           return(
             <div key={`slider-item${i}`} className='slide-item'>
-              <a className="title-image" href={item.theme == true ? theme_url : '/'+ item.link.uid}>
+              <a className="title-image" href={item.theme == true ? theme_url : '/' + item.link.lang + '/' + item.link.uid}>
                 <div className={`title ${item.position} ${item.color}`}>
                   {item.title}
                 </div>

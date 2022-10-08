@@ -15,7 +15,7 @@ export default class extends Document {
           <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-137371396-1"
+            src="https://www.googletagmanager.com/gtag/js?id=UA-3748362-1"
           />
           <script
             dangerouslySetInnerHTML={{
@@ -23,7 +23,7 @@ export default class extends Document {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'UA-137371396-1', { page_path: window.location.pathname });
+                gtag('config', 'UA-3748362-1', { page_path: window.location.pathname });
               `,
             }}
           />

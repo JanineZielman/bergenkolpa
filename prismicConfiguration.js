@@ -47,6 +47,8 @@ export function linkResolver(doc) {
       return `/${doc.lang}/theme/${doc.uid}#projects`
     case 'project':
       return `/${doc.lang}/#${doc.uid}`
+    case 'news-item':
+      return `/${doc.lang}/recent/#${doc.uid}`
     default:
       return null
   }
