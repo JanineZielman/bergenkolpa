@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import { useRouter } from 'next/router';
 import { RichText } from 'prismic-reactjs'
 import Slick from "react-slick";
 import Image from 'next/image'
@@ -9,22 +8,7 @@ import CoverImage from './coverImage';
 
 
 const Content = ({item}) => {
-	const router = useRouter();
-
-	const [selectedId, setSelectedId] = useState();
-
-  const AddClass = (e) => {
-		document.getElementById(selectedId)?.classList.remove("selected");
-		
-		const id = e.currentTarget.parentElement.id;
-		e.currentTarget.parentElement.classList.add('selected');
-		router.push('#'+id);
-		setTimeout(() => {
-			router.push('#'+id);
-		}, 1000);
-		setSelectedId(id)
-   };
-
+	
 	const settings = {
     dots: false,
     arrows: true,
@@ -43,11 +27,10 @@ const Content = ({item}) => {
 		item.data.caption[0]?.text = newCap
   });
 
-	
 
   return(
 		<>				
-			<div className={`flex`} onClick={AddClass} >
+			{/* <div className={`flex`}>
 					<div className="cover">
 						{item.data['cover-image'].url && 
 							<div className={`img-effect`}>
@@ -64,7 +47,7 @@ const Content = ({item}) => {
 				<div className="description">
 					<RichText render={item.data['description']} linkResolver={linkResolver}/>
 				</div>
-			</div>
+			</div> */}
 			{item.data.caption[0] && 
 				<div className="caption">
 					<div></div>

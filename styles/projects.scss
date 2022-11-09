@@ -293,30 +293,62 @@
 		padding-right: 3vw;
 		margin-right: -3vw;
 		margin-left: -3vw;
+		background-color: rgba(245, 235, 193,0.2);
+		// background-image: url(pattern-white.gif);
+		// background-repeat: repeat;
+		// background-size: 175px;
 		&:after{
 				position: absolute;
 				top: 0;
-				left: -130%;
-				width: 120%;
+				// left: -130%;
+				left: 0;
+				width: 100%;
 				height: 100%;
 				padding-right: 3px;
-				background-color: transparent;
+				// background-color: red;
+				background-color: rgb(245, 235, 193);
 				content: "";
 				z-index: -1;
-				opacity: 0.2;
-				box-shadow: 110vw 0px #f5ebc1;
+			
+				opacity: 1;
+				// box-shadow: 110vw 0px red;
+				mask-image: url(random.gif);
+				mask-repeat: repeat;
+				mask-size: 150px;
+				mask-composite: subtract;
 		}
-		&.sand:after {
-			box-shadow: 110vw 0px #f5ebc1;
+		&.sand{
+			background-color: rgba(245, 235, 193, 0.2);
+			&:after {
+				mask-image: url(random.gif);
+				background-color: #f5ebc1;
+				mask-size: 175px;
+			}
 		}
-		&.blue:after{
-			box-shadow: 110vw 0px #bce4e5;
+		&.blue{
+			background-color: rgba(188, 228, 229, 0.2);
+			&:after{
+				mask-image: url(maze.gif);
+				mask-size: 75px;
+				background-color: #bce4e5;
+			}
 		}
-		&.purple:after {
-			box-shadow: 110vw 0px #c0a8b3;
+		&.purple{
+			background-color: rgba(192, 168, 179, 0.2);
+			&:after {
+				mask-image: url(rotation.gif);
+				mask-size: 80px;
+				background-color: #c0a8b3;
+				// opacity: 0.4;
+			}
 		}
-		&.yellow:after {
-			box-shadow: 110vw 0px #fff100;
+		&.yellow{
+			background-color: rgba(255,241,0,0.2);
+			&:after {
+				mask-image: url(wave.gif);
+				mask-size: 10px;
+				background-color: #fff100;
+			}
 		}
 	}	
 }

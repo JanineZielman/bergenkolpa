@@ -27,7 +27,9 @@ const Projects = ({projects, tags, themes, lang}) => {
   }, []);
 
   const AddClass = (e) => {
-		document.getElementById(selectedId)?.classList.remove("selected");
+		const oldID = selectedItems[0]?.id;
+		document.getElementById(oldID)?.classList.remove("selected");
+		// document.getElementById(selectedId)?.classList.remove("selected");
 		
 		const id = e.currentTarget.parentElement.id;
 		e.currentTarget.parentElement.classList.add('selected');
@@ -48,7 +50,9 @@ const Projects = ({projects, tags, themes, lang}) => {
   };
 
 	const GoToClass = (e) => {
-		document.getElementById(selectedId)?.classList.remove("selected");
+		const oldID = selectedItems[0]?.id;
+		// document.getElementById(selectedId)?.classList.remove("selected");
+		document.getElementById(oldID)?.classList.remove("selected");
 		
 		const id = e.currentTarget.id.replace('-link', '')
 		const type = e.currentTarget.className.split(" ")[1]
@@ -127,7 +131,27 @@ const Projects = ({projects, tags, themes, lang}) => {
 										</div>
 									</a>
 								:
-								<Content item={item}/>
+									<>
+										<div className={`flex`} onClick={AddClass}>
+											<div className="cover">
+												{item.data['cover-image'].url && 
+													<div className={`img-effect`}>
+														<CoverImage item={item}/>
+													</div>
+												}
+												{item.data['cover-text'][0] &&
+													<h2 className={`img-effect`}>
+														<RichText render={item.data['cover-text']} linkResolver={linkResolver} />
+													</h2>
+												}
+											</div>
+
+											<div className="description">
+												<RichText render={item.data['description']} linkResolver={linkResolver}/>
+											</div>
+										</div>
+										<Content item={item}/>
+									</>
 								}
 							</div>
 						</LazyLoad>
