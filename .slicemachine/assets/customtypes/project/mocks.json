@@ -1,11 +1,12 @@
 {
-  "id": "c737a938-57e8-475e-b0d9-f844637bda61",
-  "uid": "impedit-quisquam-placeat",
+  "id": "0a9b867a-0138-42d2-a937-9ff04a67841d",
+  "uid": "suscipit-maxime-debitis",
   "type": "project",
   "data": {
-    "title": "aggregate holistic methodologies",
-    "date": "2020-10-08",
+    "title": "integrate cutting-edge models",
+    "date": "2020-11-27",
     "background": "sand",
+    "pattern": "wave",
     "aspect-ratio": "Main",
     "cover-image": {
       "dimensions": {
@@ -14,7 +15,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=1520&h=1080&fit=crop",
+      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=1520&h=1080&fit=crop",
       "landscape": {
         "dimensions": {
           "width": 1920,
@@ -22,7 +23,7 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=1920&h=1080&fit=crop"
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=1920&h=1080&fit=crop"
       },
       "square": {
         "dimensions": {
@@ -31,7 +32,7 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=1080&h=1080&fit=crop"
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=1080&h=1080&fit=crop"
       },
       "portrait": {
         "dimensions": {
@@ -40,7 +41,7 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=763&h=1080&fit=crop"
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=763&h=1080&fit=crop"
       },
       "narrow": {
         "dimensions": {
@@ -49,37 +50,37 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=610&h=1080&fit=crop"
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=610&h=1080&fit=crop"
       }
     },
     "cover-text": [
       {
         "type": "heading2",
-        "text": "Iterate extensible networks",
+        "text": "Syndicate scalable architectures",
         "spans": []
       }
     ],
     "link-to-project": {
       "link_type": "Web",
-      "url": "http://twitter.com"
+      "url": "https://slicemachine.dev"
     },
     "description": [
       {
         "type": "paragraph",
-        "text": "Amet cillum eu consectetur amet amet id nulla consectetur duis.",
+        "text": "Mollit et et aliqua deserunt adipisicing laboris quis id dolore. Consectetur velit sint voluptate esse occaecat do nulla commodo duis amet cupidatat. Nulla id deserunt elit in nostrud consequat fugiat nostrud sint velit aute.",
         "spans": []
       }
     ],
     "caption": [
       {
         "type": "paragraph",
-        "text": "Fugiat elit laborum anim reprehenderit aliquip sunt in pariatur pariatur. Laborum occaecat irure tempor sit laboris ad commodo enim excepteur ea occaecat elit ad. Ad dolor velit eiusmod tempor elit excepteur velit sunt in ex occaecat eiusmod magna.",
+        "text": "Enim cillum labore cillum quis excepteur est dolor irure cupidatat. Laborum veniam anim sint in magna esse enim.",
         "spans": []
       }
     ],
     "categories": [
       {
-        "category": "architectuur"
+        "category": "stedenbouw"
       },
       {
         "category": "onderzoek"
@@ -90,19 +91,10 @@
         "theme": "wonen"
       },
       {
+        "theme": "wonen"
+      },
+      {
         "theme": "voedsel"
-      },
-      {
-        "theme": "houtbouw"
-      },
-      {
-        "theme": "sociale-cohesie"
-      },
-      {
-        "theme": "sociale-cohesie"
-      },
-      {
-        "theme": "circulair"
       }
     ]
   }

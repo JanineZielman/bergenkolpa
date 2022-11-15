@@ -35,9 +35,24 @@
             "sand",
             "blue",
             "purple",
-            "yellow"
+            "yellow",
+            "grey"
           ],
           "default_value": "sand"
+        }
+      },
+      "pattern": {
+        "type": "Select",
+        "config": {
+          "label": "Pattern",
+          "placeholder": "",
+          "options": [
+            "random",
+            "maze",
+            "rotation",
+            "wave"
+          ],
+          "default_value": "random"
         }
       },
       "categories": {

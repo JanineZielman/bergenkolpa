@@ -88,7 +88,7 @@ const Projects = ({projects, tags, themes, lang}) => {
 					<>
 					{item &&
 						<LazyLoad height={600} offset={600} className="project-wrapper">
-							<div key={`project${i}`} className={`project-item ${item.data.background ? item.data.background : '' } ${item.data['cover-image']?.url ? '' : 'cover-text'} ${item.data['aspect-ratio']}`} id={item.uid}>
+							<div key={`project${i}`} className={`project-item ${item.data.background ? item.data.background : '' } ${item.data.pattern ? item.data.pattern : '' } ${item.data['cover-image']?.url ? '' : 'cover-text'} ${item.data['aspect-ratio']}`} id={item.uid}>
 								<div className="title" onClick={item.data['link-to-project'].uid ? null : AddClass}>{item.data.title ? item.data.title : <span>&nbsp;</span> }</div>
 								<img className='close' onClick={RemoveClass} src="/cross.svg"/>
 								<div className="tags">
