@@ -293,85 +293,47 @@
 		padding-right: 3vw;
 		margin-right: -3vw;
 		margin-left: -3vw;
-		background-color: rgba(245, 235, 193,0.2);
-		// background-image: url(pattern-white.gif);
-		// background-repeat: repeat;
-		// background-size: 175px;
+		background-color: rgba(255, 255, 255, 0.2);
 		&:after{
 				position: absolute;
 				top: 0;
-				// left: -130%;
 				left: 0;
 				width: 100%;
 				height: 100%;
 				padding-right: 3px;
-				// background-color: red;
-				background-color: rgb(218, 218, 218);
+				background-color: rgba(154, 154, 154, 0.4);
 				content: "";
 				z-index: -1;
-			
 				opacity: 1;
-				// box-shadow: 110vw 0px red;
 				mask-image: url(random.gif);
 				mask-repeat: repeat;
-				mask-size: 130px;
+				mask-size: 20000px;
 				mask-composite: subtract;
 		}
-		&.random{
-			&:after{
-				mask-image: url(random.gif);
-				mask-size: 130px;
-			}
-		}
-		&.maze{
-			&:after {
-				mask-image: url(maze.gif);
-				mask-size: 75px;
-			}
-		}
-		&.rotation{
-			&:after{
-				mask-image: url(rotation.gif);
-				mask-size: 80px;
-			}
-		}
-		&.wave{
-			&:after{
-				mask-image: url(wave.gif);
-				mask-size: 10px;
-			}
-		}
-		&.sand{
-			background-color: rgba(245, 235, 193, 0.2);
-			&:after {
-				background-color: #f5ebc1;
-			}
-		}
-		&.grey {
-			background-color: rgba(255, 255, 255, 0.2);
-
-			&:after {
-				background-color: rgba(154, 154, 154, 0.4);
-			}
-		}
-		&.blue{
-			background-color: rgba(188, 228, 229, 0.2);
-			&:after{
-				background-color: #bce4e5;
-			}
-		}
-		&.purple{
-			background-color: rgba(192, 168, 179, 0.2);
-			&:after {
-				background-color: rgba(192, 168, 179, 0.6);
-			}
-		}
-		&.yellow{
-			background-color: rgba(255,241,0,0.2);
-			&:after {
-				background-color: #fff100;
-			}
-		}
+		// &.random{
+		// 	&:after{
+		// 		mask-image: url(random.gif);
+		// 		mask-size: 130px;
+		// 	}
+		// }
+		// &.maze{
+		// 	&:after {
+		// 		mask-image: url(maze.gif);
+		// 		mask-size: 75px;
+		// 	}
+		// }
+		// &.rotation{
+		// 	&:after{
+		// 		mask-image: url(rotation.gif);
+		// 		mask-size: 80px;
+		// 	}
+		// }
+		// &.wave{
+		// 	&:after{
+		// 		mask-image: url(wave.gif);
+		// 		mask-size: 10px;
+		// 	}
+		// }
 	}	
 }
 
