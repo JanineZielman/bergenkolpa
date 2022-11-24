@@ -45,7 +45,7 @@
 			max-height: 90vh;
 			width: auto;
 			overflow: hidden;
-			margin: 24px 0;
+			margin: 24px 24px 24px 0;
 			img {
 					width: 100% !important;
 					max-width: 100% !important;
@@ -314,13 +314,13 @@
 				// box-shadow: 110vw 0px red;
 				mask-image: url(random.gif);
 				mask-repeat: repeat;
-				mask-size: 150px;
+				mask-size: 130px;
 				mask-composite: subtract;
 		}
 		&.random{
 			&:after{
 				mask-image: url(random.gif);
-				mask-size: 175px;
+				mask-size: 130px;
 			}
 		}
 		&.maze{
@@ -363,7 +363,7 @@
 		&.purple{
 			background-color: rgba(192, 168, 179, 0.2);
 			&:after {
-				background-color: #c0a8b3;
+				background-color: rgba(192, 168, 179, 0.6);
 			}
 		}
 		&.yellow{
