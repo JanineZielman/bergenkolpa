@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.vanbergenkolpa.nl
+
+# Sitemaps
+Sitemap: https://www.vanbergenkolpa.nl/sitemap.xml
