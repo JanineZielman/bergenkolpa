@@ -36,7 +36,7 @@ const ProjectPage = ({item, tags, themes, lang}) => {
 						))}
 					</div>
 					{item.data['link-to-project'].uid ? 
-						<a className={`flex ${item.data['link-to-project'].type}`} id={`${item.data['link-to-project'].uid}-link`} onClick={GoToClass} >
+						<a className={`flex ${item.data['link-to-project'].type}`} id={`${item.data['link-to-project'].uid}-link`}>
 							<div className="cover">
 								{item.data['cover-image'].url && 
 									<div className={`img-effect`}>
