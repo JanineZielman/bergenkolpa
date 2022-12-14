@@ -85,15 +85,16 @@ const Bureau = (props) => {
             </div>
           </div>
           {content.slices.map((slice,i) => {
+            console.log(slice)
             return(
               <div key={`bureau-items${i}`} className={`section ${slice.primary.size}`} id={slice.primary.uid}>
                 {slice.primary.title && <h2>{slice.primary.title}</h2> }
                 {slice.primary.text && 
-                  <div className='text-wrap'>
+                  <div className={`text-wrap ${slice.primary.columns ? 'columns' : ''}`}>
                     <RichText render={slice.primary.text} linkResolver={linkResolver}/>
                   </div>
                 }
-                <div className='flex'>
+                <div className='flex '>
                   {slice.slice_type == 'image_text' &&
                     slice.items.map((item,j) => {
                       return(

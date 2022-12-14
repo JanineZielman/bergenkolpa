@@ -61,11 +61,26 @@
 			width: 100%;
 			margin-left: 0;
 			.text-wrap{	
-				display: flex;
+				// display: flex;
+				// p{
+				// 	width: 30%;
+				// 	margin-right: 2%;
+				// }
+			}
+			.columns{
+				margin-top: 14px;
+				column-count: 3;
+				column-gap: 2%;
 				p{
-					width: 30%;
-					margin-right: 2%;
+					margin: 0;
 				}
+				// p{
+				// 	display: flex;
+				// 	flex-wrap: wrap;
+				// 	a{
+				// 		width: 30%;						
+				// 	}
+				// }
 			}
 		}
 		h2{

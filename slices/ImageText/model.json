@@ -45,6 +45,15 @@
               "large"
             ]
           }
+        },
+        "columns": {
+          "type": "Boolean",
+          "config": {
+            "label": "Columns",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
         }
       },
       "items": {
