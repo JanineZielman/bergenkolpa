@@ -89,8 +89,10 @@ const Projects = ({projects, tags, themes, lang}) => {
 					{item &&
 						<LazyLoad height={600} offset={600} className="project-wrapper">
 							<div key={`project${i}`} className={`project-item ${item.data.background ? item.data.background : '' } ${item.data.pattern ? item.data.pattern : '' } ${item.data['cover-image']?.url ? '' : 'cover-text'} ${item.data['aspect-ratio']}`} id={item.uid}>
-								<div className='blob' style={{'--top': (Math.floor(Math.random() * 80)) + 'vh','--left': (Math.floor(Math.random() * 80)) + 'vw' }} />
-								<div className='blob2' style={{'--top': (Math.floor(Math.random() * 80)) + 'vh','--left': (Math.floor(Math.random() * 80)) + 'vw' }}/>
+								<div className='blob' style={{'--top': (Math.floor(Math.random() * 60)) + 'vh','--left': (Math.floor(Math.random() * 80)) + 'vw' }} />
+								<div className='blob2' style={{'--top': (Math.floor(Math.random() * 50)) + 30 + 'vh','--left': (Math.floor(Math.random() * 80)) + 'vw' }}/>
+								<div className='blob3' style={{'--top': (Math.floor(Math.random() * 50)) + 50 + 'vh','--left': (Math.floor(Math.random() * 80)) + 'vw' }}/>
+								<div className='blob4' style={{'--top': (Math.floor(Math.random() * 80)) + 'vh','--left': (Math.floor(Math.random() * 80)) + 'vw' }}/>
 								<div className="title" onClick={item.data['link-to-project'].uid ? null : AddClass}>{item.data.title ? item.data.title : <span>&nbsp;</span> }</div>
 								<img className='close' onClick={RemoveClass} src="/cross.svg"/>
 								<div className="tags">

@@ -629,5 +629,9 @@
 			margin-top: -14px;
 		}
 	}
+
+	.projects .project-item.selected .extra-info .info:last-child p{
+		width: 100%;
+	}
 	
 }
