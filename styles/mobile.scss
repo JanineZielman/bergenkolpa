@@ -359,6 +359,9 @@
 			&.large{
 				.text-wrap{
 					flex-direction: column;
+					&.columns{
+						column-count: 1;
+					}
 					p{
 						width: 100%;
 						margin-right: 0;
