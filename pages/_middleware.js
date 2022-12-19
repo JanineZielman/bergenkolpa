@@ -59,10 +59,10 @@ export function middleware(req) {
     return NextResponse.redirect(new URL(`/#duin-almere-boomrijk`, req.nextUrl));
   }
   if (pathname.indexOf('552_dakserre_agrotopia.html') > -1) {
-    return NextResponse.redirect(new URL(`/#dakserre-agrotopia`, req.nextUrl));
+    return NextResponse.redirect(new URL(`/#dakserre-agrotopia-roeselare`, req.nextUrl));
   }
   if (pathname.indexOf('552_rooftop_greenhouse_agrotopia.html') > -1) {
-    return NextResponse.redirect(new URL(`/#dakserre-agrotopia`, req.nextUrl));
+    return NextResponse.redirect(new URL(`/#dakserre-agrotopia-roeselare`, req.nextUrl));
   }
   if (pathname.indexOf('751_timber_tower_rotterdam.html') > -1) {
     return NextResponse.redirect(new URL(`/#timber-tower-rotterdam`, req.nextUrl));
