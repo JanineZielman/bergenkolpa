@@ -48,7 +48,8 @@
             "project",
             "evenement",
             "publicatie",
-            "prijzen"
+            "prijzen",
+            "nieuwsbrief"
           ]
         }
       },

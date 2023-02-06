@@ -631,6 +631,9 @@
 		.extra-info div{
 			margin-top: -14px;
 		}
+		.extra-info .images, .extra-info .slick-slider{
+			margin-top: 0;
+		}
 	}
 
 	.projects .project-item.selected .extra-info .info:last-child p{

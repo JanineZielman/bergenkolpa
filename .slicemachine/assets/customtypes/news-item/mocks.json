@@ -1,6 +1,6 @@
 {
-  "id": "b94a0f2e-16aa-4a1f-802b-249fee695f4d",
-  "uid": "cum-saepe-consequatur",
+  "id": "9bd68f7f-15da-4217-9fc5-51e6b2d5c95e",
+  "uid": "recusandae-repellendus-et",
   "type": "news-item",
   "data": {
     "image": {
@@ -10,16 +10,16 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=1920&h=1080&fit=crop"
+      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=1920&h=1080&fit=crop"
     },
-    "date": "2021-03-08",
+    "date": "2019-05-22",
     "text": [
       {
         "type": "paragraph",
-        "text": "Culpa ad aliqua irure aute aute excepteur fugiat nulla fugiat consectetur excepteur mollit id. Ea sit voluptate ad magna minim duis non ea cillum et aliquip.",
+        "text": "Ipsum do anim cillum nisi voluptate ut. Velit duis occaecat anim tempor sunt officia et enim nulla.",
         "spans": []
       }
     ],
-    "category": "prijzen"
+    "category": "evenement"
   }
 }

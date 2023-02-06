@@ -78,18 +78,18 @@ const News = (props) => {
     <>
       <Head>
         <title>{global.title + ' | Recent'}</title>
-        <meta name="description" content={RichText.asText(news[0].data.text)} />
+        <meta name="description" content={RichText.asText(news[0]?.data.text)} />
 				<meta name="keywords" content={RichText.asText(global.keywords)} />
 				<meta name="copyright" content={global.copyright} />
 				<meta name="DC.CONTRIBUTORS" content={global.contributors}></meta>
 				<meta name="DC.SUBJECT" content={RichText.asText(global.keywords)}></meta>
-				<meta name="DC.DESCRIPTION" content={RichText.asText(news[0].data.text)} />
+				<meta name="DC.DESCRIPTION" content={RichText.asText(news[0]?.data.text)} />
 				<meta name="DC.RIGHTS" content={global.copyright} />
 				<meta name="DC.LANGUAGE" content={doc.lang.slice(0,2)} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={global.title + ' | Recent'} />
-        <meta property="og:description" content={RichText.asText(news[0].data.text)} />
-        <meta property="og:image" content={news[0].data.image.url} />
+        <meta property="og:description" content={RichText.asText(news[0]?.data.text)} />
+        <meta property="og:image" content={news[0]?.data.image.url} />
       </Head>
 			<Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
 				<div className="recent">
