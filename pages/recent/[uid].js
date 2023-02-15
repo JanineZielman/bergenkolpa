@@ -6,14 +6,19 @@ import 'moment/locale/nl'
 import Head from 'next/head'
 import { RichText } from 'prismic-reactjs'
 import ImageSize from '../../components/imageSize';
+import SliceZone from "next-slicezone";
+
 
 import * as Slices from "../../slices";
+const resolver = ({ sliceName }) => Slices[sliceName];
 import Layout from "../../components/layout"
 
 
 
 const News = (props) => {
   const {doc, menu, footer, news, global, locale} = props;
+
+  console.log(doc)
 
 	useEffect(() => {
 		if (locale.slice(0,2) == 'zh') {
@@ -94,6 +99,15 @@ const News = (props) => {
 			<Layout altLangs={doc.alternate_languages} menu={menu} lang={doc.lang} footer={footer} global={global}>
 				<div className="recent">
 					<h2>Recent</h2>
+					<div className='intro-text'>
+						{doc.data.slices.map((item, i) => (
+							item.items.map((text, j) => {
+								return(
+									<RichText render={text.text}/>
+								)
+							})
+						))}
+					</div>
 					<div className="content">
 						{news.map((item,i) => {
 							return(
