@@ -1449,9 +1449,9 @@
             "slice_type": "slider",
             "items": [
               {
-                "title": "transition rich networks",
+                "title": "embrace B2C solutions",
                 "color": "white",
-                "position": "top-left",
+                "position": "bottom-right",
                 "image": {
                   "dimensions": {
                     "width": 1920,
@@ -1459,40 +1459,12 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=1920&h=1080&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=1920&h=1080&fit=crop"
                 },
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Dolor esse sint dolor mollit cillum ea proident reprehenderit anim tempor anim sit. Aliquip occaecat Lorem et reprehenderit amet. Tempor ipsum sit consequat consectetur commodo.",
-                    "spans": []
-                  }
-                ],
-                "link": {
-                  "link_type": "Web",
-                  "url": "https://slicemachine.dev"
-                },
-                "theme": false,
-                "horizontal-crop": "center",
-                "vertical-crop": "middle"
-              },
-              {
-                "title": "incubate cross-media vortals",
-                "color": "white",
-                "position": "top-left",
-                "image": {
-                  "dimensions": {
-                    "width": 1920,
-                    "height": 1080
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?w=1920&h=1080&fit=crop"
-                },
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "Lorem fugiat deserunt magna aliqua officia reprehenderit sint.",
+                    "text": "Est fugiat sit excepteur ex sit dolor adipisicing laboris dolor fugiat ex sit sint cillum qui. Sint aliqua ad eiusmod reprehenderit incididunt enim qui non commodo consequat enim consequat adipisicing consequat.",
                     "spans": []
                   }
                 ],
@@ -1501,6 +1473,62 @@
                   "url": "http://twitter.com"
                 },
                 "theme": true,
+                "horizontal-crop": "right",
+                "vertical-crop": "top"
+              },
+              {
+                "title": "streamline scalable models",
+                "color": "white",
+                "position": "top-left",
+                "image": {
+                  "dimensions": {
+                    "width": 1920,
+                    "height": 1080
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=1920&h=1080&fit=crop"
+                },
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Occaecat exercitation do cillum. Deserunt ea est reprehenderit elit et et enim. Do nostrud nulla tempor deserunt aliqua exercitation qui.",
+                    "spans": []
+                  }
+                ],
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                },
+                "theme": true,
+                "horizontal-crop": "center",
+                "vertical-crop": "bottom"
+              },
+              {
+                "title": "maximize efficient methodologies",
+                "color": "black",
+                "position": "top-right",
+                "image": {
+                  "dimensions": {
+                    "width": 1920,
+                    "height": 1080
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=1920&h=1080&fit=crop"
+                },
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Amet anim magna ex cillum in excepteur excepteur incididunt cupidatat. Sint eiusmod nisi duis ad irure aliqua magna. Laboris nulla esse reprehenderit magna sint proident.",
+                    "spans": []
+                  }
+                ],
+                "link": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                },
+                "theme": false,
                 "horizontal-crop": "center",
                 "vertical-crop": "top"
               }

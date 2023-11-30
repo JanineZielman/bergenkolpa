@@ -8,6 +8,7 @@ import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import {linkResolver} from '../prismicConfiguration'
 import Head from 'next/head'
+import Link from "next/link";
 
 
 function MyApp({ Component, pageProps }) {

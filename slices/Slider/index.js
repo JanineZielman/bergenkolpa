@@ -4,7 +4,6 @@ import Slick from "react-slick";
 import Image from 'next/image'
 
 const Slider = ({ slice }) => {
-  var slugify = require('slugify')
   const settings = {
     dots: true,
     arrows: true,
@@ -26,9 +25,22 @@ const Slider = ({ slice }) => {
       <Slick {...settings} className="main-slider">
         {slice.items.map((item, i) => {
           let theme_url = `/${item.link.lang}/theme/${item.link.uid}#projects`
+          let document_url = `/${item.link.lang}/${item.link.uid}`
+          let link_url;
+          let blank = '';
+          if(item.link.link_type == 'Document'){
+            if(item.theme == true){
+              link_url = theme_url;
+            } else {
+              link_url = document_url;
+            }
+          } else {
+            link_url = `${item.link.url}`
+            blank = "_blank"
+          }
           return(
             <div key={`slider-item${i}`} className='slide-item'>
-              <a className="title-image" href={item.theme == true ? theme_url : '/' + item.link.lang + '/' + item.link.uid}>
+              <a className="title-image" href={link_url} target={blank}>
                 <div className={`title ${item.position} ${item.color}`}>
                   {item.title}
                 </div>
