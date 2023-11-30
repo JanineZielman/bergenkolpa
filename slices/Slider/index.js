@@ -40,7 +40,7 @@ const Slider = ({ slice }) => {
           }
           return(
             <div key={`slider-item${i}`} className='slide-item'>
-              <a className="title-image" href={link_url} target={blank}>
+              <a className="title-image" href={link_url ? link_url : '#'} target={blank}>
                 <div className={`title ${item.position} ${item.color}`}>
                   {item.title}
                 </div>
