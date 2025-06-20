@@ -21,6 +21,25 @@ export default function UnusedAssetsPage() {
     fetchAssets();
   }, []);
 
+  const downloadAllImages = async () => {
+    for (const asset of assets) {
+      try {
+        const response = await fetch(asset.url);
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = asset.name || 'download';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      } catch (error) {
+        console.error(`Failed to download ${asset.name}`, error);
+      }
+    }
+  };
+
   if (loading) return <p>Loading unused assets...</p>;
   if (error) return <p>Error: {error}</p>;
 
@@ -29,6 +48,20 @@ export default function UnusedAssetsPage() {
   return (
     <div style={{ padding: 20 }}>
       <h1>Unused Assets ({assets.length})</h1>
+      <button
+        onClick={downloadAllImages}
+        style={{
+          marginBottom: 20,
+          padding: '10px 16px',
+          backgroundColor: '#0070f3',
+          color: '#fff',
+          border: 'none',
+          borderRadius: 5,
+          cursor: 'pointer',
+        }}
+      >
+        Download All Images
+      </button>
       <div
         style={{
           display: 'grid',
