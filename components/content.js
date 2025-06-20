@@ -1,11 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import { RichText } from 'prismic-reactjs'
 import Slick from "react-slick";
-import Image from 'next/image'
 import { linkResolver } from '../prismicConfiguration'
 import ImageSize from './imageSize';
-import CoverImage from './coverImage';
-
 
 const Content = ({item}) => {
 	
@@ -30,24 +27,6 @@ const Content = ({item}) => {
 
   return(
 		<>				
-			{/* <div className={`flex`}>
-					<div className="cover">
-						{item.data['cover-image'].url && 
-							<div className={`img-effect`}>
-								<CoverImage item={item}/>
-							</div>
-						}
-						{item.data['cover-text'][0] &&
-							<h2 className={`img-effect`}>
-								<RichText render={item.data['cover-text']} linkResolver={linkResolver} />
-							</h2>
-						}
-					</div>
-
-				<div className="description">
-					<RichText render={item.data['description']} linkResolver={linkResolver}/>
-				</div>
-			</div> */}
 			{item.data.caption[0] && 
 				<div className="caption">
 					<div></div>
@@ -64,11 +43,11 @@ const Content = ({item}) => {
 						{slice.slice_type == 'images' && 
 							<div key={`image-slider${i}`} className="images" id={'images'+i}>
 								<Slick {...settings}>
-										{slice.items.map((item,i) => {
+										{slice.items.map((slice_item,i) => {
 											return(
 												<div key={`slide-item${i}`} className='slide-item'>
-													{item.image.url && 
-														<ImageSize item={item}/>
+													{slice_item.image.url && 
+														<ImageSize item={slice_item} parent={item}/>
 													}
 												</div>
 											)
@@ -78,39 +57,39 @@ const Content = ({item}) => {
 						}
 						{slice.slice_type == 'image' && 
 							<>
-								{slice.items.map((item,i) => {
+								{slice.items.map((slice_item,i) => {
 									return(
 										<>
-											{item.image.url && 
+											{slice_item.image.url && 
 												<>
-												{item['big-image'] == true ?	
+												{slice_item['big-image'] == true ?	
 													<div className='big-image'>
-														{item.image?.url && 
-															<ImageSize item={item}/>
+														{slice_item.image?.url && 
+															<ImageSize item={slice_item} parent={item}/>
 														}
 													</div>
 												:
 													<div key={`image-item${i}`} className={`image ${item['aspect-ratio']}`}>
-														{item.image?.url && 
-															<ImageSize item={item}/>
+														{slice_item.image?.url && 
+															<ImageSize item={slice_item} parent={item}/>
 														}
 													</div>
 												}
 												</>
 											}
-											{item.text[0] && 
+											{slice_item.text[0] && 
 												<div className="info" id={'info-image'+i}>
-													<RichText render={item.text} linkResolver={linkResolver}/>
+													<RichText render={slice_item.text} linkResolver={linkResolver}/>
 												</div>
 											}
-											{item.quote[0] && 
+											{slice_item.quote[0] && 
 												<div className="caption">
 													<div></div>
-													<RichText render={item.quote} linkResolver={linkResolver} />
+													<RichText render={slice_item.quote} linkResolver={linkResolver} />
 												</div>
 											}
-											{item.embed.html && 
-												<div className='video' dangerouslySetInnerHTML={{ __html: item.embed.html }} />
+											{slice_item.embed.html && 
+												<div className='video' dangerouslySetInnerHTML={{ __html: slice_item.embed.html }} />
 											}
 										</>
 									)

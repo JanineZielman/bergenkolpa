@@ -110,13 +110,13 @@ const Layout = ({children, altLangs, menu, lang, footer, global}) => {
 						return(
 							<a key={`social${i}`} className="social-link" target="_blank" href={item.link.url}>
 								{item.social == 'facebook' &&
-									<img src="/fb.svg"/>
+									<img src="/fb.svg" alt={`van Bergen Kolpa - Facebook`}/>
 								}
 								{item.social == 'linkedin' &&
-									<img src="/li.svg"/>
+									<img src="/li.svg" alt={`van Bergen Kolpa - LinkedIn`}/>
 								}
 								{item.social == 'instagram' &&
-									<img src="/insta.svg"/>
+									<img src="/insta.svg" alt={`van Bergen Kolpa - Instagram`}/>
 								}
 							</a>
 						)

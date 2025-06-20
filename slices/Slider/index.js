@@ -47,6 +47,7 @@ const Slider = ({ slice }) => {
                 <div className='image slide-img'>
                   <Image 
                     src={item.image.url}
+                    alt={item.image.alt ? item.image.alt : `van Bergen Kolpa - ${item.title}`}
                     width={'1920'}
                     height={'1080'}
                     priority={true}

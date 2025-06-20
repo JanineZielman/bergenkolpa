@@ -6,7 +6,6 @@ import 'moment/locale/nl'
 import Head from 'next/head'
 import { RichText } from 'prismic-reactjs'
 import ImageSize from '../../components/imageSize';
-import SliceZone from "next-slicezone";
 
 
 import * as Slices from "../../slices";
@@ -110,6 +109,7 @@ const News = (props) => {
 					</div>
 					<div className="content">
 						{news.map((item,i) => {
+							console.log('a', item)
 							return(
 								<div key={`news${i}`} className='news-item' id={item.uid?.replace(' ', '_')}>
 									<div className='date'>
@@ -118,7 +118,7 @@ const News = (props) => {
 									<div onClick={item.data.slices[0] && AddClass2} className={`wrapper ${item.data.slices[0] && 'clickable'}`}>
 										{item.data.image.url ?
 											<>
-												<img src={item.data.image.url}/>
+												<img src={item.data.image.url} alt={item.data.image.alt}/>
 												<RichText render={item.data.text} linkResolver={linkResolver} />
 											</>
 										:
@@ -136,23 +136,23 @@ const News = (props) => {
 														{slice.slice_type == 'embed' &&
 															<div className='video' dangerouslySetInnerHTML={{ __html: slice.primary.embed.html }} />
 														}
-														{slice.items.map((item, i) => {
+														{slice.items.map((slice_item, i) => {
 															return(
 																<>
 																	{item['aspect-ratio'] &&
 																		<div className='extra-content'>
-																			{item.image?.url &&
+																			{slice_item.image?.url &&
 																				<div className='image'>
-																					<ImageSize item={item}/>
+																					<ImageSize item={slice_item} parent={item}/>
 																				</div>
 																			}
-																			{item.text && item.text[0]?.text &&
-																				<RichText render={item.text} linkResolver={linkResolver} />
+																			{slice_item.text && slice_item.text[0]?.text &&
+																				<RichText render={slice_item.text} linkResolver={linkResolver} />
 																			}
-																			{item.quote && item.quote[0]?.text &&
+																			{slice_item.quote && slice_item.quote[0]?.text &&
 																				<div className="caption">
 																					<div></div>
-																					<RichText render={item.quote} linkResolver={linkResolver} />
+																					<RichText render={slice_item.quote} linkResolver={linkResolver} />
 																				</div>
 																			}
 																		</div>
