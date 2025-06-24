@@ -139,7 +139,7 @@ const News = (props) => {
 														{slice.items.map((slice_item, i) => {
 															return(
 																<>
-																	{item['aspect-ratio'] &&
+																	{slice_item['aspect-ratio'] &&
 																		<div className='extra-content'>
 																			{slice_item.image?.url &&
 																				<div className='image'>

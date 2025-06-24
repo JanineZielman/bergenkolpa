@@ -69,7 +69,7 @@ const Content = ({item}) => {
 														}
 													</div>
 												:
-													<div key={`image-item${i}`} className={`image ${item['aspect-ratio']}`}>
+													<div key={`image-item${i}`} className={`image ${slice_item['aspect-ratio']}`}>
 														{slice_item.image?.url && 
 															<ImageSize item={slice_item} parent={item}/>
 														}
