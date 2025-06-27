@@ -104,7 +104,7 @@ const Bureau = (props) => {
                           }
                           <img className='close' onClick={RemoveClass} src="/cross.svg"/>
                           <div className='content-wrapper'>
-                            <img onClick={item.info[0] && AddClass} src={item.image.url} alt={item.image.alt ? item.image.alt : `van Bergen Kolpa - ${item.text}`} className={item.info[0] && 'clickable'}/>
+                            {item.image.url && <img onClick={item.info[0] && AddClass} src={item.image.url} alt={item.image.alt ? item.image.alt : `van Bergen Kolpa - ${item.text}`} className={item.info[0] && 'clickable'}/>}
                             {item.info[0] &&
                               <div className='info-text'>
                                 <RichText render={item.info} linkResolver={linkResolver}/>
